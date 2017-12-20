@@ -1,8 +1,33 @@
 @charset 'utf-8';
 
+
+//
+// Custom Variables
+// --------------------------------------------------
+$dcp-orange: #d96b27;
+$a11y-orange: #ae561f;
+$dcp-yellow: #ffc861;
+$a11y-yellow: #ffeec1;
+
+$lu-peach: #FDD48D;
+$lu-yellow: #F2F618;
+$lu-magenta: #E362FB;
+$lu-red: #FC5B5B;
+$lu-orange: #FF9400;
+$lu-pink: #FFC8BD;
+$lu-green: #78D271;
+$lu-blue: #44A3D5;
+$lu-lavendar: #E0BEEB;
+$lu-silver: #BAB8B6;
+$lu-gray: #5F5F60;
+
+
+//
+// Foundation
+// --------------------------------------------------
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 @include foundation-global-styles;
 // @include foundation-grid;
@@ -13,41 +38,271 @@
 @include foundation-button;
 @include foundation-forms;
 // @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
 @include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
 @include foundation-callout;
-@include foundation-card;
+// @include foundation-card;
 @include foundation-close-button;
 @include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
-@include foundation-responsive-embed;
+// @include foundation-menu-icon;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-responsive-embed;
 @include foundation-label;
-@include foundation-media-object;
-@include foundation-off-canvas;
-@include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-@include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
+// @include foundation-media-object;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
 @include foundation-switch;
 @include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
-@include foundation-title-bar;
-@include foundation-tooltip;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
-// @include foundation-float-classes;
+@include foundation-float-classes;
 @include foundation-flex-classes;
+
 
 // @include foundation-prototype-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+
+//
+// Headings
+// --------------------------------------------------
+.header-xxlarge { @extend h1; }
+.header-xlarge {  @extend h2; }
+.header-large {   @extend h3; }
+.header-medium {  @extend h4; }
+.header-small {   @extend h5; }
+.header-tiny {    @extend h6; }
+
+h6,
+.header-tiny {
+  text-transform: uppercase;
+  font-weight: $global-weight-normal;
+  margin-bottom: 0.5em;
+}
+
+.content-header {
+  @extend h3;
+  margin-bottom: rem-calc(10);
+
+  .landmark {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .landmark + .address {
+    display: block;
+    @extend h4;
+    margin-bottom: 0;
+  }
+}
+
+.header-label {
+  color: $dark-gray;
+  font-size: rem-calc(13);
+}
+
+
+//
+// Typography helper classes
+// --------------------------------------------------
+.nowrap {
+  white-space: nowrap;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.small-margin-bottom {
+  margin-bottom: rem-calc(5);
+}
+
+.text-small {
+  font-size: rem-calc(13);
+}
+
+.text-tiny {
+  font-size: rem-calc(10);
+  line-height: 1.5;
+}
+
+.text-weight-normal {
+  font-weight: $global-weight-normal;
+}
+.text-weight-bold {
+  font-weight: $global-weight-bold;
+}
+
+.pipe {
+  opacity: 0.25;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+}
+
+.link {
+  cursor: pointer;
+  color: $anchor-color;
+
+  &:hover {
+    color:$anchor-color-hover;
+  }
+}
+
+.light-gray { color: $light-gray; }
+.medium-gray { color: $medium-gray; }
+.dark-gray { color: $dark-gray; }
+.black { color: $black; }
+.dcp-orange { color: $dcp-orange; }
+.dcp-yellow { color: $dcp-yellow; }
+.a11y-yellow { color: $a11y-yellow; }
+
+// Land Use colors
+.lu-peach { color: $lu-peach; }
+.lu-yellow { color: $lu-yellow; }
+.lu-magenta { color: $lu-magenta; }
+.lu-red { color: $lu-red; }
+.lu-orange { color: $lu-orange; }
+.lu-pink { color: $lu-pink; }
+.lu-green { color: $lu-green; }
+.lu-blue { color: $lu-blue; }
+.lu-lavendar { color: $lu-lavendar; }
+.lu-silver { color: $lu-silver; }
+.lu-gray { color: $lu-gray; }
+
+.comma-separated-list {
+  list-style: none;
+  margin-left: 0;
+
+  li {
+    display: inline;
+
+    &:not(:last-of-type):after {
+      content: ',';
+    }
+  }
+}
+
+
+//
+// Module: Labs Beta Notice
+// --------------------------------------------------
+.labs-beta-notice {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  height: rem-calc(21);
+  line-height: 21px;
+  text-align: center;
+  background-color: #D96B27;
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
+}
+.labs-beta-notice:hover, .labs-beta-notice:focus {
+  color: #fff;
+  background-color: #b95b21;
+  text-decoration: none;
+}
+
+
+//
+// Module: Site Header
+// --------------------------------------------------
+$logo-height-small: rem-calc(24);
+$logo-height-medium: rem-calc(36);
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  background-color: $white;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+
+  .branding {
+    padding-top: $global-margin;
+    padding-bottom: $global-margin;
+  }
+
+  .dcp-logo {
+    height: $logo-height-small;
+    float: left;
+    margin-right: $global-margin;
+
+    @include breakpoint(medium) {
+      height: $logo-height-medium;
+    }
+  }
+
+  .site-name {
+    font-size: $logo-height-small*0.8;
+    font-weight: $global-weight-bold;
+    line-height: 1.5;
+
+    @include breakpoint(medium) {
+      font-size: $logo-height-medium*0.8;
+    }
+  }
+
+  .site-subtitle {
+    font-size: 0.5em;
+    font-weight: $global-weight-normal;
+    color: $dark-gray;
+    @include breakpoint(large) {
+      font-size: 0.7em;
+      letter-spacing: -0.02em;
+    }
+  }
+  a:hover .site-subtitle {
+    color: $anchor-color;
+  }
+
+  .menu {
+    a {
+      color: $dark-gray;
+      line-height: 1.5;
+      padding: (rem-calc(11)+$global-margin) rem-calc(20);
+      font-size:  rem-calc(14);
+      font-weight: $global-weight-bold;
+
+      &:hover {
+        background-color: $light-gray;
+        color: $black;
+      }
+    }
+  }
+
+  .responsive-nav-toggler {
+    color: $dark-gray;
+    background-color: $light-gray;
+    font-size:  rem-calc(14);
+    font-weight: $global-weight-bold;
+    line-height: $logo-height-small;
+    cursor: pointer;
+    margin: $global-margin/2 0;
+    padding: rem-calc(10) rem-calc(16);
+
+    @include breakpoint(medium) {
+      margin: $global-margin 0;
+    }
+  }
+}
+
+
+//
+// Module: Site Main
+// --------------------------------------------------
+.site-main {
+  padding: $global-margin 0;
+}
