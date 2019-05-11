@@ -10,20 +10,20 @@ Forked from the official ZURB Template, it has a Gulp-powered build system with 
 - Built-in BrowserSync server
 - For production builds:
   - CSS compression
-  - JavaScript compression
+  - JavaScript module bundling with webpack
   - Image compression
 
 ## Installation
 
 To use this template, your computer needs:
 
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
+- [NodeJS](https://nodejs.org/en/) (Version 6 or greater recommended, tested with 6.11.4 and 8.12.0)
 - [Git](https://git-scm.com/)
 
 This template can be installed with the Foundation CLI, or downloaded and set up manually.
 
 
-### Manual Setup
+### Local Development
 
 Clone this repository:
 
@@ -35,13 +35,13 @@ Then open the folder in your command line, and install the needed dependencies:
 
 ```bash
 cd labs-foundation
-npm install
+yarn
 ```
 
-Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
+Finally, run `yarn start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
 
 ```
 http://localhost:8000
 ```
 
-To create compressed, production-ready assets, run `npm run build`.
+To create compressed, production-ready assets, run `yarn run build`.

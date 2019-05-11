@@ -15,7 +15,6 @@
       border-bottom: 2px solid #ccc;
       margin-bottom: 4rem;
     }
-
     /* This styles code blocks used for examples. */
     .ss-code code {
       display: block;
@@ -23,9 +22,8 @@
       overflow-x: scroll;
       margin-bottom: 1.5rem;
     }
-
     /* This styles the example rows used in the grid documentation. */
-    .row.display {
+    .grid-x.display {
       background: #eee;
       font-size: 11px;
       margin-bottom: 10px;
@@ -33,11 +31,10 @@
       border: solid 1px #c6c6c6;
       margin-left: 0 !important;
       margin-right: 0 !important; }
-      .row.display .columns:nth-child(2), .row.display .columns.small-centered, .row.display .columns.large-centered {
+      .grid-x.display .cell:nth-child(2), .grid-x.display .cell.small-centered, .grid-x.display .cell.large-centered {
         background: #e1e1e1; }
-      .row.display .columns.color-end {
+      .grid-x.display .cell.color-end {
         background: #d4d4d4; }
-
     /* This styles the color blocks used in the color documentation. */
     .color-block {
       border-radius: 2px;
@@ -54,34 +51,64 @@
         height: 100px;
         margin-bottom: 0.42857rem;
       }
+      .sg-header {
+        background: #eee;
+        padding: 2rem;
+      }
+      .grid-container {
+      }
+      .sg-side-menu {
+        margin-left: 1rem;
+      }
+      .grid-container.padded {
+        padding-top: 2rem;
+      }
+      .sg-side-menu a {
+        transition: all 0.15s ease-in;
+      }
+      .sg-side-menu a:hover {
+        background: #eee;
+      }
+      .sg-side-menu a:focus {
+        background: #1468a0;
+        color: #fff;
+      }
+      .sg-side-menu.menu {
+        overflow: auto;
+        max-height: 100vh;
+        padding-bottom: 5rem;
+      }
     </style>
   </head>
   <body>
 
-    <div class="column row">
-      <h1>Client Style Guide</h1>
-      <p class="lead">This style guide was built with Foundation for Sites. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
-      <a href="http://foundation.zurb.com/docs/" class="button">Visit the Docs</a>
-      <a href="http://foundation.zurb.com/forum/" class="secondary button">Foundation Forum</a>
-      <a href="http://foundation.zurb.com/business/business-support.html" class="secondary button">Technical Support</a>
-    </div>
-
-    <div class="column row"><div class="row collapse">
-
-      <div class="large-3 medium-4 columns" data-sticky-container>
-        <ul class="vertical menu">
-            <li><a href="#the-grid">The Grid</a></li>
-            <li><a href="#colors">Colors</a></li>
-            <li><a href="#typography">Typography</a></li>
-            <li><a href="#buttons">Buttons</a></li>
-            <li><a href="#forms">Forms</a></li>
-            <li><a href="#new-section">New Section</a></li>
-        </ul>
+    <header class="sg-header" id="sg-header">
+      <div class="grid-container">
+        <h1>Style Guide</h1>
       </div>
+    </header>
 
-      <div class="large-9 medium-8 columns">
-          <section class="ss-section" id="the-grid">
-            <h1>The Grid</h1><p class="lead">Problem: You&#39;ve got tons of content, each needing different sized cells, and don&#39;t know how to quick and easily get it all done. Solution: The awesome XY grid!</p>
+    <div class="grid-container padded">
+      <div class="grid-x grid-margin-x">
+
+        <div class="large-3 medium-4 cell" data-sticky-container>
+          <div class="sticky" data-sticky data-margin-top="0">
+            <ul class="vertical menu sg-side-menu" data-smooth-scroll data-animation-easing="swing">
+                <li><a href="#the-grid">The Grid</a></li>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#new-section">New Section</a></li>
+            </ul>
+
+            <p class="">This style guide was built with Foundation for Sites. For more information on how to use this responsive front-end framework, check out the <a href="https://foundation.zurb.com/sites/docs/">documentation</a>.</p>
+          </div>
+        </div>
+
+        <div class="large-9 medium-8 cell">
+            <section class="ss-section" id="the-grid">
+              <h1>The Grid</h1><p class="lead">Problem: You&#39;ve got tons of content, each needing different sized cells, and don&#39;t know how to quick and easily get it all done. Solution: The awesome XY grid!</p>
 
 <hr>
 <h2>Overview</h2><p>The grid is built around two key elements: grid-x and cells. grid-container create a max-width and contain the grid, and cells create the final structure. Everything on your page that you don&#39;t give a specific structural style to should be within a grid-x or cell.</p>
@@ -171,46 +198,46 @@
   <div class="small-3 cell">3</div>
   <div class="small-9 cell">9, last</div>
 </div>
-          </section>
-          <section class="ss-section" id="colors">
-            <h1>Colors</h1><p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>_settings.scss</code></p>
+            </section>
+            <section class="ss-section" id="colors">
+              <h1>Colors</h1><p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>_settings.scss</code></p>
 
 <hr>
-<div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
+<div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-5">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #2199e8"></span>
       #2199e8
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #3adb76"></span>
       #3adb76
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #ffae00"></span>
       #ffae00
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #ec5840"></span>
       #ec5840
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #0a0a0a"></span>
       #0a0a0a
     </div>
   </div>
 </div>
-          </section>
-          <section class="ss-section" id="typography">
-            <h1>Typography</h1><p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
+            </section>
+            <section class="ss-section" id="typography">
+              <h1>Typography</h1><p class="lead">This design uses Helvetica Neue for headings and paragraph text.</p>
 
 <hr>
 <h2>Headings</h2><p>Headings are used to denote different sections of content, usually consisting of related paragraphs and other HTML elements. They range from h1 to h6 and should be styled in a clear hierarchy (i.e., largest to smallest)</p>
@@ -236,9 +263,9 @@
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quibusdam ratione sunt dolorum, qui illo maxime doloremque accusantium cum libero eum, a optio odio placeat debitis ullam aut non distinctio.</p>
 
-          </section>
-          <section class="ss-section" id="buttons">
-            <h1>Buttons</h1><p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you&#39;re strapped to. On the web, we follow similar conventions.</p>
+            </section>
+            <section class="ss-section" id="buttons">
+              <h1>Buttons</h1><p class="lead">Buttons are tied to an action of some kind, whether that button is on a cheese dispenser or launches the rocket that you&#39;re strapped to. On the web, we follow similar conventions.</p>
 
 <hr>
 <h2>Primary Buttons</h2><p>These buttons are primary calls to action and should be used sparingly. Their size can be adjusted with the <code>.tiny</code>, <code>.small</code>, and <code>.large</code> classes.</p>
@@ -261,9 +288,9 @@
 <a href="#" class="secondary button">Regular button</a>
 <a href="#" class="secondary small button">Small button</a>
 <a href="#" class="secondary tiny button">Tiny button</a></div>
-          </section>
-          <section class="ss-section" id="forms">
-            <h1>Forms</h1><p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
+            </section>
+            <section class="ss-section" id="forms">
+              <h1>Forms</h1><p class="lead">Use forms to allow users to interact with the site and provide information to the company.</p>
 
 <hr>
 <h2>Elements of a Form</h2><p>A form should be marked up using its default HTML properties. The ones we make use of include (in hierarchical order):</p>
@@ -285,26 +312,26 @@
 <hr>
 <h2>Learn All About Forms</h2><p>Check out the <a href="http://foundation.zurb.com/sites/docs">Foundation Docs</a> to learn about how flexible our forms are for creating different layouts. It works perfectly with the grid to meet all your form needs.</p>
 <hr>
-<h2>Form Layouts</h2><p>Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:</p>
+<h2>Form Layouts</h2><p>Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the cell that contains them. However, you have two options which make these forms extremely versatile:</p>
 <ul>
-<li>You can size inputs using column sizes, like <code>.medium-6</code>, <code>.small-6</code>.</li>
-<li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
+<li>You can size inputs using cell sizes, like <code>.medium-6</code>, <code>.small-6</code>.</li>
+<li>You can create row elements inside your form and use cell for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
 </ul>
 <hr>
 <h2>Form Example</h2><div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row collapse"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 cell"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x collapse"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group"</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group-field"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span>
@@ -313,8 +340,8 @@
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Select Box<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"good"</span>&gt;</span>Good<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
@@ -323,20 +350,20 @@
       <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Choose Your Favorite<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"radio1"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"radio1"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio1"</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"radio2"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"radio2"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"radio2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"radio2"</span>&gt;</span>Blue<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 columns"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-6 cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Check these out<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox1"</span>&gt;</span>Checkbox 1<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"checkbox2"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"checkbox2"</span>&gt;</span>Checkbox 2<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 columns"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"large-12 cell"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Textarea Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"placeholder"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
@@ -344,19 +371,19 @@
 <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></code></pre></div>
 
 <div class="ss-code-live"><form>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="large-12 cell">
       <label>Label</label>
       <input type="text" placeholder="placeholder">
     </div>
   </div>
-  <div class="row">
-    <div class="large-6 columns">
+  <div class="grid-x">
+    <div class="large-6 cell">
       <label>Label</label>
       <input type="text" placeholder="placeholder">
     </div>
-    <div class="large-6 columns">
-      <div class="row collapse">
+    <div class="large-6 cell">
+      <div class="grid-x collapse">
         <label>Label</label>
         <div class="input-group">
           <input class="input-group-field" type="text" placeholder="placeholder">
@@ -365,8 +392,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="large-12 cell">
       <label>Select Box</label>
       <select>
         <option value="good">Good</option>
@@ -375,28 +402,28 @@
       </select>
     </div>
   </div>
-  <div class="row">
-    <div class="large-6 columns">
+  <div class="grid-x">
+    <div class="large-6 cell">
       <label>Choose Your Favorite</label>
       <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
       <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
     </div>
-    <div class="large-6 columns">
+    <div class="large-6 cell">
       <label>Check these out</label>
       <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
       <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="large-12 cell">
       <label>Textarea Label</label>
       <textarea placeholder="placeholder"></textarea>
     </div>
   </div>
 </form></div>
-          </section>
-          <section class="ss-section" id="new-section">
-            <h1>New Section</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid <strong>expedita!</strong> <a href="zurb.com">Non dicta</a>, autem obcaecati error, id ab voluptate unde culpa nulla.</p>
+            </section>
+            <section class="ss-section" id="new-section">
+              <h1>New Section</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora omnis suscipit id ut laborum recusandae molestias hic aliquid <strong>expedita!</strong> <a href="zurb.com">Non dicta</a>, autem obcaecati error, id ab voluptate unde culpa nulla.</p>
 <div class="ss-code"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div>
@@ -404,10 +431,11 @@
 <div class="ss-code-live"><a href="#" class="button">Button</a>
 <a href="#" class="button">Button</a>
 <a href="#" class="button">Button</a></div>
-          </section>
-      </div>
+            </section>
+        </div>
 
-    </div></div>
+      </div>
+    </div>
 
     <script src="assets/js/app.js"></script>
   </body>

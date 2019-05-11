@@ -1,5 +1,94 @@
-//  Foundation for Sites Settings
-//  -----------------------------
+//
+// Custom variables
+// --------------------------------------------------
+
+// Colors
+$aqua: #12eded;
+// $aqua-light: #3bffff;
+$aqua-light: #99ffff;
+$aqua-dark: #007a7a;
+$aqua-muted: #64b4b4;
+$teal: #12eda4;
+$teal-light: #b3ffe6;
+$teal-dark: #007a52;
+$teal-muted: #64b49a;
+$green: #12ed12;
+$green-light: #b3ffb3;
+$green-dark: #007a00;
+$green-muted: #64b464;
+$chartreuse: #a5ed12;
+$chartreuse-light: #e6ffb3;
+$chartreuse-dark: #527a00;
+$chartreuse-muted: #9ab464;
+$yellow: #eded12;
+$yellow-light: #ffffb3;
+$yellow-dark: #7a7a00;
+$yellow-muted: #b4b464;
+$gold: #edbd12;
+$gold-light: #ffeeb3;
+$gold-dark: #7a6000;
+$gold-muted: #b4a364;
+$orange: #e2750f;
+$orange-light: #ffd8b3;
+$orange-dark: #7a3c00;
+$orange-muted: #b48b64;
+$red: #ed1212;
+$red-light: #ffb7b7;
+$red-dark: #7a0000;
+$red-muted: #b46464;
+$fuchsia: #ed1294;
+$fuchsia-light: #ffb3e0;
+$fuchsia-dark: #7a0048;
+$fuchsia-muted: #b46494;
+$purple: #9912ed;
+$purple-light: #e2b3ff;
+$purple-dark: #4b007a;
+$purple-muted: #9664b4;
+$indigo: #2929ed;
+$indigo-light: #b7b7ff;
+$indigo-dark: #00007a;
+$indigo-muted: #6464b4;
+$blue: #129ded;
+$blue-light: #b3e3ff;
+$blue-dark: #004e7a;
+$blue-muted: #6497b4;
+
+// Grayscale colors
+$gray-hue: hue(#6b717b);
+$gray-saturation: saturation(#6b717b);
+$black: hsl($gray-hue, $gray-saturation, 14%);
+$charcoal: hsl($gray-hue, $gray-saturation, 24%);
+$dark-gray: hsl($gray-hue, $gray-saturation, 39%);
+$gray: hsl($gray-hue, $gray-saturation, 54%);
+$light-gray: hsl($gray-hue, $gray-saturation, 69%);
+$silver: hsl($gray-hue, $gray-saturation, 84%);
+$white-smoke: hsl($gray-hue, $gray-saturation, 93%);
+$off-white: #fafafa;
+$white: #fefefe;
+
+// DCP colors
+$dcp-orange: #d96b27;
+$a11y-orange: #ae561f;
+$dcp-yellow: #ffc861;
+$a11y-yellow: #ffeec1;
+
+// Land Use colors
+$lu-peach: $gold-light;
+$lu-yellow: $yellow;
+$lu-magenta: $purple;
+$lu-red: $red;
+$lu-orange: $orange;
+$lu-pink: $fuchsia-light;
+$lu-green: $green;
+$lu-blue: $blue;
+$lu-lavendar: $purple-light;
+$lu-silver: $silver;
+$lu-gray: $dark-gray;
+
+
+//
+// Foundation for Sites settings
+// --------------------------------------------------
 //
 //  Table of Contents:
 //
@@ -69,21 +158,21 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
+  primary: $a11y-orange,
+  secondary: $a11y-yellow,
+  success: $green ,
+  warning: $orange,
+  alert: $red,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
+// $light-gray: $light-gray;
+$medium-gray: $gray;
+// $dark-gray: $dark-gray;
+// $black: #0a0a0a;
+// $white: #fefefe;
+$body-background: $off-white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$body-antialiased: true;
+$body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-antialiased: false;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
@@ -97,10 +186,9 @@ $global-flexbox: true;
 $global-prototype-breakpoints: false;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
-$print-transparent-backgrounds: true;
+$print-transparent-backgrounds: false;
 
 @include add-foundation-colors;
-$print-hrefs: true;
 
 // 2. Breakpoints
 // --------------
@@ -112,8 +200,8 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$print-breakpoint: medium;
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
@@ -132,48 +220,48 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-lineheight: 1.3;
+$header-margin-bottom: 1.25em;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 34),
+    'h2': ('font-size': 25),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 14),
+    'h6': ('font-size': 12),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 38),
+    'h2': ('font-size': 34),
+    'h3': ('font-size': 25),
+    'h4': ('font-size': 20),
+    'h5': ('font-size': 16),
+    'h6': ('font-size': 12),
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
-$header-small-font-color: $medium-gray;
+$small-font-size: 75%;
+$header-small-font-color: inherit;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
-$code-color: $black;
+$code-color: $charcoal;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
+$code-background: $white-smoke;
+$code-border: 1px solid $silver;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color-hover: scale-color($anchor-color, $lightness: -20%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
-$hr-width: $global-width;
-$hr-border: 1px solid $medium-gray;
+$hr-width: auto;
+$hr-border: 1px solid $silver;
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -200,14 +288,14 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
-$lead-lineheight: 1.6;
+$lead-font-size: rem-calc(20);
+$lead-lineheight: 1.4;
 $subheader-lineheight: 1.4;
-$subheader-color: $dark-gray;
+$subheader-color: inherit;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;
-$stat-font-size: 2.5rem;
+$stat-font-size: rem-calc(38);
 
 // 6. Abide
 // --------
@@ -253,13 +341,13 @@ $accordionmenu-arrow-size: 6px;
 // 9. Badge
 // --------
 
-$badge-background: $primary-color;
-$badge-color: $white;
-$badge-color-alt: $black;
+$badge-background: $secondary-color;
+$badge-color: $black;
+$badge-color-alt: $white;
 $badge-palette: $foundation-palette;
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
+$badge-padding: rem-calc(1);
+$badge-minwidth: rem-calc(17);
+$badge-font-size: rem-calc(10);
 
 // 10. Breadcrumbs
 // ---------------
@@ -300,7 +388,6 @@ $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
 $button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-$button-responsive-expanded: false;
 
 // 12. Button Group
 // ----------------
@@ -392,8 +479,8 @@ $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: null;
-$dropdownmenu-submenu-background: $white;
+$dropdownmenu-background: $white;
+$dropdownmenu-submenu-background: $dropdownmenu-background;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
@@ -419,8 +506,8 @@ $helptext-color: $black;
 $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
-$input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-background: $white-smoke;
+$input-prefix-border: 1px solid $silver;
 $input-prefix-padding: 1rem;
 $form-label-color: $black;
 $form-label-font-size: rem-calc(14);
@@ -430,19 +517,19 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $dark-gray;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
 $input-background: $white;
 $input-background-focus: $white;
-$input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+$input-background-disabled: $white-smoke;
+$input-border: 1px solid $silver;
+$input-border-focus: 1px solid $gray;
 $input-padding: $form-spacing / 2;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow-focus: 0 0 5px $light-gray;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
@@ -477,6 +564,7 @@ $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
 $menu-item-background-active: get-color(primary);
 $menu-icon-spacing: 0.25rem;
+$menu-item-background-hover: $light-gray;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
 $menu-icons-back-compat: true;
@@ -755,16 +843,16 @@ $slider-radius: $global-radius;
 // 49. Switch
 // ----------
 
-$switch-background: $medium-gray;
+$switch-background: $light-gray;
 $switch-background-active: $primary-color;
 $switch-height: 2rem;
-$switch-height-tiny: 1.5rem;
+$switch-height-tiny: rem-calc(14);
 $switch-height-small: 1.75rem;
 $switch-height-large: 2.5rem;
 $switch-radius: $global-radius;
 $switch-margin: $global-margin;
 $switch-paddle-background: $white;
-$switch-paddle-offset: 0.25rem;
+$switch-paddle-offset: rem-calc(2);
 $switch-paddle-radius: $global-radius;
 $switch-paddle-transition: all 0.25s ease-out;
 
@@ -773,7 +861,7 @@ $switch-paddle-transition: all 0.25s ease-out;
 
 $table-background: $white;
 $table-color-scale: 5%;
-$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-border: 1px solid $silver;
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
@@ -801,6 +889,7 @@ $tab-active-color: $primary-color;
 $tab-item-font-size: rem-calc(12);
 $tab-item-background-hover: $white;
 $tab-item-padding: 1.25rem 1.5rem;
+$tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
 $tab-content-color: $body-font-color;
@@ -809,7 +898,7 @@ $tab-content-padding: 1rem;
 // 52. Thumbnail
 // -------------
 
-$thumbnail-border: 4px solid $white;
+$thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
@@ -860,10 +949,10 @@ $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
   small: 20px,
-  medium: 30px
+  medium: 30px,
+  large: 40px,
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;
-

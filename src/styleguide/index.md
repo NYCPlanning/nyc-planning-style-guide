@@ -131,32 +131,32 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 ---
 
-<div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
+<div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-5">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #2199e8"></span>
       #2199e8
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #3adb76"></span>
       #3adb76
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #ffae00"></span>
       #ffae00
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #ec5840"></span>
       #ec5840
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #0a0a0a"></span>
       #0a0a0a
@@ -279,10 +279,10 @@ Check out the [Foundation Docs](http://foundation.zurb.com/sites/docs) to learn 
 
 ## Form Layouts
 
-Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the column that contains them. However, you have two options which make these forms extremely versatile:
+Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the cell that contains them. However, you have two options which make these forms extremely versatile:
 
-- You can size inputs using column sizes, like `.medium-6`, `.small-6`.
-- You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.
+- You can size inputs using cell sizes, like `.medium-6`, `.small-6`.
+- You can create row elements inside your form and use cell for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.
 
 ---
 
@@ -290,19 +290,19 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 ```html_example
 <form>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="large-12 cell">
       <label>Label</label>
       <input type="text" placeholder="placeholder">
     </div>
   </div>
-  <div class="row">
-    <div class="large-6 columns">
+  <div class="grid-x">
+    <div class="large-6 cell">
       <label>Label</label>
       <input type="text" placeholder="placeholder">
     </div>
-    <div class="large-6 columns">
-      <div class="row collapse">
+    <div class="large-6 cell">
+      <div class="grid-x collapse">
         <label>Label</label>
         <div class="input-group">
           <input class="input-group-field" type="text" placeholder="placeholder">
@@ -311,8 +311,8 @@ Form elements in Foundation are styled based on their type attribute rather than
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="large-12 cell">
       <label>Select Box</label>
       <select>
         <option value="good">Good</option>
@@ -321,20 +321,20 @@ Form elements in Foundation are styled based on their type attribute rather than
       </select>
     </div>
   </div>
-  <div class="row">
-    <div class="large-6 columns">
+  <div class="grid-x">
+    <div class="large-6 cell">
       <label>Choose Your Favorite</label>
       <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
       <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
     </div>
-    <div class="large-6 columns">
+    <div class="large-6 cell">
       <label>Check these out</label>
       <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
       <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="large-12 cell">
       <label>Textarea Label</label>
       <textarea placeholder="placeholder"></textarea>
     </div>
