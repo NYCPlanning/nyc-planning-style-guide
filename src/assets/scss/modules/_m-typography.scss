@@ -66,39 +66,6 @@ button {
 
 
 //
-// Margin helper classes
-// --------------------------------------------------
-.no-margin {
-  margin: 0 !important;
-}
-
-$sides: top right bottom left;
-@each $side in $sides {
-  $i: index($sides, $side);
-
-  .no-margin-#{$side} {
-    margin-#{$side}: 0 !important;
-  }
-
-  .tiny-margin-#{$side} {
-    margin-#{$side}: $global-margin/4 !important;
-  }
-
-  .small-margin-#{$side} {
-    margin-#{$side}: $global-margin/2 !important;
-  }
-
-  .medium-margin-#{$side} {
-    margin-#{$side}: $global-margin !important;
-  }
-
-  .large-margin-#{$side} {
-    margin-#{$side}: $global-margin*2 !important;
-  }
-}
-
-
-//
 // Inputs
 // --------------------------------------------------
 ::-ms-clear {

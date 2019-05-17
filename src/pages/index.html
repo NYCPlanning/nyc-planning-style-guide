@@ -1,82 +1,239 @@
-<div class="site-header">
-
-  <header role="banner">
-    <a href="https://planninglabs.nyc/" class="labs-beta-notice hide-for-print">A beta project of NYC Planning Labs</a>
-    <div class="grid-x grid-padding-x">
-      <div class="branding cell shrink large-auto">
-        <a class="dcp-link" href="http://www1.nyc.gov/site/planning/index.page"><img class="dcp-logo" src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning"></a>
-        <a class="site-name">
-          Site Name
-          <small class="site-subtitle show-for-medium">N<span class="show-for-large">ew </span>Y<span class="show-for-large">ork </span>C<span class="show-for-large">ity</span>&rsquo;s Something App</small>
-        </a>
-      </div>
-      <div class="cell auto hide-for-large text-right">
-        <button class="responsive-nav-toggler hide-for-print" data-toggle="responsive-menu">Menu</button>
-      </div>
-      <div id="responsive-menu" class="cell large-shrink show-for-large hide-for-print" data-toggler=".show-for-large">
-        <nav role="navigation">
-          <ul class="vertical large-horizontal menu">
-            <li><a>About</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-</div>
-
-<div class="site-main">
-
+<header class="xlarge-padding-top xlarge-padding-bottom bg-white-smoke">
   <div class="grid-container">
-    <div class="grid-x grid-margin-x">
-      <div class="large-8 medium-8 cell">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <div class="grid-x grid-margin-x">
-          <div class="large-12 cell">
-            <div class="callout">
-              <p><strong>This is a twelve column section in a grid-x with grid-margin-x.</strong> Each of these includes a div.callout element so you can see where the cell are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="grid-x grid-margin-x">
-          <div class="large-6 medium-6 cell">
-            <div class="callout">
-              <p>Six cell</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 cell">
-            <div class="callout">
-              <p>Six cell</p>
-            </div>
-          </div>
-        </div>
-        <div class="grid-x grid-margin-x">
-          <div class="large-4 medium-4 small-4 cell">
-            <div class="callout">
-              <p>Four cell</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 cell">
-            <div class="callout">
-              <p>Four cell</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 cell">
-            <div class="callout">
-              <p>Four cell</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <h1 class="no-margin">NYC Planning Digital Style Guide</h1>
+    <p class="no-margin">CSS, Code Snippets, &amp; Assets</p>
+  </div>
+</header>
 
-      <div class="large-4 medium-4 cell">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>
-      </div>
+<div class="grid-container large-margin-top large-margin-bottom">
+  <div class="grid-x grid-margin-x">
+    <div class="medium-8 large-9 cell medium-order-2">
+
+
+      <section id="logo">
+
+        <h2>Logo</h2>
+
+        <img src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning" class="xlarge-margin-y medium-margin-top" width="200">
+
+        {{#code 'html'}}
+<img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png">
+        {{/code}}
+
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="headers">
+
+        <h2>Headers</h2>
+        <p>Search engines use the headings to index the structure and content of your web pages. Users skim your pages by its headings. It is important to use headings to show the document structure. h1 headings should be used for main headings, followed by h1 headings, then the less important h3, and so on. Don't use headings to make text big or bold.</p>
+
+        {{#code 'html'}}
+        {{/code}}
+
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="paragraphs">
+        <h2>Paragraphs</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="links">
+        <h2>Links</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="dividers">
+        <h2>Dividers</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="unordered-lists">
+        <h2>Unordered Lists</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="ordered-lists">
+        <h2>Ordered Lists</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="definition-lists">
+        <h2>Definition Lists</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="blockquotes">
+        <h2>Blockquotes</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="abbreviations">
+        <h2>Abbreviations</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="code">
+        <h2>Code</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="keystrokes">
+        <h2>Keystrokes</h2>
+      </section>
+
+      <hr class="xlarge-margin-top xlarge-margin-bottom">
+
+      <section id="site-header">
+        <h2>Site Header</h2>
+
+        {{#code 'html'}}
+<header class="site-header" role="banner">
+  <a href="https://planninglabs.nyc/" class="labs-beta-notice hide-for-print">A beta project of NYC Planning Labs</a>
+  <div class="grid-x grid-padding-x">
+    <div class="branding cell medium-auto shrink">
+      <a href="http://www1.nyc.gov/site/planning/index.page" class="dcp-link"><img src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning" class="dcp-logo"></a>
+      <a class="site-title">Product <small class="site-subtitle show-for-medium">Description of Product</small></a>
+    </div>
+
+    <div class="cell auto hide-for-medium text-right">
+      <button class="responsive-nav-toggler hide-for-print">Menu</button>
+    </div>
+
+    <nav role="navigation" class="cell medium-shrink responsive show-for-medium hide-for-print">
+      <ul class="menu vertical medium-horizontal">
+        <li><a href="/">One</a></li>
+        <li><a href="/">Two</a></li>
+        <li class="external-nav-item"><a href="mailto:email@example.org">Email</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+        {{/code}}
+        <header class="site-header" role="banner">
+          <a href="https://planninglabs.nyc/" class="labs-beta-notice hide-for-print">A beta project of NYC Planning Labs</a>
+          <div class="grid-x grid-padding-x">
+            <div class="branding cell large-auto shrink">
+              <a href="http://www1.nyc.gov/site/planning/index.page" class="dcp-link"><img src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning" class="dcp-logo"></a>
+              <a class="site-title">Product <small class="site-subtitle show-for-large">Description of Product</small></a>
+            </div>
+
+            <div class="cell auto hide-for-large text-right">
+              <button class="responsive-nav-toggler hide-for-print" data-toggle="responsive-nav">Menu</button>
+            </div>
+
+            <nav role="navigation" id="responsive-nav" class="cell large-shrink responsive show-for-large hide-for-print" data-toggler=".show-for-large">
+              <ul class="menu vertical large-horizontal">
+                <li><a href="/">One</a></li>
+                <li><a href="/">Two</a></li>
+                <li class="external-nav-item"><a href="mailto:email@example.org">Email</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+      </section>
+
+    </div>
+
+    <div class="medium-4 large-3 cell medium-order-1">
+      <ul class="no-bullet">
+        <li>
+          <span class="small-margin-bottom header-medium display-block">Assets</span>
+          <ul class="medium-margin-bottom">
+            <li>Logo</li>
+          </ul>
+        </li>
+        <li>
+          <span class="small-margin-bottom header-medium display-block">Typography</span>
+          <ul class="medium-margin-bottom">
+            <li>Headers</li>
+            <li>Paragraphs</li>
+            <li>Links</li>
+            <li>Dividers</li>
+            <li>Unordered Lists</li>
+            <li>Ordered Lists</li>
+            <li>Definition Lists</li>
+            <li>Blockquotes</li>
+            <li>Abbreviations</li>
+            <li>Code</li>
+            <li>Keystrokes</li>
+          </ul>
+        </li>
+        <li>
+          <span class="small-margin-bottom header-medium display-block">Typography Helper Classes</span>
+          <ul class="medium-margin-bottom">
+            <li>Text Alignment</li>
+            <li>Lead Paragraph</li>
+            <li>Un-bulleted List</li>
+            <li>Typescale</li>
+          </ul>
+        </li>
+
+        <li>Button</li>
+        <li>Close Button</li>
+
+        <li>Tables</li>
+        <li>Grid</li>
+
+        <li>Accessibility: Text vs. Images</li>
+        <li>Accessibility: Contrast</li>
+        <li>Accessibility: Font Size</li>
+        <li>Accessibility: Show/Hide for Screen Readers</li>
+        <li>Accessibility: Skip Links</li>
+
+        <li>Print Style Classes</li>
+        <li>Visibility Classes</li>
+
+        <li>Badge</li>
+        <li>Label</li>
+
+        <li>Switch</li>
+        <li>Tooltip</li>
+
+        <!-- <li>Abide</li> -->
+        <!-- <li>Accordion</li> -->
+        <!-- <li>Accordion Menu</li> -->
+        <li>Breadcrumbs</li>
+        <li>Callout</li>
+        <li>Drilldown Menu</li>
+        <li>Dropdown Menu</li>
+        <li>Dropdown Pane</li>
+        <li>Equalizer</li>
+        <li>Responsive Embed</li>
+        <li>Float Classes</li>
+        <li>Forms</li>
+        <!-- <li>Interchange</li> -->
+        <li>Magellan</li>
+        <li>Media Object</li>
+        <li>Menu</li>
+        <li>Off-canvas</li>
+        <!-- <li>Orbit</li> -->
+        <li>Pagination</li>
+        <li>Progress Bar</li>
+        <li>Responsive Menu</li>
+        <li>Responsive Toggle</li>
+        <li>Reveal</li>
+        <li>Slider</li>
+        <li>Sticky</li>
+        <li>Tabs</li>
+        <li>Thumbnail</li>
+        <li>Title Bar</li>
+        <li>Toggler</li>
+        <li>Top Bar</li>
+      </ul>
     </div>
   </div>
-
 </div>
