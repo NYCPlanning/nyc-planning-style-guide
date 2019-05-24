@@ -14,244 +14,340 @@
         overflow-x: scroll;
         margin-bottom: 1.5rem;
       }
+      .is-stuck{
+        max-height: 100vh;
+        overflow: auto;
+      }
+      .code-example + .callout {
+        margin-top: calc(-1px - 1.5rem);
+      }
+      section + section {
+        margin-top: 3rem;
+        padding-top: 3rem;
+        border-top: 1px solid #d3d5d9;
+      }
     </style>
   </head>
   <body>
 
-<header class="xlarge-padding-top xlarge-padding-bottom bg-white-smoke">
-  <div class="grid-container">
-    <h1 class="no-margin">NYC Planning Digital Style Guide</h1>
-    <p class="no-margin">CSS, Code Snippets, &amp; Assets</p>
-  </div>
-</header>
+    <header class="xlarge-padding-top xlarge-padding-bottom bg-white-smoke">
+      <div class="grid-container">
+        <h1 class="no-margin">NYC Planning Digital Style Guide</h1>
+        <p class="no-margin">CSS, Code Snippets, &amp; Assets</p>
+      </div>
+    </header>
 
-<div class="grid-container large-margin-top large-margin-bottom">
-  <div class="grid-x grid-margin-x">
-    <div class="medium-8 large-9 cell medium-order-2">
+    <div id="main-content" class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="medium-8 large-9 cell medium-order-2 large-padding-top large-padding-bottom">
+
+<!--
+Abide
+Accordion
+Accordion Menu
+Equalizer
+Interchange
+Magellan
+Media Object
+Off-canvas
+Orbit
+Progress Bar
+Responsive Toggle
+Reveal (AVOID USING MODALS!)
+Slider
+Tabs
+Thumbnail
+Title Bar
+Toggler
+Top Bar
+-->
+
+<p class="lead">Overview / Description...</p>
 
 
-      <section id="logo">
+<hr class="xlarge-margin-top xlarge-margin-bottom">
 
-        <h2>Logo</h2>
+<h2 id="assets">Assets</h2>
 
-        <img src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning" class="xlarge-margin-y medium-margin-top" width="200">
+<section>
+<h3 id="logo">Logo</h3>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png"</span> /&gt;</span></code></pre></div><div class="callout">
+  <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" width="200" class="large-margin" />
+</div>
+</section>
 
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png"</span>&gt;</span>
-</code></pre></div>
-      </section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<hr class="xlarge-margin-top xlarge-margin-bottom">
 
-      <section id="headers">
+<h2 id="typography">Typography</h2>
 
-        <h2>Headers</h2>
-        <p>Search engines use the headings to index the structure and content of your web pages. Users skim your pages by its headings. It is important to use headings to show the document structure. h1 headings should be used for main headings, followed by h1 headings, then the less important h3, and so on. Don't use headings to make text big or bold.</p>
+<section>
+<h3 id="headers">Headers</h3>
+<p>Since search engines use headers to index structure and content, and users skim content by its headers, it&#39;s important to use headers semantically. <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> elements represent six levels of hierarchy, <code>&lt;h1&gt;</code> being the highest and <code>&lt;h6&gt;</code> the lowest. Avoiding using <code>&lt;h1&gt;</code> more than once on a page, and avoid skipping heading levels.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Header Level 1<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Header Level 2<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Header Level 3<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Header Level 4<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Header Level 5<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Header Level 6<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></code></pre></div><div class="callout">
+<h1>Header Level 1</h1>
+<h2>Header Level 2</h2>
+<h3>Header Level 3</h3>
+<h4>Header Level 4</h4>
+<h5>Header Level 5</h5>
+<h6>Header Level 6</h6>
+</div>
 
-<div class="code-example"><pre><code class="html"></code></pre></div>
-      </section>
+<p>Although header tags make fonts bigger and bolder, text should not be inside a header tag if it is not a heading. Header classes are used to give elements a particular header style, regardless of their tag. This allows for both semantic page structure and versatile design.</p>
+<p>For example, an <code>&lt;h2&gt;</code> may be the proper element choice, but it&#39;s relatively large by default. You can style it by adding a <code>.header-[size]</code> class.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-xxlarge"</span>&gt;</span>XXL Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-xlarge"</span>&gt;</span>XL Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-large"</span>&gt;</span>Large Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-medium"</span>&gt;</span>Medium Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-small"</span>&gt;</span>Small Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-tiny"</span>&gt;</span>Tiny Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></code></pre></div><div class="callout">
+<h5 class="header-xxlarge">XXL Heading</h5>
+<h5 class="header-xlarge">XL Heading</h5>
+<p class="header-large">Large Heading</p>
+<p class="header-medium">Medium Heading</p>
+<h1 class="header-small">Small Heading</h1>
+<h1 class="header-tiny">Tiny Heading</h1>
+</div>
+</section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<section>
+<h3 id="paragraphs">Paragraphs</h3>
+</section>
 
-      <section id="paragraphs">
-        <h2>Paragraphs</h2>
-      </section>
+<section>
+<h3 id="lead-paragraph">Lead Paragraph</h3>
+</section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<section>
+<h3 id="links">Links</h3>
+</section>
 
-      <section id="links">
-        <h2>Links</h2>
-      </section>
+<section>
+<h3 id="dividers">Dividers</h3>
+</section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<section>
+<h3 id="unordered-lists">Unordered Lists</h3>
+</section>
 
-      <section id="dividers">
-        <h2>Dividers</h2>
-      </section>
+<section>
+<h3 id="ordered-lists">Ordered Lists</h3>
+</section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<section>
+<h3 id="definition-lists">Definition Lists</h3>
+</section>
 
-      <section id="unordered-lists">
-        <h2>Unordered Lists</h2>
-      </section>
+<section>
+<h3 id="blockquotes">Blockquotes</h3>
+</section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<section>
+<h3 id="abbreviations">Abbreviations</h3>
+</section>
 
-      <section id="ordered-lists">
-        <h2>Ordered Lists</h2>
-      </section>
+<section>
+<h3 id="code">Code</h3>
+</section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<section>
+<h3 id="keystrokes">Keystrokes</h3>
+</section>
 
-      <section id="definition-lists">
-        <h2>Definition Lists</h2>
-      </section>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
+<hr class="xlarge-margin-top xlarge-margin-bottom">
 
-      <section id="blockquotes">
-        <h2>Blockquotes</h2>
-      </section>
+<h2 id="color">Color</h2>
 
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
-
-      <section id="abbreviations">
-        <h2>Abbreviations</h2>
-      </section>
-
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
-
-      <section id="code">
-        <h2>Code</h2>
-      </section>
-
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
-
-      <section id="keystrokes">
-        <h2>Keystrokes</h2>
-      </section>
-
-      <hr class="xlarge-margin-top xlarge-margin-bottom">
-
-      <section id="site-header">
-        <h2>Site Header</h2>
-
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"site-header"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"banner"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://planninglabs.nyc/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"labs-beta-notice hide-for-print"</span>&gt;</span>A beta project of NYC Planning Labs<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x grid-padding-x"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"branding cell medium-auto shrink"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www1.nyc.gov/site/planning/index.page"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dcp-link"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dcp-logo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"site-title"</span>&gt;</span>Product <span class="hljs-tag">&lt;<span class="hljs-title">small</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"site-subtitle show-for-medium"</span>&gt;</span>Description of Product<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"cell auto hide-for-medium text-right"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"responsive-nav-toggler hide-for-print"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"cell medium-shrink responsive show-for-medium hide-for-print"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu vertical medium-horizontal"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"external-nav-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:email@example.org"</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
-</code></pre></div>        <header class="site-header" role="banner">
-          <a href="https://planninglabs.nyc/" class="labs-beta-notice hide-for-print">A beta project of NYC Planning Labs</a>
-          <div class="grid-x grid-padding-x">
-            <div class="branding cell large-auto shrink">
-              <a href="http://www1.nyc.gov/site/planning/index.page" class="dcp-link"><img src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning" class="dcp-logo"></a>
-              <a class="site-title">Product <small class="site-subtitle show-for-large">Description of Product</small></a>
-            </div>
-
-            <div class="cell auto hide-for-large text-right">
-              <button class="responsive-nav-toggler hide-for-print" data-toggle="responsive-nav">Menu</button>
-            </div>
-
-            <nav role="navigation" id="responsive-nav" class="cell large-shrink responsive show-for-large hide-for-print" data-toggler=".show-for-large">
-              <ul class="menu vertical large-horizontal">
-                <li><a href="/">One</a></li>
-                <li><a href="/">Two</a></li>
-                <li class="external-nav-item"><a href="mailto:email@example.org">Email</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-
-      </section>
-
+<section>
+<h3 id="brand-colors">Brand Colors</h3>
+<div class="grid-x grid-margin-x small-up-2 large-up-4">
+  <div class="cell">
+    <div class="color-block">
+      <div style="background: #d96b27" class="large-padding"></div>
+      <code>$dcp-orange</code> <code>#d96b27</code>
     </div>
-
-    <div class="medium-4 large-3 cell medium-order-1">
-      <ul class="no-bullet">
-        <li>
-          <span class="small-margin-bottom header-medium display-block">Assets</span>
-          <ul class="medium-margin-bottom">
-            <li>Logo</li>
-          </ul>
-        </li>
-        <li>
-          <span class="small-margin-bottom header-medium display-block">Typography</span>
-          <ul class="medium-margin-bottom">
-            <li>Headers</li>
-            <li>Paragraphs</li>
-            <li>Links</li>
-            <li>Dividers</li>
-            <li>Unordered Lists</li>
-            <li>Ordered Lists</li>
-            <li>Definition Lists</li>
-            <li>Blockquotes</li>
-            <li>Abbreviations</li>
-            <li>Code</li>
-            <li>Keystrokes</li>
-          </ul>
-        </li>
-        <li>
-          <span class="small-margin-bottom header-medium display-block">Typography Helper Classes</span>
-          <ul class="medium-margin-bottom">
-            <li>Text Alignment</li>
-            <li>Lead Paragraph</li>
-            <li>Un-bulleted List</li>
-            <li>Typescale</li>
-          </ul>
-        </li>
-
-        <li>Button</li>
-        <li>Close Button</li>
-
-        <li>Tables</li>
-        <li>Grid</li>
-
-        <li>Accessibility: Text vs. Images</li>
-        <li>Accessibility: Contrast</li>
-        <li>Accessibility: Font Size</li>
-        <li>Accessibility: Show/Hide for Screen Readers</li>
-        <li>Accessibility: Skip Links</li>
-
-        <li>Print Style Classes</li>
-        <li>Visibility Classes</li>
-
-        <li>Badge</li>
-        <li>Label</li>
-
-        <li>Switch</li>
-        <li>Tooltip</li>
-
-        <!-- <li>Abide</li> -->
-        <!-- <li>Accordion</li> -->
-        <!-- <li>Accordion Menu</li> -->
-        <li>Breadcrumbs</li>
-        <li>Callout</li>
-        <li>Drilldown Menu</li>
-        <li>Dropdown Menu</li>
-        <li>Dropdown Pane</li>
-        <li>Equalizer</li>
-        <li>Responsive Embed</li>
-        <li>Float Classes</li>
-        <li>Forms</li>
-        <!-- <li>Interchange</li> -->
-        <li>Magellan</li>
-        <li>Media Object</li>
-        <li>Menu</li>
-        <li>Off-canvas</li>
-        <!-- <li>Orbit</li> -->
-        <li>Pagination</li>
-        <li>Progress Bar</li>
-        <li>Responsive Menu</li>
-        <li>Responsive Toggle</li>
-        <li>Reveal</li>
-        <li>Slider</li>
-        <li>Sticky</li>
-        <li>Tabs</li>
-        <li>Thumbnail</li>
-        <li>Title Bar</li>
-        <li>Toggler</li>
-        <li>Top Bar</li>
-      </ul>
+  </div>
+  <div class="cell">
+    <div class="color-block">
+      <div style="background: #ae561f" class="large-padding"></div>
+      <code>$a11y-orange</code> <code>#ae561f</code>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="color-block">
+      <div style="background: #ffc861" class="large-padding"></div>
+      <code>$dcp-yellow</code> <code>#ffc861</code>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="color-block">
+      <div style="background: #ffeec1" class="large-padding"></div>
+      <code>$a11y-yellow</code> <code>#ffeec1</code>
     </div>
   </div>
 </div>
+</section>
 
+<section>
+  <h3>Site Header</h3>
+
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"site-header"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"banner"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://planninglabs.nyc/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"labs-beta-notice hide-for-print"</span>&gt;</span>A beta project of NYC Planning Labs<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"grid-x grid-padding-x"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"branding cell medium-auto shrink"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://www1.nyc.gov/site/planning/index.page"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dcp-link"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"dcp-logo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"site-title"</span>&gt;</span>Product <span class="hljs-tag">&lt;<span class="hljs-title">small</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"site-subtitle show-for-medium"</span>&gt;</span>Description of Product<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"cell auto hide-for-medium text-right"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"responsive-nav-toggler hide-for-print"</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"navigation"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"cell medium-shrink responsive show-for-medium hide-for-print"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"menu vertical medium-horizontal"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"external-nav-item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:email@example.org"</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+</code></pre></div>  <header class="site-header" role="banner">
+    <a href="https://planninglabs.nyc/" class="labs-beta-notice hide-for-print">A beta project of NYC Planning Labs</a>
+    <div class="grid-x grid-padding-x">
+      <div class="branding cell large-auto shrink">
+        <a href="http://www1.nyc.gov/site/planning/index.page" class="dcp-link"><img src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" alt="NYC Planning" class="dcp-logo"></a>
+        <a class="site-title">Product <small class="site-subtitle show-for-large">Description of Product</small></a>
+      </div>
+
+      <div class="cell auto hide-for-large text-right">
+        <button class="responsive-nav-toggler hide-for-print" data-toggle="responsive-nav">Menu</button>
+      </div>
+
+      <nav role="navigation" id="responsive-nav" class="cell large-shrink responsive show-for-large hide-for-print" data-toggler=".show-for-large">
+        <ul class="menu vertical large-horizontal">
+          <li><a href="/">One</a></li>
+          <li><a href="/">Two</a></li>
+          <li class="external-nav-item"><a href="mailto:email@example.org">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+</section>
+
+        </div>
+        <div class="medium-4 large-3 cell medium-order-1" data-sticky-container>
+          <div class="sticky large-padding-top large-padding-bottom" data-sticky data-margin-top="0" data-anchor="main-content">
+            <ul class="no-bullet" data-smooth-scroll data-animation-easing="swing">
+              <li>
+                <a href="#assets" class="small-margin-bottom header-small display-inline-block text-black">Assets</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#logo">Logo</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#typography" class="small-margin-bottom header-small display-inline-block text-black">Typography</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#headers">Headers</a></li>
+                  <li><a href="#paragraphs">Paragraphs</a></li>
+                  <li><a href="#lead-paragraph">Lead Paragraph</a></li>
+                  <li><a href="#links">Links</a></li>
+                  <li><a href="#dividers">Dividers</a></li>
+                  <li><a href="#unordered-lists">Unordered Lists</a></li>
+                  <li><a href="#ordered-lists">Ordered Lists</a></li>
+                  <li><a href="#un-bulleted-lists">Un-bulleted Lists</a></li>
+                  <li><a href="#definition-lists">Definition Lists</a></li>
+                  <li><a href="#blockquotes">Blockquotes</a></li>
+                  <li><a href="#abbreviations">Abbreviations</a></li>
+                  <li><a href="#code">Code</a></li>
+                  <li><a href="#keystrokes">Keystrokes</a></li>
+                  <li><a href="#text-alignment">Text Alignment</a></li>
+                  <li><a href="#badge">Badge</a></li>
+                  <li><a href="#label">Label</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#color" class="small-margin-bottom header-small display-inline-block text-black">Color</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#brand-colors">Brand Colors</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#forms" class="small-margin-bottom header-small display-inline-block text-black">Forms</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#text-inputs">Text Inputs</a></li>
+                  <li><a href="#number-inputs">Number Inputs</a></li>
+                  <li><a href="#text-areas">Text Areas</a></li>
+                  <li><a href="#select-menus">Select Menus</a></li>
+                  <li><a href="#checkboxes-andamp-radio-buttons">Checkboxes &amp; Radio Buttons</a></li>
+                  <li><a href="#file-upload">File Upload</a></li>
+                  <li><a href="#labels">Labels</a></li>
+                  <li><a href="#fieldset">Fieldset</a></li>
+                  <li><a href="#help-text">Help Text</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#accessibility" class="small-margin-bottom header-small display-inline-block text-black">Accessibility</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#text-vs.-images">Text vs. Images</a></li>
+                  <li><a href="#contrast">Contrast</a></li>
+                  <li><a href="#font-size">Font Size</a></li>
+                  <li><a href="#screen-readers">Screen Readers</a></li>
+                  <li><a href="#skip-links">Skip Links</a></li>
+                  <li><a href="#custom-form-controls">Custom Form Controls</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#layout" class="small-margin-bottom header-small display-inline-block text-black">Layout</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#tables">Tables</a></li>
+                  <li><a href="#grid">Grid</a></li>
+                  <li><a href="#visibility">Visibility</a></li>
+                  <li><a href="#print-styles">Print Styles</a></li>
+                  <li><a href="#float-classes">Float Classes</a></li>
+                  <li><a href="#sticky">Sticky</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#navigation" class="small-margin-bottom header-small display-inline-block text-black">Navigation</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#button">Button</a></li>
+                  <li><a href="#close-button">Close Button</a></li>
+                  <li><a href="#responsive-menu">Responsive Menu</a></li>
+                  <li><a href="#drilldown-menu">Drilldown Menu</a></li>
+                  <li><a href="#dropdown-menu">Dropdown Menu</a></li>
+                  <li><a href="#dropdown-pane">Dropdown Pane</a></li>
+                  <li><a href="#menu">Menu</a></li>
+                  <li><a href="#pagination">Pagination</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#components" class="small-margin-bottom header-small display-inline-block text-black">Components</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#switch">Switch</a></li>
+                  <li><a href="#tooltip">Tooltip</a></li>
+                  <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                  <li><a href="#callout">Callout</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#media" class="small-margin-bottom header-small display-inline-block text-black">Media</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#responsive-embed">Responsive Embed</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <script src="assets/js/app.js"></script>
   </body>
