@@ -1,7 +1,6 @@
 <section>
+{{{headerify 'h3' 'Headers'}}}
 {{#markdown}}
-### Headers
-
 Since search engines use headers to index structure and content, and users skim content by its headers, it's important to use headers semantically. `<h1>` through `<h6>` elements represent six levels of hierarchy, `<h1>` being the highest and `<h6>` the lowest. Avoiding using `<h1>` more than once on a page, and avoid skipping heading levels.
 
 ``` html
@@ -21,9 +20,11 @@ Since search engines use headers to index structure and content, and users skim 
 <h6>Header Level 6</h6>
 </div>
 
+#### Header classes
+
 Although header tags make fonts bigger and bolder, text should not be inside a header tag if it is not a heading. Header classes are used to give elements a particular header style, regardless of their tag. This allows for both semantic page structure and versatile design.
 
-For example, an `<h2>` may be the proper element choice, but it's relatively large by default. You can style it by adding a `.header-[size]` class.
+For example, an `<h2>` may be the proper element choice, but it's relatively large by default. You can style it smaller by adding a `.header-[size]` class.
 
 ``` html
 <h5 class="header-xxlarge">XXL Heading</h5>

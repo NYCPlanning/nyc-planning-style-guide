@@ -41,20 +41,20 @@ button {
 //
 // Typography helper classes
 // --------------------------------------------------
+.font-default { font-family: $body-font-family; }
+.font-mono { font-family: $font-family-monospace; }
+
 .nowrap,
 .no-wrap {
   white-space: nowrap;
 }
 
-.text-small {
-  font-size: rem-calc(13);
-  line-height: 1.7;
-}
-
-.text-tiny {
-  font-size: rem-calc(10);
-  line-height: 1.5;
-}
+.text-xxlarge { font-size: rem-calc(34); }
+.text-xlarge { font-size: rem-calc(25); }
+.text-large { font-size: rem-calc(20); }
+.text-medium { font-size: 1rem; }
+.text-small { font-size: rem-calc(13); }
+.text-tiny { font-size: rem-calc(10); }
 
 .text-weight-normal {
   font-weight: $global-weight-normal;
@@ -62,6 +62,25 @@ button {
 
 .text-weight-bold {
   font-weight: $global-weight-bold;
+}
+
+
+//
+// Blockquotes
+// --------------------------------------------------
+blockquote {
+
+  cite {
+    opacity: 0.75;
+  }
+}
+
+
+//
+// Lists
+// --------------------------------------------------
+dd + dt {
+  margin-top: $defnlist-term-margin-bottom;
 }
 
 

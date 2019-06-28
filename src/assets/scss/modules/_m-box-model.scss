@@ -81,6 +81,18 @@
   margin-left: $global-margin*3 !important;
 }
 
+// Auto margin for right/left
+.auto-margin {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.auto-margin-right {
+  margin-right: auto !important;
+}
+.auto-margin-left {
+  margin-left: auto !important;
+}
+
 // Margin for individual sides
 $sides: top right bottom left;
 @each $side in $sides {

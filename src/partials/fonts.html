@@ -1,0 +1,32 @@
+<section>
+{{{headerify 'h3' 'Fonts'}}}
+{{#markdown}}
+NYC Planning products use a system font stack. This ensures that UIs are optimized to be highly legible, boosts performance, and are frictionless as you move between our products and the rest of the operating system. One exception to system fonts is when displaying `code`. In this case, you should use the monospace font stack.
+
+Use the `.font-default` and `.font-mono` classes to explicitly set the font for a particular element. These classes can be used to override the font inherited from a parent element. But be aware that further nested elements may inherit their font from these classes.
+
+``` css
+// Sans-serif font stack
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+```
+
+``` css
+// Monospaced font stack
+font-family: Consolas, 'Liberation Mono', Courier, monospace;
+```
+
+#### Font size
+
+The default font size of the `<body>` element is set to `100%`, which is 16 pixels on most browsers. This ensures compatibility with browser-based text zoom and preferences set by the user. Explicit font sizes should be set with relative units, preferably `rem`. Setting the font size with `px` can break browser zoom functionality.
+
+<table>
+  <tr><td>`.xxlarge`</td><td>`rem` (typically 34 pixels).</td><td class="text-xxlarge">This is giant.</td></tr>
+  <tr><td>`.xlarge`</td><td>`rem` (typically 25 pixels).</td><td class="text-xlarge">This is really big.</td></tr>
+  <tr><td>`.large`</td><td>`rem` (typically 20 pixels).</td><td class="text-large">This is larger than average.</td></tr>
+  <tr><td>`.medium`</td><td>`1rem` (typically 16 pixels).</td><td class="text-medium">This is medium (default size).</td></tr>
+  <tr><td>`.small`</td><td>`rem` (typically 13 pixels).</td><td class="text-small">This is small. Make sure it's accessible.</td></tr>
+  <tr><td>`.tiny`</td><td>`rem` (typically 10 pixels).</td><td class="text-tiny">Be careful using text this tiny. ALL CAPS HELPS.</td></tr>
+</table>
+
+{{/markdown}}
+</section>

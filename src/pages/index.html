@@ -9,9 +9,10 @@ sections:
   - title: Typography
     slug: typography
     items:
-      - Headers
+      - Type Basics
+      - Fonts
       - Paragraphs
-      - 'Lead Paragraph'
+      - Headers
       - Links
       - Dividers
       - 'Unordered Lists'
@@ -23,13 +24,13 @@ sections:
       - Code
       - Keystrokes
       - 'Text Alignment'
-      - Badge
-      - Label
+      - Badges
+      - Labels
 
   - title: Color
     slug: color
     items:
-      - 'Brand Colors'
+      - 'Color Palettes'
 
   - title: Forms
     slug: forms
@@ -79,6 +80,7 @@ sections:
   - title: Components
     slug: components
     items:
+      - Site Header
       - Switch
       - Tooltip
       - Breadcrumbs
@@ -91,37 +93,46 @@ sections:
 
 ---
 
-<p class="lead">Overview / Description...</p>
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
-<h2 id="assets">Assets</h2>
+<h2 id="assets" class="xlarge-margin-bottom">{{{anchorify 'Assets'}}}</h2>
 {{> logo}}
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
-<h2 id="typography">Typography</h2>
-{{> headers}}
+<h2 id="typography" class="xlarge-margin-bottom">{{{anchorify 'Typography'}}}</h2>
+{{> type-basics}}
+{{> fonts}}
 {{> paragraphs}}
-{{> lead}}
+{{> headers}}
 {{> links}}
 {{> dividers}}
-{{> unordered-lists}}
-{{> ordered-lists}}
-{{> un-bulleted-lists}}
-{{> definition-lists}}
+{{> lists}}
 {{> blockquotes}}
 {{> abbreviations}}
 {{> code}}
 {{> keystrokes}}
 {{> text-alignment}}
-{{> badge}}
-{{> label}}
+{{> badges}}
+{{> labels}}
+
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
-<h2 id="color">Color</h2>
-{{> brand-colors}}
+<h2 id="color" class="xlarge-margin-bottom">{{{anchorify 'Color'}}}</h2>
+{{> color-palettes}}
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+
+<h2 id="layout" class="xlarge-margin-bottom">{{{anchorify 'Layout'}}}</h2>
+use relative units
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+
+<h2 id="components" class="xlarge-margin-bottom">{{{anchorify 'Components'}}}</h2>
 {{> site-header}}
 
 <!--

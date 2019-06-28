@@ -1,0 +1,63 @@
+<section>
+{{{headerify 'h3' 'Links'}}}
+{{#markdown}}
+Inline text links are styled as orange text, as orange implies clickability in NYC Planning products. For more information on indicating clickability in the UI, go to the <a href="#color" data-smooth-scroll>Color</a> section.
+
+``` html
+<a href="url">link text</a>
+```
+<div class="callout">
+  <a href="http://nyc.gov/planning">link text</a>
+</div>
+
+#### Never tell users to click here!
+
+There are two reasons why links should never say <a>click here</a>:
+
+1. "Click" puts too much focus on mouse mechanics. People know what links are and how to use a mouse. Telling them to click is unnecessary, diminishes their experience, and can be even demeaning (they may be using a touch device or assistive technology).
+
+2. "Here" conceals the content that they are clicking on. You shouldn't have to read a paragraph to understand a link's context. When links communicate more than "here," you can easily scan content to find the link you're looking for.
+
+<div class="grid-x grid-margin-x medium-up-2">
+  <div class="cell">
+    <div class="callout">
+      <b><i class="fas fa-ban fa-fw fuchsia"></i> Bad:</b>
+      <p>To learn more about ZoLa, <a>click here</a>.</p>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="callout">
+      <b><i class="fas fa-check fa-fw green-dark"></i> Good:</b>
+      <p>Learn more about <a>ZoLa</a>.</p>
+    </div>
+  </div>
+</div>
+
+Here are some tips for writing proper links:
+
+- Links should provide information when read out of context
+- Do not talk about mechanics (clicking)
+- A link should be the subject of its sentence (avoid linking verb phrases)
+- Placing links at the end of sentences can help users to act more quickly
+- When linking to documents, include the filetype in the link text — e.g. <a>Important File <small>(PDF)</small></a>
+
+_Note: Proper link text also has the benefit of being more SEO-friendly._
+
+#### The target attribute
+
+The target attribute can be used to open a linked document in a new window. This should be used sparingly. Avoid opening new windows for internal links.
+
+``` html
+<a href="url" target="_blank">link text</a>
+```
+<div class="callout">
+  <a href="http://nyc.gov/planning" target="_blank">link text</a>
+</div>
+
+#### External links
+
+When linking to external websites and documents, use an icon that indicates to the user that they will be leaving the current website. For example: “Follow <a href="https://github.com/NYCPlanning/">NYC Planning <i class="fas fa-external-link-alt"></i></a> on GitHub.” For more information on adding icons, go to the <a href="#font-awesome" data-smooth-scroll>Font Awesome</a> section. 
+
+
+{{/markdown}}
+</section>

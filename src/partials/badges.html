@@ -1,0 +1,31 @@
+<section>
+{{{headerify 'h3' 'Badges'}}}
+{{#markdown}}
+Add the `.badge` class to an element to create a badge, which is useful for indicating out number of items.
+```
+<strong aria-describedby="messageCount">Unread Messages</strong>
+<span class="badge" id="messageCount">1</span>
+```
+<div class="callout">
+  <strong aria-describedby="messageCount">Unread Messages</strong>
+  <span class="badge" id="messageCount">1</span>
+</div>
+
+Use color classes to change the color of badges. Be sure to [check the contrast](https://webaim.org/resources/contrastchecker/) when choosing colors.
+```
+<span class="badge bg-yellow-light a11y-orange">1</span>
+<span class="badge bg-chartreuse-dark">2</span>
+<span class="badge bg-silver black">3</span>
+<span class="badge bg-fuchsia">45</span>
+```
+<div class="callout">
+  <span class="badge bg-yellow-light a11y-orange">1</span>
+  <span class="badge bg-chartreuse-dark">2</span>
+  <span class="badge bg-silver black">3</span>
+  <span class="badge bg-fuchsia">45</span>
+</div>
+
+_Note: Badges are not good for large numbers, as the circle stretches to an oval:_ <span class="badge">525,600</span>
+
+{{/markdown}}
+</section>

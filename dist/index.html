@@ -5,9 +5,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>NYC Planning Digital Style Guide</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/app.css">
     <style>
+      .header-logo {
+        max-height: 4.5rem;
+      }
       .code-example code {
         display: block;
         padding: 1rem;
@@ -26,14 +30,28 @@
         padding-top: 3rem;
         border-top: 1px solid #d3d5d9;
       }
+      section h4 {
+        margin-top: 1.5rem;
+      }
+      .callout.clear {
+        background-color: transparent;
+        border-color: transparent;
+      }
     </style>
   </head>
   <body>
 
-    <header class="xlarge-padding-top xlarge-padding-bottom bg-white-smoke">
+    <header class="xlarge-padding-top large-padding-bottom bg-white-smoke">
       <div class="grid-container">
-        <h1 class="no-margin">NYC Planning Digital Style Guide</h1>
-        <p class="no-margin">CSS, Code Snippets, &amp; Assets</p>
+        <div class="grid-x text-center medium-text-left">
+          <div class="cell medium-shrink">
+            <img class="header-logo medium-margin-right medium-margin-bottom" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" alt="NYC Planning" />
+          </div>
+          <div class="cell medium-auto">
+            <h1 class="no-margin">Digital Style Guide</h1>
+            <p class="medium-margin-bottom">CSS, Code Snippets, &amp; Assets</p>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -41,23 +59,175 @@
       <div class="grid-x grid-margin-x">
         <div class="medium-8 large-9 cell medium-order-2 large-padding-top large-padding-bottom">
 
-<p class="lead">Overview / Description...</p>
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
-<h2 id="assets">Assets</h2>
+<h2 id="assets" class="xlarge-margin-bottom">Assets <sup><a href="#assets" class="silver"><i class="fas fa-link"></i></a></sup></h2>
 <section>
-<h3 id="logo">Logo</h3>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png"</span> /&gt;</span></code></pre></div><div class="callout">
-  <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/logo/master/dcp_logo_772.png" width="200" class="large-margin" />
+<h3 id="logo">Logo <sup><a href="#logo" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+
+<p>The NYC Planning logo should be used consistently to foster brand awareness.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png"</span> /&gt;</span></code></pre></div><div class="callout xlarge-padding">
+  <img alt="NYC Planning" style="width:350px;" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
 </div>
+
+<h4 id="color-variations">Color variations</h4>
+<p>The two-color, primary version of logo should be used for most instances. Alternate black and white versions are provided for instances where the primary logo is less legible — e.g. a background makes the orange or black in the logo hard to read.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-comment">&lt;!-- Primary, two-color logo --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png"</span> /&gt;</span>
+
+<span class="hljs-comment">&lt;!-- White logo --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_white_772.png"</span> /&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Black logo --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"NYC Planning"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_black_772.png"</span> /&gt;</span></code></pre></div><div class="grid-x grid-margin-x large-up-3">
+  <div class="cell">
+    <div class="callout large-padding">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+    </div>
+    <p class="text-small">Use the two-color version of the logo whenever possible</p>
+  </div>
+  <div class="cell">
+    <div class="callout large-padding bg-a11y-orange">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_white_772.png" />
+    </div>
+    <p class="text-small">Use the white version of the logo on dark&nbsp;backgrounds</p>
+  </div>
+  <div class="cell">
+    <div class="callout large-padding bg-dcp-yellow">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_black_772.png" />
+    </div>
+    <p class="text-small">Use the black version of the logo on light&nbsp;backgrounds</p>
+  </div>
+</div>
+
+<h4 id="clearspace">Clearspace</h4>
+<div class="grid-x grid-margin-x">
+  <div class="cell large-4">
+    <div class="callout clear" style="padding:8%; position:relative;">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+      <div style="background:rgba(255,0,0,0.2); position:absolute; top:0; right:0; bottom:auto; left:0; padding-top:8%;"></div>
+      <div style="background:rgba(255,0,0,0.2); position:absolute; top:0; right:0; bottom:0; left:auto; padding-right:8%;"></div>
+      <div style="background:rgba(255,0,0,0.2); position:absolute; top:auto; right:0; bottom:0; left:0; padding-bottom:8%;"></div>
+      <div style="background:rgba(255,0,0,0.2); position:absolute; top:0; right:auto; bottom:0; left:0; padding-left:8%;"></div>
+    </div>
+  </div>
+  <div class="cell large-auto">
+    <p>It&#39;s important to maintain enough space around the logo, allowing it to stand out and ensuring that it&#39;s easily identifiable.</p>
+    <p>Please don’t put anything in this red zone—which is approximately 8% of the height of the logo, or about the size of the square in the middle of the C.</p>
+  </div>
+</div>
+
+<h4 id="logo-don-ts">Logo don&#39;ts</h4>
+<div class="grid-x grid-margin-x large-up-4">
+  <div class="cell">
+    <div class="callout large-padding bg-green-muted">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not place the two-color logo on colorful backgrounds</p>
+  </div>
+  <div class="cell">
+    <div class="callout large-padding" style="background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not place the logo on backgrounds that make it difficult to read</p>
+  </div>
+  <div class="cell">
+    <div class="callout clear large-padding">
+      <img style="transform:scale(0.2)" alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not shrink the logo smaller than 50px minimum width</p>
+  </div>
+  <div class="cell">
+    <div class="callout large-padding">
+      <img style="mix-blend-mode:hard-light;" alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not change the color of the logo</p>
+  </div>
+  <div class="cell">
+    <div class="callout clear large-padding">
+      <img style="filter:blur(2px);" alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not use a blurry or low-resolution version of the logo</p>
+  </div>
+  <div class="cell">
+    <div class="callout clear large-padding">
+      <img style="transform:rotate(-45deg);" alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not rotate the logo</p>
+  </div>
+  <div class="cell">
+    <div class="callout bg-white-smoke large-padding">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_black_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not use the black logo when the primary logo would read well</p>
+  </div>
+  <div class="cell">
+    <div class="callout bg-orange-light large-padding">
+      <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_white_772.png" />
+    </div>
+    <p class="text-small"><i class="fas fa-ban fuchsia"></i> Do not use the white logo on light colored backgrounds</p>
+  </div>
+</div>
+
+
 </section>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
-<h2 id="typography">Typography</h2>
+<h2 id="typography" class="xlarge-margin-bottom">Typography <sup><a href="#typography" class="silver"><i class="fas fa-link"></i></a></sup></h2>
 <section>
-<h3 id="headers">Headers</h3>
+<h3 id="type-basics">Type basics <sup><a href="#type-basics" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Be consistant and stick to logical hierarchies to ensure that UI elements are clear and easily recognizable when scanning the page.</p>
+<ul>
+<li>Avoid using too many font styles</li>
+<li>Size type with <a href="https://www.w3schools.com/cssref/css_units.asp">relative units</a> (<code>rem</code>)</li>
+<li>Check how your type flows at various screen sizes</li>
+</ul>
+<h4 id="inline-formatting">Inline formatting</h4>
+<ul>
+<li>Use <code>&lt;b&gt;</code> for <strong>bold</strong> text, without any extra importance</li>
+<li>Use <code>&lt;strong&gt;</code> for <strong>bold</strong> text, with added semantic &quot;strong&quot; importance</li>
+<li>Use <code>&lt;i&gt;</code> for <em>italic</em> text, without any extra importance</li>
+<li>Use <code>&lt;em&gt;</code> for <em>italicize</em> text, with added semantic importance</li>
+<li>Use <code>&lt;small&gt;</code> for <small>smaller</small> text</li>
+<li>Use <code>&lt;mark&gt;</code> for <mark>marked</mark> or <mark>highlighted</mark> text</li>
+<li>Use <code>&lt;del&gt;</code> for <del>deleted</del> (removed) text</li>
+<li>Use <code>&lt;ins&gt;</code> for <ins>inserted</ins> (added) text</li>
+<li>Use <code>&lt;sub&gt;</code> for <sub>subscripted</sub> text</li>
+<li>Use <code>&lt;sup&gt;</code> for <sup>superscripted</sup> text</li>
+</ul>
+</section>
+<section>
+<h3 id="fonts">Fonts <sup><a href="#fonts" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>NYC Planning products use a system font stack. This ensures that UIs are optimized to be highly legible, boosts performance, and are frictionless as you move between our products and the rest of the operating system. One exception to system fonts is when displaying <code>code</code>. In this case, you should use the monospace font stack.</p>
+<p>Use the <code>.font-default</code> and <code>.font-mono</code> classes to explicitly set the font for a particular element. These classes can be used to override the font inherited from a parent element. But be aware that further nested elements may inherit their font from these classes.</p>
+<div class="code-example"><pre><code class="css">// Sans-serif font stack
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;</code></pre></div><div class="code-example"><pre><code class="css">// Monospaced font stack
+font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div><h4 id="font-size">Font size</h4>
+<p>The default font size of the <code>&lt;body&gt;</code> element is set to <code>100%</code>, which is 16 pixels on most browsers. This ensures compatibility with browser-based text zoom and preferences set by the user. Explicit font sizes should be set with relative units, preferably <code>rem</code>. Setting the font size with <code>px</code> can break browser zoom functionality.</p>
+<table>
+  <tr><td><code>.xxlarge</code></td><td><code>rem</code> (typically 34 pixels).</td><td class="text-xxlarge">This is giant.</td></tr>
+  <tr><td><code>.xlarge</code></td><td><code>rem</code> (typically 25 pixels).</td><td class="text-xlarge">This is really big.</td></tr>
+  <tr><td><code>.large</code></td><td><code>rem</code> (typically 20 pixels).</td><td class="text-large">This is larger than average.</td></tr>
+  <tr><td><code>.medium</code></td><td><code>1rem</code> (typically 16 pixels).</td><td class="text-medium">This is medium (default size).</td></tr>
+  <tr><td><code>.small</code></td><td><code>rem</code> (typically 13 pixels).</td><td class="text-small">This is small. Make sure it&#39;s accessible.</td></tr>
+  <tr><td><code>.tiny</code></td><td><code>rem</code> (typically 10 pixels).</td><td class="text-tiny">Be careful using text this tiny. ALL CAPS HELPS.</td></tr>
+</table>
+
+</section>
+<section>
+<h3 id="paragraphs">Paragraphs <sup><a href="#paragraphs" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Paragraphs inherit the font size of their containing element, which defaults to <code>1rem</code>/<code>16px</code> inherited from the body element. Paragraphs are styled with <code>line-height: 1.6</code> and <code>margin-bottom: 1rem</code> for a vertical rhythm that&#39;s easy to read.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This is a paragraph...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><h4 id="line-length">Line length</h4>
+<p>Wide lines of text are difficult to read and make it harder for people to focus. While there&#39;s no perfect line length, a good goal fewer than 120 characters per line (including spaces). It&#39;s good practice to use responsive design techniques to create layouts with optimal line lengths.</p>
+<h4 id="lead-paragraphs">Lead paragraphs</h4>
+<p class="lead">This is lead paragraph. It&#39;s larger than a regular paragraph, which makes it noticeably stand out. If you add <code>class=&quot;lead&quot;</code> to a paragraph you&#39;ll make it a lead paragraph.</p>
+
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lead"</span>&gt;</span>This is lead paragraph...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div></section>
+<section>
+<h3 id="headers">Headers <sup><a href="#headers" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>Since search engines use headers to index structure and content, and users skim content by its headers, it&#39;s important to use headers semantically. <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> elements represent six levels of hierarchy, <code>&lt;h1&gt;</code> being the highest and <code>&lt;h6&gt;</code> the lowest. Avoiding using <code>&lt;h1&gt;</code> more than once on a page, and avoid skipping heading levels.</p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Header Level 1<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Header Level 2<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
@@ -73,8 +243,9 @@
 <h6>Header Level 6</h6>
 </div>
 
+<h4 id="header-classes">Header classes</h4>
 <p>Although header tags make fonts bigger and bolder, text should not be inside a header tag if it is not a heading. Header classes are used to give elements a particular header style, regardless of their tag. This allows for both semantic page structure and versatile design.</p>
-<p>For example, an <code>&lt;h2&gt;</code> may be the proper element choice, but it&#39;s relatively large by default. You can style it by adding a <code>.header-[size]</code> class.</p>
+<p>For example, an <code>&lt;h2&gt;</code> may be the proper element choice, but it&#39;s relatively large by default. You can style it smaller by adding a <code>.header-[size]</code> class.</p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-xxlarge"</span>&gt;</span>XXL Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-xlarge"</span>&gt;</span>XL Heading<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"header-large"</span>&gt;</span>Large Heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -90,43 +261,657 @@
 </div>
 </section>
 <section>
-<h3 id="paragraphs">Paragraphs</h3>
+<h3 id="links">Links <sup><a href="#links" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Inline text links are styled as orange text, as orange implies clickability in NYC Planning products. For more information on indicating clickability in the UI, go to the <a href="#color" data-smooth-scroll>Color</a> section.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"url"</span>&gt;</span>link text<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div><div class="callout">
+  <a href="http://nyc.gov/planning">link text</a>
+</div>
+
+<h4 id="never-tell-users-to-click-here-">Never tell users to click here!</h4>
+<p>There are two reasons why links should never say <a>click here</a>:</p>
+<ol>
+<li><p>&quot;Click&quot; puts too much focus on mouse mechanics. People know what links are and how to use a mouse. Telling them to click is unnecessary, diminishes their experience, and can be even demeaning (they may be using a touch device or assistive technology).</p>
+</li>
+<li><p>&quot;Here&quot; conceals the content that they are clicking on. You shouldn&#39;t have to read a paragraph to understand a link&#39;s context. When links communicate more than &quot;here,&quot; you can easily scan content to find the link you&#39;re looking for.</p>
+</li>
+</ol>
+<div class="grid-x grid-margin-x medium-up-2">
+  <div class="cell">
+    <div class="callout">
+      <b><i class="fas fa-ban fa-fw fuchsia"></i> Bad:</b>
+      <p>To learn more about ZoLa, <a>click here</a>.</p>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="callout">
+      <b><i class="fas fa-check fa-fw green-dark"></i> Good:</b>
+      <p>Learn more about <a>ZoLa</a>.</p>
+    </div>
+  </div>
+</div>
+
+<p>Here are some tips for writing proper links:</p>
+<ul>
+<li>Links should provide information when read out of context</li>
+<li>Do not talk about mechanics (clicking)</li>
+<li>A link should be the subject of its sentence (avoid linking verb phrases)</li>
+<li>Placing links at the end of sentences can help users to act more quickly</li>
+<li>When linking to documents, include the filetype in the link text — e.g. <a>Important File <small>(PDF)</small></a></li>
+</ul>
+<p><em>Note: Proper link text also has the benefit of being more SEO-friendly.</em></p>
+<h4 id="the-target-attribute">The target attribute</h4>
+<p>The target attribute can be used to open a linked document in a new window. This should be used sparingly. Avoid opening new windows for internal links.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"url"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span>&gt;</span>link text<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div><div class="callout">
+  <a href="http://nyc.gov/planning" target="_blank">link text</a>
+</div>
+
+<h4 id="external-links">External links</h4>
+<p>When linking to external websites and documents, use an icon that indicates to the user that they will be leaving the current website. For example: “Follow <a href="https://github.com/NYCPlanning/">NYC Planning <i class="fas fa-external-link-alt"></i></a> on GitHub.” For more information on adding icons, go to the <a href="#font-awesome" data-smooth-scroll>Font Awesome</a> section. </p>
+</section>
+<section>
+<h3 id="dividers">Dividers <sup><a href="#dividers" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Use the <code>&lt;hr&gt;</code> tag to define a thematic change in the content (a shift of topic). This creates a 1-pixel tall, gray horizontal rule that spans 100% of the width of its container.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">hr</span> /&gt;</span></code></pre></div><div class="callout">
+  <p>This is a paragraph about apples. This is a paragraph about apples. This is a paragraph about apples. This is a paragraph about apples. This is a paragraph about apples.</p>
+  <hr>
+  <p>This is a paragraph about oranges. This is a paragraph about oranges. This is a paragraph about oranges. This is a paragraph about oranges. This is a paragraph about oranges.</p>
+</div>
+
+</section>
+<section>
+<h3 id="unordered-lists">Unordered lists <sup><a href="#unordered-lists" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Use the <code>&lt;ol&gt;</code> tag to list things if the order of the items doesn&#39;t matter.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>This list item contains another list
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Another nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item with a much longer description or more content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div><div class="callout">
+<ul>
+  <li>List item</li>
+  <li>List item</li>
+  <li>This list item contains another list
+    <ul>
+      <li>Nested list item</li>
+      <li>Another nested list item</li>
+    </ul>
+  </li>
+  <li>List item with a much longer description or more content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
+</ul>
+</div>
+</section>
+
+
+<section>
+<h3 id="ordered-lists">Ordered lists <sup><a href="#ordered-lists" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>The <code>&lt;ol&gt;</code> tag defines lists with an explicit order, marked with numbers by default.</p>
+<p>The optional <code>type=&quot;[1,A,a,I,i]&quot;</code> attribute defines the type of the list item marker.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Bicycles<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Bike racks<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Bike lanes
+    <span class="hljs-tag">&lt;<span class="hljs-title">ol</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"a"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Sharrows<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Striped<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Buffered<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Protected<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ol</span>&gt;</span></code></pre></div><div class="callout">
+<ol>
+  <li>Bicycles</li>
+  <li>Bike racks</li>
+  <li>Bike lanes
+    <ol type="a">
+      <li>Sharrows</li>
+      <li>Striped</li>
+      <li>Buffered</li>
+      <li>Protected</li>
+    </ol>
+  </li>
+</ol>
+</div>
+</section>
+
+
+<section>
+<h3 id="un-bulleted-lists">Un-bulleted lists <sup><a href="#un-bulleted-lists" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>The <code>&lt;ul&gt;</code> is a bulleted list and <code>&lt;ol&gt;</code> is a numbered list by default, but you can add the class <code>.no-bullet</code> to remove the bullets or numbers. This allows lists to have semantic markup and custom styles so they do not look like lists (useful for lists such as menu items).</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"no-bullet"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Nested list item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List item<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></code></pre></div><div class="callout">
+<ul class="no-bullet">
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested list item</li>
+      <li>Nested list item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+</ul>
+</div>
+</section>
+
+
+<section>
+<h3 id="definition-lists">Definition lists <sup><a href="#definition-lists" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>The <code>&lt;dl&gt;</code> tag is used to display name-value pairs, like metadata or a dictionary definition. Each term (<code>&lt;dt&gt;</code>) is paired with one or more definitions (<code>&lt;dd&gt;</code>).</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">dl</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>Time<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dt</span>&gt;</span>Space<span class="hljs-tag">&lt;/<span class="hljs-title">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>A continuous area or expanse that is free, available, or unoccupied.<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">dd</span>&gt;</span>The dimensions of height, depth, and width within which all things exist and move.<span class="hljs-tag">&lt;/<span class="hljs-title">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">dl</span>&gt;</span></code></pre></div><div class="callout">
+<dl>
+  <dt>Time</dt>
+  <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
+  <dt>Space</dt>
+  <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
+  <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
+</dl>
+</div>
+
+</section>
+<section>
+<h3 id="blockquotes">Blockquotes <sup><a href="#blockquotes" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">blockquote</span>&gt;</span>
+  Cities have the capability of providing something for everybody, only because, and only when, they are created by everybody.
+  <span class="hljs-tag">&lt;<span class="hljs-title">cite</span>&gt;</span>Jane Jacobs<span class="hljs-tag">&lt;/<span class="hljs-title">cite</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">blockquote</span>&gt;</span></code></pre></div><div class="callout">
+<blockquote>
+  Cities have the capability of providing something for everybody, only because, and only when, they are created by everybody.
+  <cite>Jane Jacobs</cite>
+</blockquote>
+</div>
+</section>
+<section>
+<h3 id="abbreviations">Abbreviations <sup><a href="#abbreviations" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Use the <code>&lt;abbr&gt;</code> tag to annotate a shortened term. Always include a <code>title</code> attribute which clarifies the full term.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">abbr</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">"The Department of City Planning"</span>&gt;</span>DCP<span class="hljs-tag">&lt;/<span class="hljs-title">abbr</span>&gt;</span> is NYC’s primary land use agency.</code></pre></div><div class="callout">
+  <abbr title="The Department of City Planning">DCP</abbr> is NYC’s primary land use agency.
+</div>
+</section>
+<section>
+<h3 id="code">Code <sup><a href="#code" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Format references to code with the <code>&lt;code&gt;</code> tag.</p>
+<div class="code-example"><pre><code class="html">Remember to escape angle brackets: <span class="hljs-tag">&lt;<span class="hljs-title">code</span>&gt;</span>&amp;lt;div&amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-title">code</span>&gt;</span></code></pre></div><div class="callout">
+  Remember to escape angle brackets: <code>&lt;div&gt;</code>
+</div>
+</section>
+<section>
+<h3 id="keystrokes">Keystrokes <sup><a href="#keystrokes" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Use the <code>&lt;kbd&gt;</code> element to annotate a key stroke or combination.</p>
+<div class="code-example"><pre><code class="html">Press <span class="hljs-tag">&lt;<span class="hljs-title">kbd</span>&gt;</span>-<span class="hljs-tag">&lt;/<span class="hljs-title">kbd</span>&gt;</span> / <span class="hljs-tag">&lt;<span class="hljs-title">kbd</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-title">kbd</span>&gt;</span> to zoom the map.</code></pre></div><div class="callout">
+  Press <kbd>-</kbd> / <kbd>+</kbd> to zoom the map.
+</div>
+</section>
+<section>
+<h3 id="text-alignment">Text alignment <sup><a href="#text-alignment" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Change the text alignment of an element by adding <code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code> or <code>.text-justify</code>.</p>
+<p>Adding a breakpoint to the front of a text alignment class will cause it to only be applied on that size screen or larger. For example, <code>.medium-text-center</code> will keep text left-aligned on the smallest screens, but switch to center-aligned on medium screens and larger.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-left"</span>&gt;</span>This text is left-aligned. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-right"</span>&gt;</span>This text is right-aligned. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-center"</span>&gt;</span>This text is centered. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-justify"</span>&gt;</span>This text is justified. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><div class="callout">
+  <p class="text-left">This text is left-aligned. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p class="text-right">This text is right-aligned. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p class="text-center">This text is centered. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p class="text-justify">This text is justified. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+</section>
+<section>
+<h3 id="badges">Badges <sup><a href="#badges" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Add the <code>.badge</code> class to an element to create a badge, which is useful for indicating out number of items.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">aria-describedby</span>=<span class="hljs-value">"messageCount"</span>&gt;</span>Unread Messages<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"messageCount"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <strong aria-describedby="messageCount">Unread Messages</strong>
+  <span class="badge" id="messageCount">1</span>
+</div>
+
+<p>Use color classes to change the color of badges. Be sure to <a href="https://webaim.org/resources/contrastchecker/">check the contrast</a> when choosing colors.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-yellow-light a11y-orange"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-chartreuse-dark"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-silver black"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-fuchsia"</span>&gt;</span>45<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <span class="badge bg-yellow-light a11y-orange">1</span>
+  <span class="badge bg-chartreuse-dark">2</span>
+  <span class="badge bg-silver black">3</span>
+  <span class="badge bg-fuchsia">45</span>
+</div>
+
+<p><em>Note: Badges are not good for large numbers, as the circle stretches to an oval:</em> <span class="badge">525,600</span></p>
+</section>
+<section>
+<h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Labels are useful inline styles that can be used to call out metadata such as tags or when something was updated.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label"</span>&gt;</span>Updated <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <span class="label">Updated </span>
+</div>
+
+<p>Use color classes to change the color of labels.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-yellow-light a11y-orange"</span>&gt;</span>cookies<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-silver"</span>&gt;</span>bicycle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-chartreuse-dark"</span>&gt;</span>happy<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-fuchsia"</span>&gt;</span>tea kettle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <span class="label bg-yellow-light a11y-orange">cookies</span>
+  <span class="label bg-silver">bicycle</span>
+  <span class="label bg-chartreuse-dark">happy</span>
+  <span class="label bg-fuchsia">tea kettle</span>
+</div>
+</section>
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+
+<h2 id="color" class="xlarge-margin-bottom">Color <sup><a href="#color" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+<section>
+<h3 id="color-palettes">Color palettes <sup><a href="#color-palettes" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h4 id="brand-colors">Brand colors</h4>
+<div class="grid-x small-up-2 large-up-4 align-stretch medium-margin-bottom text-white font-mono text-weight-bold">
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-dcp-orange">
+    <ul class="no-bullet xlarge-padding-top">
+      <li class="text-small">#d96b27</li>
+      <li class="text-tiny">$dcp-orange</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-a11y-orange">
+    <ul class="no-bullet xlarge-padding-top">
+      <li class="text-small">#ae561f</li>
+      <li class="text-tiny">$a11y-orange</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-dcp-yellow">
+    <ul class="no-bullet xlarge-padding-top">
+      <li class="text-small">#ffc861</li>
+      <li class="text-tiny">$dcp-yellow</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-a11y-yellow">
+    <ul class="no-bullet xlarge-padding-top">
+      <li class="text-small">#ffeec1</li>
+      <li class="text-tiny">$a11y-yellow</li>
+    </ul>
+  </div>
+</div>
+
+<h4 id="grayscale-colors">Grayscale colors</h4>
+<div class="grid-x small-up-2 large-up-4 align-stretch medium-margin-bottom text-white font-mono text-weight-bold">
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-black">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-black</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-charcoal">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-charcoal</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-dark-gray">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-dark-gray</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-gray">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-gray</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-light-gray">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-light-gray</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-silver">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-silver</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-white-smoke">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-white-smoke</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-off-white">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-off-white</li>
+    </ul>
+  </div>
+  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-white">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-white</li>
+    </ul>
+  </div>
+</div>
+
+<h4 id="data-viz-colors">Data viz colors</h4>
+<div class="grid-x small-up-2 large-up-4 align-stretch medium-margin-bottom text-white font-mono text-weight-bold">
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-aqua</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-aqua-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-aqua-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-aqua-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-teal</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-teal-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-teal-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-teal-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-green</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-green-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-green-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-green-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-chartreuse</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-chartreuse-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-chartreuse-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-chartreuse-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-yellow</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-yellow-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-yellow-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-yellow-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-gold</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-gold-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-gold-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-gold-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-orange</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-orange-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-orange-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-orange-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-red</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-red-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-red-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-red-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-fuchsia</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-fuchsia-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-fuchsia-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-fuchsia-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-purple</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-purple-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-purple-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-purple-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-indigo</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-indigo-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-indigo-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-indigo-muted</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-blue</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue-light">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-blue-light</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue-dark">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-blue-dark</li>
+    </ul>
+  </div>
+  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue-muted">
+    <ul class="no-bullet">
+      <li class="text-small">#ffffff</li>
+      <li class="text-tiny">$bg-blue-muted</li>
+    </ul>
+  </div>
+</div>
+
+<h4 id="clickability">Clickability</h4>
 </section>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
-<h2 id="color">Color</h2>
+<h2 id="layout" class="xlarge-margin-bottom">Layout <sup><a href="#layout" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+use relative units
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+
+<h2 id="components" class="xlarge-margin-bottom">Components <sup><a href="#components" class="silver"><i class="fas fa-link"></i></a></sup></h2>
 <section>
-<h3 id="brand-colors">Brand Colors</h3>
-<div class="grid-x grid-margin-x small-up-2 large-up-4">
-  <div class="cell">
-    <div class="color-block">
-      <div style="background: #d96b27" class="large-padding"></div>
-      <code>$dcp-orange</code> <code>#d96b27</code>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="color-block">
-      <div style="background: #ae561f" class="large-padding"></div>
-      <code>$a11y-orange</code> <code>#ae561f</code>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="color-block">
-      <div style="background: #ffc861" class="large-padding"></div>
-      <code>$dcp-yellow</code> <code>#ffc861</code>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="color-block">
-      <div style="background: #ffeec1" class="large-padding"></div>
-      <code>$a11y-yellow</code> <code>#ffeec1</code>
-    </div>
-  </div>
-</div>
-</section>
-<section>
-  <h3>Site Header</h3>
+<h3 id="site-header">Site Header <sup><a href="#site-header" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"site-header"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"banner"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://planninglabs.nyc/"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"labs-beta-notice hide-for-print"</span>&gt;</span>A beta project of NYC Planning Labs<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -207,9 +992,10 @@ Top Bar
               <li>
                 <a href="#typography" class="small-margin-bottom header-small display-inline-block text-black">Typography</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#headers">Headers</a></li>
+                  <li><a href="#type-basics">Type Basics</a></li>
+                  <li><a href="#fonts">Fonts</a></li>
                   <li><a href="#paragraphs">Paragraphs</a></li>
-                  <li><a href="#lead-paragraph">Lead Paragraph</a></li>
+                  <li><a href="#headers">Headers</a></li>
                   <li><a href="#links">Links</a></li>
                   <li><a href="#dividers">Dividers</a></li>
                   <li><a href="#unordered-lists">Unordered Lists</a></li>
@@ -221,14 +1007,14 @@ Top Bar
                   <li><a href="#code">Code</a></li>
                   <li><a href="#keystrokes">Keystrokes</a></li>
                   <li><a href="#text-alignment">Text Alignment</a></li>
-                  <li><a href="#badge">Badge</a></li>
-                  <li><a href="#label">Label</a></li>
+                  <li><a href="#badges">Badges</a></li>
+                  <li><a href="#labels">Labels</a></li>
                 </ul>
               </li>
               <li>
                 <a href="#color" class="small-margin-bottom header-small display-inline-block text-black">Color</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#brand-colors">Brand Colors</a></li>
+                  <li><a href="#color-palettes">Color Palettes</a></li>
                 </ul>
               </li>
               <li>
@@ -238,7 +1024,7 @@ Top Bar
                   <li><a href="#number-inputs">Number Inputs</a></li>
                   <li><a href="#text-areas">Text Areas</a></li>
                   <li><a href="#select-menus">Select Menus</a></li>
-                  <li><a href="#checkboxes-andamp-radio-buttons">Checkboxes &amp; Radio Buttons</a></li>
+                  <li><a href="#checkboxes-and-radio-buttons">Checkboxes &amp; Radio Buttons</a></li>
                   <li><a href="#file-upload">File Upload</a></li>
                   <li><a href="#labels">Labels</a></li>
                   <li><a href="#fieldset">Fieldset</a></li>
@@ -283,6 +1069,7 @@ Top Bar
               <li>
                 <a href="#components" class="small-margin-bottom header-small display-inline-block text-black">Components</a>
                 <ul class="medium-margin-bottom text-small">
+                  <li><a href="#site-header">Site Header</a></li>
                   <li><a href="#switch">Switch</a></li>
                   <li><a href="#tooltip">Tooltip</a></li>
                   <li><a href="#breadcrumbs">Breadcrumbs</a></li>

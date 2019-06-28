@@ -6,9 +6,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>NYC Planning Digital Style Guide</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
     <style>
+      .header-logo {
+        max-height: 4.5rem;
+      }
       .code-example code {
         display: block;
         padding: 1rem;
@@ -27,14 +31,28 @@
         padding-top: 3rem;
         border-top: 1px solid #d3d5d9;
       }
+      section h4 {
+        margin-top: 1.5rem;
+      }
+      .callout.clear {
+        background-color: transparent;
+        border-color: transparent;
+      }
     </style>
   </head>
   <body>
 
-    <header class="xlarge-padding-top xlarge-padding-bottom bg-white-smoke">
+    <header class="xlarge-padding-top large-padding-bottom bg-white-smoke">
       <div class="grid-container">
-        <h1 class="no-margin">NYC Planning Digital Style Guide</h1>
-        <p class="no-margin">CSS, Code Snippets, &amp; Assets</p>
+        <div class="grid-x text-center medium-text-left">
+          <div class="cell medium-shrink">
+            <img class="header-logo medium-margin-right medium-margin-bottom" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" alt="NYC Planning" />
+          </div>
+          <div class="cell medium-auto">
+            <h1 class="no-margin">Digital Style Guide</h1>
+            <p class="medium-margin-bottom">CSS, Code Snippets, &amp; Assets</p>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -51,7 +69,7 @@
                 <a href="#{{slug}}" class="small-margin-bottom header-small display-inline-block text-black">{{title}}</a>
                 <ul class="medium-margin-bottom text-small">
                   {{#each items}}
-                  <li><a href="#{{#slugify}}{{this}}{{/slugify}}">{{this}}</a></li>
+                  <li><a href="#{{slugify this}}">{{this}}</a></li>
                   {{/each}}
                 </ul>
               </li>

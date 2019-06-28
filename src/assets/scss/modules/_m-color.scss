@@ -82,78 +82,78 @@
 //
 // Font colors
 // --------------------------------------------------
-.aqua { color: $aqua; }
-.aqua-light { color: $aqua-light; }
-.aqua-dark { color: $aqua-dark; }
-.aqua-muted { color: $aqua-muted; }
-.teal { color: $teal; }
-.teal-light { color: $teal-light; }
-.teal-dark { color: $teal-dark; }
-.teal-muted { color: $teal-muted; }
-.green { color: $green; }
-.green-light { color: $green-light; }
-.green-dark { color: $green-dark; }
-.green-muted { color: $green-muted; }
-.chartreuse { color: $chartreuse; }
-.chartreuse-light { color: $chartreuse-light; }
-.chartreuse-dark { color: $chartreuse-dark; }
-.chartreuse-muted { color: $chartreuse-muted; }
-.yellow { color: $yellow; }
-.yellow-light { color: $yellow-light; }
-.yellow-dark { color: $yellow-dark; }
-.yellow-muted { color: $yellow-muted; }
-.gold { color: $gold; }
-.gold-light { color: $gold-light; }
-.gold-dark { color: $gold-dark; }
-.gold-muted { color: $gold-muted; }
-.orange { color: $orange; }
-.orange-light { color: $orange-light; }
-.orange-dark { color: $orange-dark; }
-.orange-muted { color: $orange-muted; }
-.red { color: $red; }
-.red-light { color: $red-light; }
-.red-dark { color: $red-dark; }
-.red-muted { color: $red-muted; }
-.fuchsia { color: $fuchsia; }
-.fuchsia-light { color: $fuchsia-light; }
-.fuchsia-dark { color: $fuchsia-dark; }
-.fuchsia-muted { color: $fuchsia-muted; }
-.purple { color: $purple; }
-.purple-light { color: $purple-light; }
-.purple-dark { color: $purple-dark; }
-.purple-muted { color: $purple-muted; }
-.indigo { color: $indigo; }
-.indigo-light { color: $indigo-light; }
-.indigo-dark { color: $indigo-dark; }
-.indigo-muted { color: $indigo-muted; }
-.blue { color: $blue; }
-.blue-light { color: $blue-light; }
-.blue-dark { color: $blue-dark; }
-.blue-muted { color: $blue-muted; }
+.aqua, .text-aqua { color: $aqua; }
+.aqua-light, .text-aqua-light { color: $aqua-light; }
+.aqua-dark, .text-aqua-dark { color: $aqua-dark; }
+.aqua-muted, .text-aqua-muted { color: $aqua-muted; }
+.teal, .text-teal { color: $teal; }
+.teal-light, .text-teal-light { color: $teal-light; }
+.teal-dark, .text-teal-dark { color: $teal-dark; }
+.teal-muted, .text-teal-muted { color: $teal-muted; }
+.green, .text-green { color: $green; }
+.green-light, .text-green-light { color: $green-light; }
+.green-dark, .text-green-dark { color: $green-dark; }
+.green-muted, .text-green-muted { color: $green-muted; }
+.chartreuse, .text-chartreuse { color: $chartreuse; }
+.chartreuse-light, .text-chartreuse-light { color: $chartreuse-light; }
+.chartreuse-dark, .text-chartreuse-dark { color: $chartreuse-dark; }
+.chartreuse-muted, .text-chartreuse-muted { color: $chartreuse-muted; }
+.yellow, .text-yellow { color: $yellow; }
+.yellow-light, .text-yellow-light { color: $yellow-light; }
+.yellow-dark, .text-yellow-dark { color: $yellow-dark; }
+.yellow-muted, .text-yellow-muted { color: $yellow-muted; }
+.gold, .text-gold { color: $gold; }
+.gold-light, .text-gold-light { color: $gold-light; }
+.gold-dark, .text-gold-dark { color: $gold-dark; }
+.gold-muted, .text-gold-muted { color: $gold-muted; }
+.orange, .text-orange { color: $orange; }
+.orange-light, .text-orange-light { color: $orange-light; }
+.orange-dark, .text-orange-dark { color: $orange-dark; }
+.orange-muted, .text-orange-muted { color: $orange-muted; }
+.red, .text-red { color: $red; }
+.red-light, .text-red-light { color: $red-light; }
+.red-dark, .text-red-dark { color: $red-dark; }
+.red-muted, .text-red-muted { color: $red-muted; }
+.fuchsia, .text-fuchsia { color: $fuchsia; }
+.fuchsia-light, .text-fuchsia-light { color: $fuchsia-light; }
+.fuchsia-dark, .text-fuchsia-dark { color: $fuchsia-dark; }
+.fuchsia-muted, .text-fuchsia-muted { color: $fuchsia-muted; }
+.purple, .text-purple { color: $purple; }
+.purple-light, .text-purple-light { color: $purple-light; }
+.purple-dark, .text-purple-dark { color: $purple-dark; }
+.purple-muted, .text-purple-muted { color: $purple-muted; }
+.indigo, .text-indigo { color: $indigo; }
+.indigo-light, .text-indigo-light { color: $indigo-light; }
+.indigo-dark, .text-indigo-dark { color: $indigo-dark; }
+.indigo-muted, .text-indigo-muted { color: $indigo-muted; }
+.blue, .text-blue { color: $blue; }
+.blue-light, .text-blue-light { color: $blue-light; }
+.blue-dark, .text-blue-dark { color: $blue-dark; }
+.blue-muted, .text-blue-muted { color: $blue-muted; }
 
-.black { color: $black; }
-.charcoal { color: $charcoal; }
-.dark-gray { color: $dark-gray; }
-.gray { color: $gray; }
-.light-gray { color: $light-gray; }
-.silver { color: $silver; }
-.white-smoke { color: $white-smoke; }
-.off-white { color: $off-white; }
-.white { color: $white; }
+.black, .text-black { color: $black; }
+.charcoal, .text-charcoal { color: $charcoal; }
+.dark-gray, .text-dark-gray { color: $dark-gray; }
+.gray, .text-gray { color: $gray; }
+.light-gray, .text-light-gray { color: $light-gray; }
+.silver, .text-silver { color: $silver; }
+.white-smoke, .text-white-smoke { color: $white-smoke; }
+.off-white, .text-off-white { color: $off-white; }
+.white, .text-white { color: $white; }
 
-.dcp-orange { color: $dcp-orange; }
-.a11y-orange { color: $a11y-orange; }
-.dcp-yellow { color: $dcp-yellow; }
-.a11y-yellow { color: $a11y-yellow; }
+.dcp-orange, .text-dcp-orange { color: $dcp-orange; }
+.a11y-orange, .text-a11y-orange { color: $a11y-orange; }
+.dcp-yellow, .text-dcp-yellow { color: $dcp-yellow; }
+.a11y-yellow, .text-a11y-yellow { color: $a11y-yellow; }
 
-.lu-peach { color: $lu-peach; }
-.lu-yellow { color: $lu-yellow; }
-.lu-magenta { color: $lu-magenta; }
-.lu-red { color: $lu-red; }
-.lu-orange { color: $lu-orange; }
-.lu-pink { color: $lu-pink; }
-.lu-green { color: $lu-green; }
-.lu-blue { color: $lu-blue; }
-.lu-lavendar { color: $lu-lavendar; }
-.lu-silver { color: $lu-silver; }
-.lu-gray { color: $lu-gray; }
+.lu-peach, .text-lu-peach { color: $lu-peach; }
+.lu-yellow, .text-lu-yellow { color: $lu-yellow; }
+.lu-magenta, .text-lu-magenta { color: $lu-magenta; }
+.lu-red, .text-lu-red { color: $lu-red; }
+.lu-orange, .text-lu-orange { color: $lu-orange; }
+.lu-pink, .text-lu-pink { color: $lu-pink; }
+.lu-green, .text-lu-green { color: $lu-green; }
+.lu-blue, .text-lu-blue { color: $lu-blue; }
+.lu-lavendar, .text-lu-lavendar { color: $lu-lavendar; }
+.lu-silver, .text-lu-silver { color: $lu-silver; }
+.lu-gray, .text-lu-gray { color: $lu-gray; }

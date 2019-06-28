@@ -160,8 +160,8 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: $a11y-orange,
   secondary: $a11y-yellow,
-  success: $green ,
-  warning: $orange,
+  success: $chartreuse-dark,
+  warning: $dcp-yellow,
   alert: $red,
 );
 // $light-gray: $light-gray;
@@ -171,7 +171,7 @@ $medium-gray: $gray;
 // $white: #fefefe;
 $body-background: $off-white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $body-antialiased: false;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -272,23 +272,23 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
+$blockquote-color: inherit;
+$blockquote-padding: rem-calc(8 16 8 16);
+$blockquote-border: rem-calc(6) solid rgba($black, 0.25);
+$cite-font-size: 1em;
+$cite-color: inherit;
 $cite-pseudo-content: '\2014 \0020';
 $keystroke-font: $font-family-monospace;
-$keystroke-color: $black;
-$keystroke-background: $light-gray;
-$keystroke-padding: rem-calc(2 4 0);
+$keystroke-color: $charcoal;
+$keystroke-background: $white-smoke;
+$keystroke-padding: rem-calc(3 6);
 $keystroke-radius: $global-radius;
-$abbr-underline: 1px dotted $black;
+$abbr-underline: 1px solid rgba($black, 0.25);
 
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: rem-calc(20);
+$lead-font-size: rem-calc(25);
 $lead-lineheight: 1.4;
 $subheader-lineheight: 1.4;
 $subheader-color: inherit;
@@ -341,9 +341,9 @@ $accordionmenu-arrow-size: 6px;
 // 9. Badge
 // --------
 
-$badge-background: $secondary-color;
-$badge-color: $black;
-$badge-color-alt: $white;
+$badge-background: $primary-color;
+$badge-color: $white;
+$badge-color-alt: $black;
 $badge-palette: $foundation-palette;
 $badge-padding: rem-calc(1);
 $badge-minwidth: rem-calc(17);
@@ -420,7 +420,7 @@ $card-divider-background: $light-gray;
 $card-border: 1px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
-$card-padding: $global-padding;
+$card-padding: $global-padding/2;
 $card-margin-bottom: $global-margin;
 
 // 15. Close Button
