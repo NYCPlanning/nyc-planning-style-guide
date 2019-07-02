@@ -1,389 +1,121 @@
 <section>
-{{{headerify 'h3' 'Color palettes'}}}
+{{{headerify 'h3' 'Color basics'}}}
 {{#markdown}}
+Promote strong brand recognition by using a distinct and reduced color palette, featuring only two hues (orange and yellow) and subtle shades of gray.
 
-#### Brand colors
+The primary brand color is <strong class="font-mono">dcp-orange</strong> <i class="fas fa-square dcp-orange"></i>. It's the color of the "NYC" in our logo, and it can be used for large blocks of color. The slightly darker <strong class="font-mono">a11y-orange</strong> <i class="fas fa-square a11y-orange"></i> increases accessibility and should be used for buttons and linked text.
 
-<div class="grid-x small-up-2 large-up-4 align-stretch medium-margin-bottom text-white font-mono text-weight-bold">
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-dcp-orange">
-    <ul class="no-bullet xlarge-padding-top">
-      <li class="text-small">#d96b27</li>
-      <li class="text-tiny">$dcp-orange</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-a11y-orange">
-    <ul class="no-bullet xlarge-padding-top">
-      <li class="text-small">#ae561f</li>
-      <li class="text-tiny">$a11y-orange</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-dcp-yellow">
-    <ul class="no-bullet xlarge-padding-top">
-      <li class="text-small">#ffc861</li>
-      <li class="text-tiny">$dcp-yellow</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-a11y-yellow">
-    <ul class="no-bullet xlarge-padding-top">
-      <li class="text-small">#ffeec1</li>
-      <li class="text-tiny">$a11y-yellow</li>
-    </ul>
-  </div>
+The secondary brand color is <strong class="font-mono">dcp-yellow</strong> <i class="fas fa-square dcp-yellow"></i>. Use it in small amounts as an accent and for secondary UI elements. The lighter <strong class="font-mono">a11y-yellow</strong> <i class="fas fa-square a11y-yellow"></i> increases accessibility and can be used for linked text on darker backgrounds.
+
+- **Orange implies clickability** in our products. Do not use orange to highlight or emphasize words.
+- Do not overuse color. Color should not cover the majority of the page. The default background color of the `<body>` element is <strong class="font-mono">off-white</strong> <i class="far fa-square light-gray"></i>. light, visual hierarchy
+- Be sure to [check the contrast](https://webaim.org/resources/contrastchecker/) when choosing colors.
+{{/markdown}}
+</section>
+
+<section>
+{{{headerify 'h3' 'Brand colors'}}}
+{{#markdown}}
+<div class="grid-x small-up-1 large-up-4 align-stretch medium-margin-bottom font-mono large-text-right">
+  <ul class="color-swatch cell bg-dcp-orange" data-colorname="dcp-orange"></ul>
+  <ul class="color-swatch cell bg-a11y-orange" data-colorname="a11y-orange"></ul>
+  <ul class="color-swatch cell bg-dcp-yellow" data-colorname="dcp-yellow"></ul>
+  <ul class="color-swatch cell bg-a11y-yellow" data-colorname="a11y-yellow"></ul>
 </div>
+{{/markdown}}
+</section>
 
-#### Grayscale colors
-
-<div class="grid-x small-up-2 large-up-4 align-stretch medium-margin-bottom text-white font-mono text-weight-bold">
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-black">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-black</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-charcoal">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-charcoal</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-dark-gray">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-dark-gray</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-gray">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-gray</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-light-gray">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-light-gray</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-silver">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-silver</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-white-smoke">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-white-smoke</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-off-white">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-off-white</li>
-    </ul>
-  </div>
-  <div class="cell xlarge-padding-top small-padding-left small-padding-right bg-white">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-white</li>
-    </ul>
-  </div>
+<section>
+{{{headerify 'h3' 'Grayscale colors'}}}
+{{#markdown}}
+<div class="grid-x small-up-1 large-up-4 align-stretch medium-margin-bottom font-mono large-text-right">
+  <ul class="color-swatch cell bg-black" data-colorname="black"></ul>
+  <ul class="color-swatch cell bg-charcoal" data-colorname="charcoal"></ul>
+  <ul class="color-swatch cell bg-dark-gray" data-colorname="dark-gray"></ul>
+  <ul class="color-swatch cell bg-gray" data-colorname="gray"></ul>
+  <ul class="color-swatch cell bg-light-gray" data-colorname="light-gray"></ul>
+  <ul class="color-swatch cell bg-silver" data-colorname="silver"></ul>
+  <ul class="color-swatch cell bg-white-smoke" data-colorname="white-smoke"></ul>
+  <ul class="color-swatch cell bg-off-white" data-colorname="off-white"></ul>
+  <ul class="color-swatch cell bg-white" data-colorname="white"></ul>
 </div>
+{{/markdown}}
+</section>
 
-#### Data viz colors
-
-<div class="grid-x small-up-2 large-up-4 align-stretch medium-margin-bottom text-white font-mono text-weight-bold">
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-aqua</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-aqua-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-aqua-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-aqua-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-aqua-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-teal</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-teal-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-teal-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-teal-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-teal-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-green</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-green-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-green-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-green-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-green-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-chartreuse</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-chartreuse-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-chartreuse-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-chartreuse-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-chartreuse-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-yellow</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-yellow-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-yellow-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-yellow-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-yellow-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-gold</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-gold-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-gold-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-gold-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-gold-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-orange</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-orange-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-orange-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-orange-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-orange-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-red</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-red-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-red-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-red-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-red-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-fuchsia</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-fuchsia-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-fuchsia-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-fuchsia-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-fuchsia-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-purple</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-purple-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-purple-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-purple-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-purple-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-indigo</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-indigo-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-indigo-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-indigo-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-indigo-muted</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-blue</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue-light">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-blue-light</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue-dark">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-blue-dark</li>
-    </ul>
-  </div>
-  <div class="cell medium-padding-top small-padding-left small-padding-right bg-blue-muted">
-    <ul class="no-bullet">
-      <li class="text-small">#ffffff</li>
-      <li class="text-tiny">$bg-blue-muted</li>
-    </ul>
-  </div>
+<section>
+{{{headerify 'h3' 'Data viz colors'}}}
+{{#markdown}}
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-aqua" data-colorname="aqua"></ul>
+  <ul class="color-swatch cell bg-aqua-light" data-colorname="aqua-light"></ul>
+  <ul class="color-swatch cell bg-aqua-dark" data-colorname="aqua-dark"></ul>
+  <ul class="color-swatch cell bg-aqua-muted" data-colorname="aqua-muted"></ul>
 </div>
-
-#### Clickability
-
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-teal" data-colorname="teal"></ul>
+  <ul class="color-swatch cell bg-teal-light" data-colorname="teal-light"></ul>
+  <ul class="color-swatch cell bg-teal-dark" data-colorname="teal-dark"></ul>
+  <ul class="color-swatch cell bg-teal-muted" data-colorname="teal-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-green" data-colorname="green"></ul>
+  <ul class="color-swatch cell bg-green-light" data-colorname="green-light"></ul>
+  <ul class="color-swatch cell bg-green-dark" data-colorname="green-dark"></ul>
+  <ul class="color-swatch cell bg-green-muted" data-colorname="green-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-chartreuse" data-colorname="chartreuse"></ul>
+  <ul class="color-swatch cell cell bg-chartreuse-light" data-colorname="chartreuse-light"></ul>
+  <ul class="color-swatch cell bg-chartreuse-dark" data-colorname="chartreuse-dark"></ul>
+  <ul class="color-swatch cell bg-chartreuse-muted" data-colorname="chartreuse-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-yellow" data-colorname="yellow"></ul>
+  <ul class="color-swatch cell bg-yellow-light" data-colorname="yellow-light"></ul>
+  <ul class="color-swatch cell bg-yellow-dark" data-colorname="yellow-dark"></ul>
+  <ul class="color-swatch cell bg-yellow-muted" data-colorname="yellow-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-gold" data-colorname="gold"></ul>
+  <ul class="color-swatch cell bg-gold-light" data-colorname="gold-light"></ul>
+  <ul class="color-swatch cell bg-gold-dark" data-colorname="gold-dark"></ul>
+  <ul class="color-swatch cell bg-gold-muted" data-colorname="gold-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-orange" data-colorname="orange"></ul>
+  <ul class="color-swatch cell bg-orange-light" data-colorname="orange-light"></ul>
+  <ul class="color-swatch cell bg-orange-dark" data-colorname="orange-dark"></ul>
+  <ul class="color-swatch cell bg-orange-muted" data-colorname="orange-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-red" data-colorname="red"></ul>
+  <ul class="color-swatch cell bg-red-light" data-colorname="red-light"></ul>
+  <ul class="color-swatch cell bg-red-dark" data-colorname="red-dark"></ul>
+  <ul class="color-swatch cell bg-red-muted" data-colorname="red-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-fuchsia" data-colorname="fuchsia"></ul>
+  <ul class="color-swatch cell bg-fuchsia-light" data-colorname="fuchsia-light"></ul>
+  <ul class="color-swatch cell bg-fuchsia-dark" data-colorname="fuchsia-dark"></ul>
+  <ul class="color-swatch cell bg-fuchsia-muted" data-colorname="fuchsia-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-purple" data-colorname="purple"></ul>
+  <ul class="color-swatch cell bg-purple-light" data-colorname="purple-light"></ul>
+  <ul class="color-swatch cell bg-purple-dark" data-colorname="purple-dark"></ul>
+  <ul class="color-swatch cell bg-purple-muted" data-colorname="purple-muted"></ul>
+</div>
+<div class="grid-x small-up-1 large-up-4 align-stretch font-mono large-text-right">
+  <ul class="color-swatch cell bg-indigo" data-colorname="indigo"></ul>
+  <ul class="color-swatch cell bg-indigo-light" data-colorname="indigo-light"></ul>
+  <ul class="color-swatch cell bg-indigo-dark" data-colorname="indigo-dark"></ul>
+  <ul class="color-swatch cell bg-indigo-muted" data-colorname="indigo-muted"></ul>
+</div>
+<div class="grid-x small-up-2 large-up-4 align-stretch medium-margin-bottom font-mono large-text-right">
+  <ul class="color-swatch cell bg-blue" data-colorname="blue"></ul>
+  <ul class="color-swatch cell bg-blue-light" data-colorname="blue-light"></ul>
+  <ul class="color-swatch cell bg-blue-dark" data-colorname="blue-dark"></ul>
+  <ul class="color-swatch cell bg-blue-muted" data-colorname="blue-muted"></ul>
+</div>
 {{/markdown}}
 </section>

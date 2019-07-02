@@ -21789,6 +21789,26 @@ __webpack_require__(/*! foundation-sites */ "./node_modules/foundation-sites/dis
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.color-swatch').each(function (index) {
+    var bgColor = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('background-color');
+    var colorName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-colorname');
+    var bgHexColor = rgbToHex(bgColor);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).append("\n      <li class=\"text-small text-weight-bold\">".concat(colorName, "</li>\n      <li class=\"text-tiny\">").concat(bgHexColor, "</li>\n      <li class=\"text-tiny\">").concat(bgColor, "</li>\n    "));
+  });
+});
+
+function rgbToHex(rgb) {
+  var sep = rgb.indexOf(",") > -1 ? "," : " ";
+  rgb = rgb.substr(4).split(")")[0].split(sep);
+  var r = (+rgb[0]).toString(16);
+  var g = (+rgb[1]).toString(16);
+  var b = (+rgb[2]).toString(16);
+  if (r.length == 1) r = "0" + r;
+  if (g.length == 1) g = "0" + g;
+  if (b.length == 1) b = "0" + b;
+  return "#" + r + g + b;
+}
 
 /***/ }),
 
