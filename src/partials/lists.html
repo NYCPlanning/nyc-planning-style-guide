@@ -1,6 +1,9 @@
 <section>
-{{{headerify 'h3' 'Unordered lists'}}}
+{{{headerify 'h3' 'Lists'}}}
 {{#markdown}}
+
+#### Unordered lists
+
 Use the `<ol>` tag to list things if the order of the items doesn't matter.
 
 ``` html
@@ -29,13 +32,10 @@ Use the `<ol>` tag to list things if the order of the items doesn't matter.
   <li>List item with a much longer description or more content. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
 </ul>
 </div>
-{{/markdown}}
-</section>
 
 
-<section>
-{{{headerify 'h3' 'Ordered lists'}}}
-{{#markdown}}
+#### Ordered lists
+
 The `<ol>` tag defines lists with an explicit order, marked with numbers by default.
 
 The optional `type="[1,A,a,I,i]"` attribute defines the type of the list item marker.
@@ -68,13 +68,10 @@ The optional `type="[1,A,a,I,i]"` attribute defines the type of the list item ma
   </li>
 </ol>
 </div>
-{{/markdown}}
-</section>
 
 
-<section>
-{{{headerify 'h3' 'Un-bulleted lists'}}}
-{{#markdown}}
+#### Un-bulleted lists
+
 The `<ul>` is a bulleted list and `<ol>` is a numbered list by default, but you can add the class `.no-bullet` to remove the bullets or numbers. This allows lists to have semantic markup and custom styles so they do not look like lists (useful for lists such as menu items).
 
 ``` html
@@ -101,13 +98,10 @@ The `<ul>` is a bulleted list and `<ol>` is a numbered list by default, but you 
   <li>List item</li>
 </ul>
 </div>
-{{/markdown}}
-</section>
 
 
-<section>
-{{{headerify 'h3' 'Definition lists'}}}
-{{#markdown}}
+#### Definition lists
+
 The `<dl>` tag is used to display name-value pairs, like metadata or a dictionary definition. Each term (`<dt>`) is paired with one or more definitions (`<dd>`).
 
 ``` html

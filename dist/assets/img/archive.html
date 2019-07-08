@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>DCP Press Clips</title>
+  <link rel="stylesheet" type="text/css" media="screen, print" href="https://planning.ra.nyc.gov/dcpcommons/css/,DanaInfo=.awxyChhvGv7myq6,CT=css+styles.css" />
+  <link rel="shortcut icon" href="https://planning.ra.nyc.gov/dcpcommons/images/interface/,DanaInfo=.awxyChhvGv7myq6+favicon.ico" type="image/x-icon" />
+
+  <style>
+    .press_clips {}
+    .press_clips--list {
+      list-style: none;
+      padding: 0;
+    }
+    .press_clips--list-item {
+      padding-bottom: 19px;
+    }
+    .press_clips--list-item-link {
+      text-decoration: none;
+    }
+    .press_clips--list-item-link:hover {
+      text-decoration: none;
+    }
+    .press_clips--list-item-title {
+      text-decoration: underline;
+    }
+    .press_clips--list-item-date {
+      text-decoration: none;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="press_clips">
+    <h1>Press Clips Archive</h1>
+    <ul class="press_clips--list">
+    </ul>
+    <div class="press_clips--pagination"></div>
+  </div>
+
+  <!-- DCP Common's version of jQuery should work fine instead of this -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <!-- Custom script to get press clips from Airtable and append them to a list -->
+  <script>
+    let apiCall = 'https://api.airtable.com/v0/appXmxVyz1mUR3NFN/Press%20Clips?pageSize=10&view=Main%20View&api_key=keyTpnmAvYGxhvsMu';
+    // const searchParams = new URLSearchParams(window.location.search);
+    // const pageOffset = searchParams.get('offset');
+    const pageOffset = window.location.href.split('offset=')[1];
+    if (pageOffset) {
+      apiCall = apiCall + '&offset=' + pageOffset;
+    };
+    $.getJSON(apiCall, function(response) {
+      const records = response.records;
+      const offset = response.offset;
+      records.forEach( function(record) {
+        const fields = record.fields;
+        const id = record.id;
+        const Title = fields.Title;
+        const Date = fields.Date;
+        if (id && Title && Date) {
+          $('.press_clips--list').append('<li class="press_clips--list-item"><a href="article.shtml?clip=' + id + '" class="press_clips--list-item-link"><strong class="press_clips--list-item-title">' + Title + '</strong> <span class="press_clips--list-item-date">' + Date + '</span></a></li>')
+        }
+      });
+      if (offset) {
+        $('.press_clips--pagination').append('<a href="?offset=' + offset + '">Next Page&nbsp;&rarr;</a>');
+      };
+    });
+  </script>
+</body>
+</html>
