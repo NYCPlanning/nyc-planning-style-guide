@@ -24,8 +24,6 @@ sections:
       - Code
       - Keystrokes
       - 'Text Alignment'
-      - Badges
-      - Labels
 
   - title: Color
     slug: color
@@ -34,6 +32,7 @@ sections:
       - 'Brand Colors'
       - 'Grayscale Colors'
       - 'Data Viz Colors'
+      - 'Color Classes'
 
   - title: Forms
     slug: forms
@@ -83,20 +82,28 @@ sections:
   - title: Components
     slug: components
     items:
-      - Site Header
-      - Switch
-      - Tooltip
+      - Badges
+      - Labels
+      - Callouts
+      - Switches
+      - Tooltips
       - Breadcrumbs
-      - Callout
+      - Site Header
 
   - title: Media
     slug: media
     items:
       - 'Responsive Embed'
 
+  - title: Sass
+    slug: sass
+    items:
+
 ---
 
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+
+<p>overview of how to use... link to Sass/CSS instructions...</p>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
@@ -118,8 +125,6 @@ sections:
 {{> code}}
 {{> keystrokes}}
 {{> text-alignment}}
-{{> badges}}
-{{> labels}}
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -127,6 +132,7 @@ sections:
 <h2 id="color" class="xlarge-margin-bottom">{{{anchorify 'Color'}}}</h2>
 {{> color-palettes}}
 {{> color-classes}}
+
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
@@ -138,6 +144,8 @@ use relative units
 
 <h2 id="components" class="xlarge-margin-bottom">{{{anchorify 'Components'}}}</h2>
 {{> site-header}}
+{{> badges}}
+{{> labels}}
 
 <!--
 Abide
@@ -159,3 +167,10 @@ Title Bar
 Toggler
 Top Bar
 -->
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+
+<h2 id="sass" class="xlarge-margin-bottom">{{{anchorify 'Sass'}}}</h2>
+download compiled CSS
+how to use Sass

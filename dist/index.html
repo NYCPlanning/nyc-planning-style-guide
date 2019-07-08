@@ -65,7 +65,9 @@
       <div class="grid-x grid-margin-x">
         <div class="medium-8 large-9 cell medium-order-2 large-padding-top large-padding-bottom">
 
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+
+<p>overview of how to use... link to Sass/CSS instructions...</p>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
@@ -219,7 +221,7 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
   <tr><td><code>.large</code></td><td><code>rem</code> (typically 20 pixels).</td><td class="text-large">This is larger than average.</td></tr>
   <tr><td><code>.medium</code></td><td><code>1rem</code> (typically 16 pixels).</td><td class="text-medium">This is medium (default size).</td></tr>
   <tr><td><code>.small</code></td><td><code>rem</code> (typically 13 pixels).</td><td class="text-small">This is small. Make sure it&#39;s accessible.</td></tr>
-  <tr><td><code>.tiny</code></td><td><code>rem</code> (typically 10 pixels).</td><td class="text-tiny">Be careful using text this tiny. ALL CAPS HELPS.</td></tr>
+  <tr><td><code>.tiny</code></td><td><code>rem</code> (typically 10 pixels).</td><td class="text-tiny">Be careful with text this tiny. ALL CAPS HELPS.</td></tr>
 </table>
 
 </section>
@@ -479,46 +481,6 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
   <p class="text-justify">This text is justified. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 </section>
-<section>
-<h3 id="badges">Badges <sup><a href="#badges" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-<p>Add the <code>.badge</code> class to an element to create a badge, which is useful for indicating out number of items.</p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">aria-describedby</span>=<span class="hljs-value">"messageCount"</span>&gt;</span>Unread Messages<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"messageCount"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
-  <strong aria-describedby="messageCount">Unread Messages</strong>
-  <span class="badge" id="messageCount">1</span>
-</div>
-
-<p>Use color classes to change the color of badges. Be sure to <a href="https://webaim.org/resources/contrastchecker/">check the contrast</a> when choosing colors.</p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-yellow-light a11y-orange"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-chartreuse-dark"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-silver black"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-fuchsia"</span>&gt;</span>45<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
-  <span class="badge bg-yellow-light a11y-orange">1</span>
-  <span class="badge bg-chartreuse-dark">2</span>
-  <span class="badge bg-silver black">3</span>
-  <span class="badge bg-fuchsia">45</span>
-</div>
-
-<p><em>Note: Badges are not good for large numbers, as the circle stretches to an oval:</em> <span class="badge">525,600</span></p>
-</section>
-<section>
-<h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-<p>Labels are useful inline styles that can be used to call out metadata such as tags or when something was updated.</p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label"</span>&gt;</span>Updated <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
-  <span class="label">Updated </span>
-</div>
-
-<p>Use color classes to change the color of labels.</p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-yellow-light a11y-orange"</span>&gt;</span>cookies<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-silver"</span>&gt;</span>bicycle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-chartreuse-dark"</span>&gt;</span>happy<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-fuchsia"</span>&gt;</span>tea kettle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
-  <span class="label bg-yellow-light a11y-orange">cookies</span>
-  <span class="label bg-silver">bicycle</span>
-  <span class="label bg-chartreuse-dark">happy</span>
-  <span class="label bg-fuchsia">tea kettle</span>
-</div>
-</section>
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -527,12 +489,12 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 <section>
 <h3 id="color-basics">Color basics <sup><a href="#color-basics" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>Promote strong brand recognition by using a distinct and reduced color palette, featuring only two hues (orange and yellow) and subtle shades of gray.</p>
-<p>The primary brand color is <strong class="font-mono">dcp-orange</strong> <i class="fas fa-square dcp-orange"></i>. It&#39;s the color of the &quot;NYC&quot; in our logo, and it can be used for large blocks of color. The slightly darker <strong class="font-mono">a11y-orange</strong> <i class="fas fa-square a11y-orange"></i> increases accessibility and should be used for buttons and linked text.</p>
+<p>The primary brand color is <strong class="font-mono">dcp-orange</strong> <i class="fas fa-square dcp-orange"></i>. It&#39;s the color of the &quot;NYC&quot; in our logo, and it can be used for large blocks of color. The slightly darker <strong class="font-mono">a11y-orange</strong> <i class="fas fa-square a11y-orange"></i> increases accessibility by adding more contrast, and is the default color for linked text and button backgrounds.</p>
 <p>The secondary brand color is <strong class="font-mono">dcp-yellow</strong> <i class="fas fa-square dcp-yellow"></i>. Use it in small amounts as an accent and for secondary UI elements. The lighter <strong class="font-mono">a11y-yellow</strong> <i class="fas fa-square a11y-yellow"></i> increases accessibility and can be used for linked text on darker backgrounds.</p>
 <ul>
 <li><strong>Orange implies clickability</strong> in our products. Do not use orange to highlight or emphasize words.</li>
-<li>Do not overuse color. Color should not cover the majority of the page. The default background color of the <code>&lt;body&gt;</code> element is <strong class="font-mono">off-white</strong> <i class="far fa-square light-gray"></i>. light, visual hierarchy</li>
-<li>Be sure to <a href="https://webaim.org/resources/contrastchecker/">check the contrast</a> when choosing colors.</li>
+<li>Do not overuse color. Color should not cover the majority of the page. The default background color of the <code>&lt;body&gt;</code> element is <strong class="font-mono">off-white</strong> <i class="far fa-square light-gray"></i>. light, visual hierarchy.</li>
+<li>Be sure to use the <a href="https://webaim.org/resources/contrastchecker/">Color Contrast Checker <i class="fas fa-external-link-alt"></i></a> to choose accessible colors.</li>
 </ul>
 </section>
 
@@ -637,12 +599,27 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </div>
 </section>
 <section>
-<h3 id="text-colors">Text colors <sup><a href="#text-colors" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="color-classes">Color classes <sup><a href="#color-classes" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h4 id="text-colors">Text colors</h4>
+<p>Use the <code>.text-[color]</code> classes to set the <strong>text color</strong> of an element.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-green-dark"</span>&gt;</span>This whole paragraph is dark green.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>This one is black with a <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-purple"</span>&gt;</span>purple<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span> word.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><div class="callout">
+  <p class="text-green-dark">This whole paragraph is dark green.</p>
+  <p>This one is black with a <span class="text-purple">purple</span> word.</p>
+</div>
+
+<h4 id="background-colors">Background colors</h4>
+<p>Use the <code>.bg-[color]</code> classes to set an element&#39;s <strong>background color</strong> and its default <strong>text color</strong> (defaulting to black or white, depending on which is more accessible). Text color classes override the default text color set by background color classes.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-yellow"</span>&gt;</span>This element has a yellow background, which defaults to black text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-blue-dark"</span>&gt;</span>This element has a dark blue background, which defaults to white text.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bg-chartreuse-light text-green-dark"</span>&gt;</span>This element has a light chartreuse background and dark green text (which overrides its default black text).<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><div class="callout">
+  <p class="bg-yellow">This element has a yellow background, which defaults to black text.</p>
+  <p class="bg-blue-dark">This element has a dark blue background, which defaults to white text.</p>
+  <p class="bg-chartreuse-light text-green-dark">This element has a light chartreuse background and dark green text (which overrides its default black text).</p>
+</div>
+
 </section>
 
-<section>
-<h3 id="background-colors">Background colors <sup><a href="#background-colors" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-</section>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 
@@ -700,6 +677,46 @@ use relative units
   </header>
 
 </section>
+<section>
+<h3 id="badges">Badges <sup><a href="#badges" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Add the <code>.badge</code> class to an element to create a badge, which is useful for indicating out number of items.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">aria-describedby</span>=<span class="hljs-value">"messageCount"</span>&gt;</span>Unread Messages<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"messageCount"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <strong aria-describedby="messageCount">Unread Messages</strong>
+  <span class="badge" id="messageCount">1</span>
+</div>
+
+<p>Use color classes to change the color of badges. Be sure to <a href="https://webaim.org/resources/contrastchecker/">check the contrast</a> when choosing colors.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-yellow-light a11y-orange"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-chartreuse-dark"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-silver black"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge bg-fuchsia"</span>&gt;</span>45<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <span class="badge bg-yellow-light a11y-orange">1</span>
+  <span class="badge bg-chartreuse-dark">2</span>
+  <span class="badge bg-silver black">3</span>
+  <span class="badge bg-fuchsia">45</span>
+</div>
+
+<p><em>Note: Badges are not good for large numbers, as the circle stretches to an oval:</em> <span class="badge">525,600</span></p>
+</section>
+<section>
+<h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Labels are useful inline styles that can be used to call out metadata such as tags or when something was updated.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label"</span>&gt;</span>Updated <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <span class="label">Updated </span>
+</div>
+
+<p>Use color classes to change the color of labels.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-yellow-light a11y-orange"</span>&gt;</span>cookies<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-silver"</span>&gt;</span>bicycle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-chartreuse-dark"</span>&gt;</span>happy<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-fuchsia"</span>&gt;</span>tea kettle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <span class="label bg-yellow-light a11y-orange">cookies</span>
+  <span class="label bg-silver">bicycle</span>
+  <span class="label bg-chartreuse-dark">happy</span>
+  <span class="label bg-fuchsia">tea kettle</span>
+</div>
+</section>
 
 <!--
 Abide
@@ -721,6 +738,13 @@ Title Bar
 Toggler
 Top Bar
 -->
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+
+<h2 id="sass" class="xlarge-margin-bottom">Sass <sup><a href="#sass" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+download compiled CSS
+how to use Sass
 
         </div>
         <div class="medium-4 large-3 cell medium-order-1" data-sticky-container>
@@ -750,8 +774,6 @@ Top Bar
                   <li><a href="#code">Code</a></li>
                   <li><a href="#keystrokes">Keystrokes</a></li>
                   <li><a href="#text-alignment">Text Alignment</a></li>
-                  <li><a href="#badges">Badges</a></li>
-                  <li><a href="#labels">Labels</a></li>
                 </ul>
               </li>
               <li>
@@ -761,6 +783,7 @@ Top Bar
                   <li><a href="#brand-colors">Brand Colors</a></li>
                   <li><a href="#grayscale-colors">Grayscale Colors</a></li>
                   <li><a href="#data-viz-colors">Data Viz Colors</a></li>
+                  <li><a href="#color-classes">Color Classes</a></li>
                 </ul>
               </li>
               <li>
@@ -815,17 +838,24 @@ Top Bar
               <li>
                 <a href="#components" class="small-margin-bottom header-small display-inline-block text-black">Components</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#site-header">Site Header</a></li>
-                  <li><a href="#switch">Switch</a></li>
-                  <li><a href="#tooltip">Tooltip</a></li>
+                  <li><a href="#badges">Badges</a></li>
+                  <li><a href="#labels">Labels</a></li>
+                  <li><a href="#callouts">Callouts</a></li>
+                  <li><a href="#switches">Switches</a></li>
+                  <li><a href="#tooltips">Tooltips</a></li>
                   <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                  <li><a href="#callout">Callout</a></li>
+                  <li><a href="#site-header">Site Header</a></li>
                 </ul>
               </li>
               <li>
                 <a href="#media" class="small-margin-bottom header-small display-inline-block text-black">Media</a>
                 <ul class="medium-margin-bottom text-small">
                   <li><a href="#responsive-embed">Responsive Embed</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#sass" class="small-margin-bottom header-small display-inline-block text-black">Sass</a>
+                <ul class="medium-margin-bottom text-small">
                 </ul>
               </li>
             </ul>

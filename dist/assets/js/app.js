@@ -21252,7 +21252,7 @@ module.exports = function (module) {
 
 /**
  * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
- * @version v5.2.1
+ * @version v5.2.3
  * @link https://github.com/ten1seven/what-input
  * @license MIT
  */
@@ -21546,7 +21546,7 @@ module.exports = function (module) {
           if (shouldUpdate && currentIntent !== value) {
             // preserve intent for keyboard interaction with form fields
             var activeElem = document.activeElement;
-            var notFormInput = activeElem && activeElem.nodeName && formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1 || activeElem.nodeName.toLowerCase() === 'button' && !checkClosest(activeElem, 'form');
+            var notFormInput = activeElem && activeElem.nodeName && (formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1 || activeElem.nodeName.toLowerCase() === 'button' && !checkClosest(activeElem, 'form'));
 
             if (notFormInput) {
               currentIntent = value;
@@ -21577,7 +21577,7 @@ module.exports = function (module) {
 
           detectScrolling(event); // only execute if scrolling isn't happening
 
-          if (!isScrolling && !validateTouch(value) && currentIntent !== value) {
+          if ((!isScrolling && !validateTouch(value) || isScrolling && event.type === 'wheel' || event.type === 'mousewheel' || event.type === 'DOMMouseScroll') && currentIntent !== value) {
             currentIntent = value;
 
             try {
@@ -21630,11 +21630,11 @@ module.exports = function (module) {
           currentTimestamp = timestamp;
           return touchIsValid;
         }; // detect version of mouse wheel event to use
-        // via https://developer.mozilla.org/en-US/docs/Web/Events/wheel
+        // via https://developer.mozilla.org/en-US/docs/Web/API/Element/wheel_event
 
 
         var detectWheel = function detectWheel() {
-          var wheelType = void 0; // Modern browsers support "wheel"
+          var wheelType = null; // Modern browsers support "wheel"
 
           if ('onwheel' in document.createElement('div')) {
             wheelType = 'wheel';

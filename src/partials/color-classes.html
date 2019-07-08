@@ -1,11 +1,34 @@
 <section>
-{{{headerify 'h3' 'Text colors'}}}
+{{{headerify 'h3' 'Color classes'}}}
 {{#markdown}}
-{{/markdown}}
-</section>
 
-<section>
-{{{headerify 'h3' 'Background colors'}}}
-{{#markdown}}
+#### Text colors
+
+Use the `.text-[color]` classes to set the **text color** of an element.
+
+```
+<p class="text-green-dark">This whole paragraph is dark green.</p>
+<p>This one is black with a <span class="text-purple">purple</span> word.</p>
+```
+<div class="callout">
+  <p class="text-green-dark">This whole paragraph is dark green.</p>
+  <p>This one is black with a <span class="text-purple">purple</span> word.</p>
+</div>
+
+#### Background colors
+
+Use the `.bg-[color]` classes to set an element's **background color** and its default **text color** (defaulting to black or white, depending on which is more accessible). Text color classes override the default text color set by background color classes.
+
+```
+<p class="bg-yellow">This element has a yellow background, which defaults to black text.</p>
+<p class="bg-blue-dark">This element has a dark blue background, which defaults to white text.</p>
+<p class="bg-chartreuse-light text-green-dark">This element has a light chartreuse background and dark green text (which overrides its default black text).</p>
+```
+<div class="callout">
+  <p class="bg-yellow">This element has a yellow background, which defaults to black text.</p>
+  <p class="bg-blue-dark">This element has a dark blue background, which defaults to white text.</p>
+  <p class="bg-chartreuse-light text-green-dark">This element has a light chartreuse background and dark green text (which overrides its default black text).</p>
+</div>
+
 {{/markdown}}
 </section>
