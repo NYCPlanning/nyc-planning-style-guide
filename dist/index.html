@@ -637,7 +637,6 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 <span class="hljs-class">.custom-search-input</span><span class="hljs-pseudo">::-webkit-search-cancel-button</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> none</span></span>;
 }</span></code></pre></div></section>
-
 <section>
 <h3 id="text-areas">Text areas <sup><a href="#text-areas" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>The <code>&lt;textarea&gt;</code> element creates a multi-line text area. The <code>row</code> attribute determines its height, which can be overridden with custom CSS. The <code>cols</code> attribute is not necessary, as the width is always 100%.</p>
@@ -647,61 +646,140 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 <label>Text Area<textarea rows="4"></textarea></label>
 </div>
 </section>
-
 <section>
 <h3 id="select-menus">Select menus <sup><a href="#select-menus" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>Select menus combine choices into one condensed menu. However, when the user needs to see all available choices, radio buttons are often more user-friendly. For long lists, consider using a typeahead autocomplete component.</p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Choose one
   <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"commercial"</span>&gt;</span>Commercial<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"manufacturing"</span>&gt;</span>Manufacturing<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"residential"</span>&gt;</span>Residential<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parks"</span>&gt;</span>Parks<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"one-two-family"</span>&gt;</span>One &amp; Two Family Buildings<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"multi-family-walk-up"</span>&gt;</span>Multi-Family Walk-Up Buildings<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    // more options ...
   <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
 <label>Choose one
   <select class="no-margin-bottom">
-    <option value="commercial">Commercial</option>
-    <option value="manufacturing">Manufacturing</option>
-    <option value="residential">Residential</option>
-    <option value="parks">Parks</option>
+    <option value="one-two-family">One &amp; Two Family Buildings</option>
+    <option value="multi-family-walk-up">Multi-Family Walk-Up Buildings</option>
+    <option value="multi-family-elevator">Multi-Family Elevator Buildings</option>
+    <option value="mixed-residential-commercial">Mixed Residential &amp; Commercial Buildings</option>
+    <option value="commercial-office">Commercial &amp; Office Buildings</option>
+    <option value="industrial-manufacturing">Industrial &amp; Manufacturing</option>
+    <option value="transportation-utility">Transportation &amp; Utility</option>
+    <option value="public-facilities-institutions">Public Facilities &amp; Institutions</option>
+    <option value="open-space-outdoor-recreation">Open Space &amp; Outdoor Recreation</option>
+    <option value="parking-facilities">Parking Facilities</option>
+    <option value="vacant-land">Vacant Land</option>
+    <option value="other">Other</option>
   </select>
 </label>
 </div>
 
 <h4 id="multi-select">Multi-select</h4>
-<p>The <code>multiple</code> attribute allows more than one option to be selected. However, since UX can vary by OS/browser and multiple selection may not be intuitive, checkboxes are often more user-friendly.</p>
+<p>The <code>multiple</code> attribute allows more than one option to be selected. Use the <code>size</code> attribute to set how many options are visible at once (defaults to 4). However, since UX can vary by OS/browser and multiple selection may not be intuitive, checkboxes are often more user-friendly.</p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Choose many
-  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">multiple</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"commercial"</span>&gt;</span>Commercial<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"manufacturing"</span>&gt;</span>Manufacturing<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"residential"</span>&gt;</span>Residential<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parks"</span>&gt;</span>Parks<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"6"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"one-two-family"</span>&gt;</span>One &amp; Two Family Buildings<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"multi-family-walk-up"</span>&gt;</span>Multi-Family Walk-Up Buildings<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    // more options ...
   <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
 <label>Choose many
-  <select multiple class="no-margin-bottom">
-    <option value="commercial">Commercial</option>
-    <option value="manufacturing">Manufacturing</option>
-    <option value="residential">Residential</option>
-    <option value="parks">Parks</option>
+  <select multiple size="6" class="no-margin-bottom">
+    <option value="one-two-family">One &amp; Two Family Buildings</option>
+    <option value="multi-family-walk-up">Multi-Family Walk-Up Buildings</option>
+    <option value="multi-family-elevator">Multi-Family Elevator Buildings</option>
+    <option value="mixed-residential-commercial">Mixed Residential &amp; Commercial Buildings</option>
+    <option value="commercial-office">Commercial &amp; Office Buildings</option>
+    <option value="industrial-manufacturing">Industrial &amp; Manufacturing</option>
+    <option value="transportation-utility">Transportation &amp; Utility</option>
+    <option value="public-facilities-institutions">Public Facilities &amp; Institutions</option>
+    <option value="open-space-outdoor-recreation">Open Space &amp; Outdoor Recreation</option>
+    <option value="parking-facilities">Parking Facilities</option>
+    <option value="vacant-land">Vacant Land</option>
+    <option value="other">Other</option>
   </select>
 </label>
 </div>
 </section>
-
 <section>
 <h3 id="checkboxes-and-radio-buttons">Checkboxes & radio buttons <sup><a href="#checkboxes-and-radio-buttons" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-<p>Use groups of checkboxes when the user may select multiple choices from a list, and use radio buttons when the user must select just one choice.</p>
-<p>Wrap a group of checkboxes or radio buttons in a <fieldset> element, and give them a common label using the <legend> element. Each individual control should also have its own label, created using a typical <label>.</p>
-<p>Example: Choose a &quot;State&quot; like California or New York. You would never use radio buttons.</p>
-<p>&lt; 7 choices</p>
-</section>
+<p>When selecting from a short list of options, checkboxes and radio buttons are often a more user-friendly alternative to select menus. Use radio buttons when the user must select only one option. Use checkboxes when the user may select multiple options. For long lists, consider using a typeahead autocomplete component.</p>
+<h4 id="radio-buttons">Radio buttons</h4>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Choose one zoning type:<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"zoning"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"r_com"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"com"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"r_com"</span>&gt;</span>Commercial<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"zoning"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"r_man"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"man"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"r_man"</span>&gt;</span>Manufacturing<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"zoning"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"r_res"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"res"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"r_res"</span>&gt;</span>Residential<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"zoning"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"r_par"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"par"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"r_par"</span>&gt;</span>Parks<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></code></pre></div><div class="callout">
+<fieldset class="fieldset">
+  <legend>Choose one zoning type:</legend>
+  <input type="radio" name="zoning" id="r_com" value="com"><label for="r_com">Commercial</label>
+  <input type="radio" name="zoning" id="r_man" value="man"><label for="r_man">Manufacturing</label>
+  <input type="radio" name="zoning" id="r_res" value="res"><label for="r_res">Residential</label>
+  <input type="radio" name="zoning" id="r_par" value="par"><label for="r_par">Parks</label>
+</fieldset>
+</div>
 
+<h4 id="checkboxes">Checkboxes</h4>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Choose multiple:<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_com"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_com"</span>&gt;</span>Commercial<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_man"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_man"</span>&gt;</span>Manufacturing<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_res"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_res"</span>&gt;</span>Residential<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_par"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_par"</span>&gt;</span>Parks<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></code></pre></div><div class="callout">
+<fieldset class="fieldset">
+  <legend>Choose multiple:</legend>
+  <input type="checkbox" id="c_com"><label for="c_com">Commercial</label>
+  <input type="checkbox" id="c_man"><label for="c_man">Manufacturing</label>
+  <input type="checkbox" id="c_res"><label for="c_res">Residential</label>
+  <input type="checkbox" id="c_par"><label for="c_par">Parks</label>
+</fieldset>
+</div>
+</section>
+<section>
+<h3 id="fieldsets">Fieldsets <sup><a href="#fieldsets" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>A group of related controls should be wrapped in a <code>&lt;fieldset&gt;</code> element, and given a common label using the <code>&lt;legend&gt;</code> element. Each individual input should have its own <code>&lt;label&gt;</code>. Fieldsets have no default style. The <code>.fieldset</code> class can be added to the fieldset to style it as a containing box, with the legend in its top-left corner.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>My Favorites<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></code></pre></div><div class="callout">
+<fieldset class="fieldset">
+  <legend>My Favorites</legend>
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-4">
+      <label>Food <input type="text"></label>
+    </div>
+    <div class="cell large-4">
+      <label>Song <input type="text"></label>
+    </div>
+    <div class="cell large-4">
+      <label>Color <input type="text"></label>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+<h4 id="accessibile-fieldsets">Accessibile fieldsets</h4>
+<p>To increase accessibility, related controls (especially checkboxes and radio buttons) should always be wrapped in a fieldset. If this is not ideal for the layout, the <code>.show-for-sr</code> class can be added to the legend to it&#39;s hidden on screen but available for screen readers.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Zoning types:<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></code></pre></div><div class="callout">
+<fieldset>
+  <legend class="show-for-sr">Zoning types:</legend>
+  <input type="checkbox" id="c_com"><label for="c_com">Commercial</label>
+  <input type="checkbox" id="c_man"><label for="c_man">Manufacturing</label>
+  <input type="checkbox" id="c_res"><label for="c_res">Residential</label>
+  <input type="checkbox" id="c_par"><label for="c_par">Parks</label>
+</fieldset>
+</div>
+
+</section>
 <section>
 <h3 id="file-upload">File upload <sup><a href="#file-upload" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 </section>
-
 <section>
 <h3 id="labels-and-placeholders">Labels & placeholders <sup><a href="#labels-and-placeholders" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>All form inputs should be contained within a label.</p>
@@ -713,11 +791,6 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </label>
 </div>
 </section>
-
-<section>
-<h3 id="fieldset">Fieldset <sup><a href="#fieldset" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-</section>
-
 <section>
 <h3 id="help-text">Help text <sup><a href="#help-text" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 </section>
@@ -889,9 +962,9 @@ how to use Sass
                   <li><a href="#text-areas">Text Areas</a></li>
                   <li><a href="#select-menus">Select Menus</a></li>
                   <li><a href="#checkboxes-and-radio-buttons">Checkboxes &amp; Radio Buttons</a></li>
+                  <li><a href="#fieldsets">Fieldsets</a></li>
                   <li><a href="#file-upload">File Upload</a></li>
                   <li><a href="#labels-and-placeholders">Labels &amp; placeholders</a></li>
-                  <li><a href="#fieldset">Fieldset</a></li>
                   <li><a href="#help-text">Help Text</a></li>
                 </ul>
               </li>

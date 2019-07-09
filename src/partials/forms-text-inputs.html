@@ -1,0 +1,30 @@
+<section>
+{{{headerify 'h3' 'Text inputs'}}}
+{{#markdown}}
+The following input types create a text input: `text`, `date`, `datetime-local`, `email`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`, and `week`.
+
+```
+<label>Text <input type="text"></label>
+<label>Number <input type="number"></label>
+<label>Date <input type="date"></label>
+<label>Password <input type="password"></label>
+```
+<div class="callout">
+<label>Text <input type="text" value="I've entered some text!"></label>
+<label>Number <input type="number" value="42"></label>
+<label>Date <input type="date"></label>
+<label>Password <input type="password" value="1234567890"></label>
+</div>
+
+In some desktop browsers, certain types &mdash; `number`, `date`, `search`&hellip; &mdash; have controls in them which allow the user to increment/decrement the text inside the field, select it from a dropdown, or clear it. When adding custom controls, be sure they don't conflict with these browser-specific controls.
+
+For example, if you add a custom clear button to your search, disable the browser clear buttons:
+
+```CSS
+.custom-search-input::-ms-clear,
+.custom-search-input::-webkit-search-cancel-button {
+    display: none;
+}
+```
+{{/markdown}}
+</section>

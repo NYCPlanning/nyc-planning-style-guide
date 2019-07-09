@@ -1,0 +1,48 @@
+<section>
+{{{headerify 'h3' 'Checkboxes & radio buttons'}}}
+{{#markdown}}
+When selecting from a short list of options, checkboxes and radio buttons are often a more user-friendly alternative to select menus. Use radio buttons when the user must select only one option. Use checkboxes when the user may select multiple options. For long lists, consider using a typeahead autocomplete component.
+
+#### Radio buttons
+
+```
+<fieldset class="fieldset">
+  <legend>Choose one zoning type:</legend>
+  <input type="radio" name="zoning" id="r_com" value="com"><label for="r_com">Commercial</label>
+  <input type="radio" name="zoning" id="r_man" value="man"><label for="r_man">Manufacturing</label>
+  <input type="radio" name="zoning" id="r_res" value="res"><label for="r_res">Residential</label>
+  <input type="radio" name="zoning" id="r_par" value="par"><label for="r_par">Parks</label>
+</fieldset>
+```
+<div class="callout">
+<fieldset class="fieldset">
+  <legend>Choose one zoning type:</legend>
+  <input type="radio" name="zoning" id="r_com" value="com"><label for="r_com">Commercial</label>
+  <input type="radio" name="zoning" id="r_man" value="man"><label for="r_man">Manufacturing</label>
+  <input type="radio" name="zoning" id="r_res" value="res"><label for="r_res">Residential</label>
+  <input type="radio" name="zoning" id="r_par" value="par"><label for="r_par">Parks</label>
+</fieldset>
+</div>
+
+#### Checkboxes
+
+```
+<fieldset class="fieldset">
+  <legend>Choose multiple:</legend>
+  <input type="checkbox" id="c_com"><label for="c_com">Commercial</label>
+  <input type="checkbox" id="c_man"><label for="c_man">Manufacturing</label>
+  <input type="checkbox" id="c_res"><label for="c_res">Residential</label>
+  <input type="checkbox" id="c_par"><label for="c_par">Parks</label>
+</fieldset>
+```
+<div class="callout">
+<fieldset class="fieldset">
+  <legend>Choose multiple:</legend>
+  <input type="checkbox" id="c_com"><label for="c_com">Commercial</label>
+  <input type="checkbox" id="c_man"><label for="c_man">Manufacturing</label>
+  <input type="checkbox" id="c_res"><label for="c_res">Residential</label>
+  <input type="checkbox" id="c_par"><label for="c_par">Parks</label>
+</fieldset>
+</div>
+{{/markdown}}
+</section>

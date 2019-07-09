@@ -1,0 +1,66 @@
+<section>
+{{{headerify 'h3' 'Select menus'}}}
+{{#markdown}}
+Select menus combine choices into one condensed menu. However, when the user needs to see all available choices, radio buttons are often more user-friendly. For long lists, consider using a typeahead autocomplete component.
+
+```
+<label>Choose one
+  <select>
+    <option value="one-two-family">One & Two Family Buildings</option>
+    <option value="multi-family-walk-up">Multi-Family Walk-Up Buildings</option>
+    // more options ...
+  </select>
+</label>
+```
+<div class="callout">
+<label>Choose one
+  <select class="no-margin-bottom">
+    <option value="one-two-family">One & Two Family Buildings</option>
+    <option value="multi-family-walk-up">Multi-Family Walk-Up Buildings</option>
+    <option value="multi-family-elevator">Multi-Family Elevator Buildings</option>
+    <option value="mixed-residential-commercial">Mixed Residential & Commercial Buildings</option>
+    <option value="commercial-office">Commercial & Office Buildings</option>
+    <option value="industrial-manufacturing">Industrial & Manufacturing</option>
+    <option value="transportation-utility">Transportation & Utility</option>
+    <option value="public-facilities-institutions">Public Facilities & Institutions</option>
+    <option value="open-space-outdoor-recreation">Open Space & Outdoor Recreation</option>
+    <option value="parking-facilities">Parking Facilities</option>
+    <option value="vacant-land">Vacant Land</option>
+    <option value="other">Other</option>
+  </select>
+</label>
+</div>
+
+#### Multi-select
+
+The `multiple` attribute allows more than one option to be selected. Use the `size` attribute to set how many options are visible at once (defaults to 4). However, since UX can vary by OS/browser and multiple selection may not be intuitive, checkboxes are often more user-friendly.
+
+```
+<label>Choose many
+  <select multiple size="6">
+    <option value="one-two-family">One & Two Family Buildings</option>
+    <option value="multi-family-walk-up">Multi-Family Walk-Up Buildings</option>
+    // more options ...
+  </select>
+</label>
+```
+<div class="callout">
+<label>Choose many
+  <select multiple size="6" class="no-margin-bottom">
+    <option value="one-two-family">One & Two Family Buildings</option>
+    <option value="multi-family-walk-up">Multi-Family Walk-Up Buildings</option>
+    <option value="multi-family-elevator">Multi-Family Elevator Buildings</option>
+    <option value="mixed-residential-commercial">Mixed Residential & Commercial Buildings</option>
+    <option value="commercial-office">Commercial & Office Buildings</option>
+    <option value="industrial-manufacturing">Industrial & Manufacturing</option>
+    <option value="transportation-utility">Transportation & Utility</option>
+    <option value="public-facilities-institutions">Public Facilities & Institutions</option>
+    <option value="open-space-outdoor-recreation">Open Space & Outdoor Recreation</option>
+    <option value="parking-facilities">Parking Facilities</option>
+    <option value="vacant-land">Vacant Land</option>
+    <option value="other">Other</option>
+  </select>
+</label>
+</div>
+{{/markdown}}
+</section>
