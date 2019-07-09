@@ -619,35 +619,99 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="forms" class="large-margin-bottom">Forms <sup><a href="#forms" class="silver"><i class="fas fa-link"></i></a></sup></h2>
 <section>
-<h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="text-inputs">Text inputs <sup><a href="#text-inputs" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>The following input types create a text input: <code>text</code>, <code>date</code>, <code>datetime-local</code>, <code>email</code>, <code>month</code>, <code>number</code>, <code>password</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, and <code>week</code>.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Text <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Number <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"number"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Date <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Password <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
+<label>Text <input type="text" value="I've entered some text!"></label>
+<label>Number <input type="number" value="42"></label>
+<label>Date <input type="date"></label>
+<label>Password <input type="password" value="1234567890"></label>
+</div>
+
+<p>In some desktop browsers, certain types &mdash; <code>number</code>, <code>date</code>, <code>search</code>&hellip; &mdash; have controls in them which allow the user to increment/decrement the text inside the field, select it from a dropdown, or clear it. When adding custom controls, be sure they don&#39;t conflict with these browser-specific controls.</p>
+<p>For example, if you add a custom clear button to your search, disable the browser clear buttons:</p>
+<div class="code-example"><pre><code class="CSS"><span class="hljs-class">.custom-search-input</span><span class="hljs-pseudo">::-ms-clear</span>,
+<span class="hljs-class">.custom-search-input</span><span class="hljs-pseudo">::-webkit-search-cancel-button</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> none</span></span>;
+}</span></code></pre></div></section>
+
+<section>
+<h3 id="text-areas">Text areas <sup><a href="#text-areas" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>The <code>&lt;textarea&gt;</code> element creates a multi-line text area. The <code>row</code> attribute determines its height, which can be overridden with custom CSS. The <code>cols</code> attribute is not necessary, as the width is always 100%.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Text Area
+  <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">rows</span>=<span class="hljs-value">"4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
+<label>Text Area<textarea rows="4"></textarea></label>
+</div>
 </section>
 
 <section>
-<h3 id="text-inputs">Text Inputs <sup><a href="#text-inputs" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="select-menus">Select menus <sup><a href="#select-menus" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Select menus combine choices into one condensed menu. However, when the user needs to see all available choices, radio buttons are often more user-friendly. For long lists, consider using a typeahead autocomplete component.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Choose one
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"commercial"</span>&gt;</span>Commercial<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"manufacturing"</span>&gt;</span>Manufacturing<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"residential"</span>&gt;</span>Residential<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parks"</span>&gt;</span>Parks<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
+<label>Choose one
+  <select class="no-margin-bottom">
+    <option value="commercial">Commercial</option>
+    <option value="manufacturing">Manufacturing</option>
+    <option value="residential">Residential</option>
+    <option value="parks">Parks</option>
+  </select>
+</label>
+</div>
+
+<h4 id="multi-select">Multi-select</h4>
+<p>The <code>multiple</code> attribute allows more than one option to be selected. However, since UX can vary by OS/browser and multiple selection may not be intuitive, checkboxes are often more user-friendly.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Choose many
+  <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">multiple</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"commercial"</span>&gt;</span>Commercial<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"manufacturing"</span>&gt;</span>Manufacturing<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"residential"</span>&gt;</span>Residential<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"parks"</span>&gt;</span>Parks<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
+<label>Choose many
+  <select multiple class="no-margin-bottom">
+    <option value="commercial">Commercial</option>
+    <option value="manufacturing">Manufacturing</option>
+    <option value="residential">Residential</option>
+    <option value="parks">Parks</option>
+  </select>
+</label>
+</div>
 </section>
 
 <section>
-<h3 id="number-inputs">Number Inputs <sup><a href="#number-inputs" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="checkboxes-and-radio-buttons">Checkboxes & radio buttons <sup><a href="#checkboxes-and-radio-buttons" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Use groups of checkboxes when the user may select multiple choices from a list, and use radio buttons when the user must select just one choice.</p>
+<p>Wrap a group of checkboxes or radio buttons in a <fieldset> element, and give them a common label using the <legend> element. Each individual control should also have its own label, created using a typical <label>.</p>
+<p>Example: Choose a &quot;State&quot; like California or New York. You would never use radio buttons.</p>
+<p>&lt; 7 choices</p>
 </section>
 
 <section>
-<h3 id="text-areas">Text Areas <sup><a href="#text-areas" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="file-upload">File upload <sup><a href="#file-upload" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 </section>
 
 <section>
-<h3 id="select-menus">Select Menus <sup><a href="#select-menus" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-</section>
-
-<section>
-<h3 id="checkboxes-and-radio-buttons">Checkboxes & Radio Buttons <sup><a href="#checkboxes-and-radio-buttons" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-</section>
-
-<section>
-<h3 id="file-upload">File Upload <sup><a href="#file-upload" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-</section>
-
-<section>
-<h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="labels-and-placeholders">Labels & placeholders <sup><a href="#labels-and-placeholders" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>All form inputs should be contained within a label.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Input Label
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
+<label>Input Label
+  <input type="text">
+</label>
+</div>
 </section>
 
 <section>
@@ -655,7 +719,7 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </section>
 
 <section>
-<h3 id="help-text">Help Text <sup><a href="#help-text" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="help-text">Help text <sup><a href="#help-text" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 </section>
 
 
@@ -822,12 +886,11 @@ how to use Sass
                 <a href="#forms" class="small-margin-bottom header-small display-inline-block text-black">Forms</a>
                 <ul class="medium-margin-bottom text-small">
                   <li><a href="#text-inputs">Text Inputs</a></li>
-                  <li><a href="#number-inputs">Number Inputs</a></li>
                   <li><a href="#text-areas">Text Areas</a></li>
                   <li><a href="#select-menus">Select Menus</a></li>
                   <li><a href="#checkboxes-and-radio-buttons">Checkboxes &amp; Radio Buttons</a></li>
                   <li><a href="#file-upload">File Upload</a></li>
-                  <li><a href="#labels">Labels</a></li>
+                  <li><a href="#labels-and-placeholders">Labels &amp; placeholders</a></li>
                   <li><a href="#fieldset">Fieldset</a></li>
                   <li><a href="#help-text">Help Text</a></li>
                 </ul>
