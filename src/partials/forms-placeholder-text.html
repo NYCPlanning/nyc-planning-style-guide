@@ -1,0 +1,20 @@
+<section>
+{{{headerify 'h3' 'Placeholder text'}}}
+{{#markdown}}
+
+The `placeholder` attribute specifies text that appears within an input when it's empty.
+
+```
+<input type="text" placeholder="This is placeholder text">
+```
+<div class="callout">
+  <input type="text" placeholder="This is placeholder text">
+</div>
+
+#### <i class="fas fa-exclamation-triangle text-gold"></i> Placeholders are not accessible!
+
+<i class="fas fa-ban fuchsia"></i> Do not use placeholder text to replace the functionality of a `<label>` element. Placeholder text can’t be automatically translated, doesn't work with assistive technology, and causes UX confusion &mdash; users may assume that the field is already filled out and upon entering their first character, they no longer see the prompt. Explicit instructions and requirements for inputs should appear in <a href="#labels" data-smooth-scroll>labels</a> or <a href="#help-text" data-smooth-scroll>help text</a>.
+
+**Search is the exception.** It's a standard UI convention for search inputs to have a magnifying glass icon, which clearly communicates the function of the input. In this case, it is acceptable to use placeholder text. However, you must also include a label for accessibility. View to the <a href="#search-form" data-smooth-scroll>Search Form</a> component for information on implementing this. 
+{{/markdown}}
+</section>

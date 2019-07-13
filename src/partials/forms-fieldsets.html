@@ -5,30 +5,26 @@ A group of related controls should be wrapped in a `<fieldset>` element, and giv
 
 ```
 <fieldset class="fieldset">
-  <legend>My Favorites</legend>
-  ...
+  <legend>Zoning types</legend>
+  <input type="checkbox" id="c_com"><label for="c_com">Commercial</label>
+  <input type="checkbox" id="c_man"><label for="c_man">Manufacturing</label>
+  <input type="checkbox" id="c_res"><label for="c_res">Residential</label>
+  <input type="checkbox" id="c_par"><label for="c_par">Parks</label>
 </fieldset>
 ```
 <div class="callout">
 <fieldset class="fieldset">
-  <legend>My Favorites</legend>
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-4">
-      <label>Food <input type="text"></label>
-    </div>
-    <div class="cell large-4">
-      <label>Song <input type="text"></label>
-    </div>
-    <div class="cell large-4">
-      <label>Color <input type="text"></label>
-    </div>
-  </div>
+  <legend>Zoning types</legend>
+  <input type="checkbox" id="c_com"><label for="c_com">Commercial</label>
+  <input type="checkbox" id="c_man"><label for="c_man">Manufacturing</label>
+  <input type="checkbox" id="c_res"><label for="c_res">Residential</label>
+  <input type="checkbox" id="c_par"><label for="c_par">Parks</label>
 </fieldset>
 </div>
 
 #### Accessibile fieldsets
 
-To increase accessibility, related controls (especially checkboxes and radio buttons) should always be wrapped in a fieldset. If this is not ideal for the layout, the `.show-for-sr` class can be added to the legend to it's hidden on screen but available for screen readers.
+To increase accessibility, related controls (especially checkboxes and radio buttons) should always be wrapped in a fieldset. If this is not ideal for the UI/layout, the `.show-for-sr` class can be added to the legend so it's hidden on screen but still available for screen readers.
 
 ```
 <fieldset>

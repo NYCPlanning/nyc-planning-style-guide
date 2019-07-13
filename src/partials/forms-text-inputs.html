@@ -16,15 +16,7 @@ The following input types create a text input: `text`, `date`, `datetime-local`,
 <label>Password <input type="password" value="1234567890"></label>
 </div>
 
-In some desktop browsers, certain types &mdash; `number`, `date`, `search`&hellip; &mdash; have controls in them which allow the user to increment/decrement the text inside the field, select it from a dropdown, or clear it. When adding custom controls, be sure they don't conflict with these browser-specific controls.
+In some desktop browsers, certain types &mdash; `number`, `date`, `search`&hellip; &mdash; have controls in them which allow the user to increment/decrement the text inside the field, select it from a dropdown, or clear it. When adding custom controls, be sure they don't conflict with these browser-specific controls. Adding the `.no-controls` class will remove most of them. 
 
-For example, if you add a custom clear button to your search, disable the browser clear buttons:
-
-```CSS
-.custom-search-input::-ms-clear,
-.custom-search-input::-webkit-search-cancel-button {
-    display: none;
-}
-```
 {{/markdown}}
 </section>

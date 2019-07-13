@@ -1,5 +1,21 @@
 <section>
 {{{headerify 'h3' 'Help text'}}}
 {{#markdown}}
+
+Place `.help-text` below a form element to clarify any instructions or requirements. Give the help text a unique `ID`, and add the attribute `aria-describedby` to the associated form element. Screen readers can read the help text when the user focusses an associated input.
+
+```
+<label>Password
+  <input type="password" aria-describedby="passwordHelpText">
+</label>
+<p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+```
+<div class="callout">
+<label>Password
+  <input type="password" aria-describedby="passwordHelpText">
+</label>
+<p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+</div>
+
 {{/markdown}}
 </section>

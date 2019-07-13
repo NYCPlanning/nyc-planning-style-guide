@@ -14,6 +14,7 @@ sections:
       - 'Grayscale Colors'
       - 'Data Viz Colors'
       - 'Color Classes'
+      - 'Color Accessibility'
 
   - title: Typography
     slug: typography
@@ -36,11 +37,12 @@ sections:
     items:
       - 'Text Inputs'
       - 'Text Areas'
+      - 'Labels & placeholders'
       - 'Select Menus'
       - 'Checkboxes & Radio Buttons'
       - Fieldsets
       - 'File Upload'
-      - 'Labels & placeholders'
+      - 'Placeholder Text'
       - 'Help Text'
 
   - title: Accessibility
@@ -97,9 +99,13 @@ sections:
 
 ---
 
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+<p class="lead">NYC Planning's Digital Style Guide defines standards for the creation, formatting, and design of our digital products. These best practices and UI patterns ensure consistency both within specific applications, and throughout our products and services. </p>
 
-<p>overview of how to use... link to Sass/CSS instructions...</p>
+<p>Since user experience is directly affected by how digital content is planned and structured, this guide is aimed at not only designers and developers, but also content creators.</p>
+
+- overview of how to use...
+- link to Sass/CSS instructions...
+- markup/elements
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -111,6 +117,7 @@ sections:
 <h2 id="color" class="large-margin-bottom">{{{anchorify 'Color'}}}</h2>
 {{> color-palettes}}
 {{> color-classes}}
+{{> color-accessibility}}
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -133,24 +140,28 @@ sections:
 <h2 id="forms" class="large-margin-bottom">{{{anchorify 'Forms'}}}</h2>
 {{> forms-text-inputs}}
 {{> forms-text-areas}}
+{{> forms-labels}}
 {{> forms-select-menus}}
 {{> forms-checkboxes-radios}}
 {{> forms-fieldsets}}
 {{> forms-file-upload}}
-{{> forms-labels}}
+{{> forms-placeholder-text}}
 {{> forms-help-text}}
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="layout" class="large-margin-bottom">{{{anchorify 'Layout'}}}</h2>
-use relative units
-
+{{#markdown}}
+- use relative units
+- boxes & whitespace
+{{/markdown}}
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="components" class="large-margin-bottom">{{{anchorify 'Components'}}}</h2>
-{{> site-header}}
-{{> badges}}
-{{> labels}}
+{{> component-site-header}}
+{{> component-search-form}}
+{{> component-badges}}
+{{> component-labels}}
 
 <!--
 Abide

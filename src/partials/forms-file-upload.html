@@ -1,5 +1,16 @@
 <section>
 {{{headerify 'h3' 'File upload'}}}
 {{#markdown}}
+
+Use `<input type="file">` to create a file upload button. For security reasons, most browsers don't let you style file inputs. To work around that, we can style a form label as a button, and point it to the `<input>`. To properly mask the input, the `.show-for-sr` class is added.
+
+```
+<label for="exampleFileUpload" class="button">Upload File</label>
+<input type="file" id="exampleFileUpload" class="show-for-sr">
+```
+<div class="callout">
+<label for="exampleFileUpload" class="button">Upload File</label>
+<input type="file" id="exampleFileUpload" class="show-for-sr">
+</div>
 {{/markdown}}
 </section>

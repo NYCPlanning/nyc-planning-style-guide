@@ -65,9 +65,13 @@
       <div class="grid-x grid-margin-x">
         <div class="medium-8 large-9 cell medium-order-2 large-padding-top large-padding-bottom">
 
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+<p class="lead">NYC Planning's Digital Style Guide defines standards for the creation, formatting, and design of our digital products. These best practices and UI patterns ensure consistency both within specific applications, and throughout our products and services. </p>
 
-<p>overview of how to use... link to Sass/CSS instructions...</p>
+<p>Since user experience is directly affected by how digital content is planned and structured, this guide is aimed at not only designers and developers, but also content creators.</p>
+
+- overview of how to use...
+- link to Sass/CSS instructions...
+- markup/elements
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -316,6 +320,26 @@
   <p class="bg-yellow">This element has a yellow background, which defaults to black text.</p>
   <p class="bg-blue-dark">This element has a dark blue background, which defaults to white text.</p>
   <p class="bg-chartreuse-light text-green-dark">This element has a light chartreuse background and dark green text (which overrides its default black text).</p>
+</div>
+
+</section>
+<section>
+<h3 id="color-accessibility">Color accessibility <sup><a href="#color-accessibility" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<div class="grid-x grid-margin-x">
+  <div class="cell large-7">
+    <p>For those with low vision, typographic contrast is important. In accordance with Web Content Accessibility Guidelines (WCAG) 2.0 requirements, please use the <a href="http://webaim.org/resources/contrastchecker/">Color Contrast Checker</a> to make sure that all text and background color combinations pass AA contrast requirements.</p>
+    <ul class="no-bullet">
+      <li><i class="fas fa-ban fuchsia"></i> Do not set light type on light backgrounds</li>
+      <li><i class="fas fa-ban fuchsia"></i> Do not set dark type on dark backgrounds</li>
+      <li><i class="fas fa-ban fuchsia"></i> Do not relying purely on color for visual cues</li>
+    </ul>
+  </div>
+  <div class="cell large-5">
+    <p class="text-small bg-silver text-dcp-orange small-padding">This isn&#39;t readable for those with low vision.</p>
+    <p class="text-small bg-charcoal text-dcp-orange small-padding">This isn&#39;t readable for those with low vision.</p>
+    <p class="text-small bg-blue-dark text-gray small-padding">This isn&#39;t readable for those with low vision.</p>
+    <p class="text-small bg-green-light text-green small-padding">This isn&#39;t readable for those with low vision.</p>
+  </div>
 </div>
 
 </section>
@@ -631,12 +655,8 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 <label>Password <input type="password" value="1234567890"></label>
 </div>
 
-<p>In some desktop browsers, certain types &mdash; <code>number</code>, <code>date</code>, <code>search</code>&hellip; &mdash; have controls in them which allow the user to increment/decrement the text inside the field, select it from a dropdown, or clear it. When adding custom controls, be sure they don&#39;t conflict with these browser-specific controls.</p>
-<p>For example, if you add a custom clear button to your search, disable the browser clear buttons:</p>
-<div class="code-example"><pre><code class="CSS"><span class="hljs-class">.custom-search-input</span><span class="hljs-pseudo">::-ms-clear</span>,
-<span class="hljs-class">.custom-search-input</span><span class="hljs-pseudo">::-webkit-search-cancel-button</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> none</span></span>;
-}</span></code></pre></div></section>
+<p>In some desktop browsers, certain types &mdash; <code>number</code>, <code>date</code>, <code>search</code>&hellip; &mdash; have controls in them which allow the user to increment/decrement the text inside the field, select it from a dropdown, or clear it. When adding custom controls, be sure they don&#39;t conflict with these browser-specific controls. Adding the <code>.no-controls</code> class will remove most of them. </p>
+</section>
 <section>
 <h3 id="text-areas">Text areas <sup><a href="#text-areas" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>The <code>&lt;textarea&gt;</code> element creates a multi-line text area. The <code>row</code> attribute determines its height, which can be overridden with custom CSS. The <code>cols</code> attribute is not necessary, as the width is always 100%.</p>
@@ -645,6 +665,26 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 <span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
 <label>Text Area<textarea rows="4"></textarea></label>
 </div>
+</section>
+<section>
+<h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>All form inputs must have an associated label. To associate a <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element, give the label a <code>for</code> attribute with the same value as the input&#39;s <code>id</code> attribute.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"my-label-id"</span>&gt;</span>Input Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"my-label-id"</span>&gt;</span></code></pre></div><div class="callout">
+<label for="my-label-id">Input Label</label>
+<input type="text" id="my-label-id">
+</div>
+
+
+<p>Alternatively, you can nest the input directly inside the label (without matching attributes) to associate them implicitly.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Input Label
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
+<label>Input Label
+  <input type="text" class="no-margin">
+</label>
+</div>
+
 </section>
 <section>
 <h3 id="select-menus">Select menus <sup><a href="#select-menus" class="silver"><i class="fas fa-link"></i></a></sup></h3>
@@ -742,27 +782,23 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 <h3 id="fieldsets">Fieldsets <sup><a href="#fieldsets" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>A group of related controls should be wrapped in a <code>&lt;fieldset&gt;</code> element, and given a common label using the <code>&lt;legend&gt;</code> element. Each individual input should have its own <code>&lt;label&gt;</code>. Fieldsets have no default style. The <code>.fieldset</code> class can be added to the fieldset to style it as a containing box, with the legend in its top-left corner.</p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fieldset"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>My Favorites<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
-  ...
+  <span class="hljs-tag">&lt;<span class="hljs-title">legend</span>&gt;</span>Zoning types<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_com"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_com"</span>&gt;</span>Commercial<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_man"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_man"</span>&gt;</span>Manufacturing<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_res"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_res"</span>&gt;</span>Residential<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"c_par"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"c_par"</span>&gt;</span>Parks<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></code></pre></div><div class="callout">
 <fieldset class="fieldset">
-  <legend>My Favorites</legend>
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-4">
-      <label>Food <input type="text"></label>
-    </div>
-    <div class="cell large-4">
-      <label>Song <input type="text"></label>
-    </div>
-    <div class="cell large-4">
-      <label>Color <input type="text"></label>
-    </div>
-  </div>
+  <legend>Zoning types</legend>
+  <input type="checkbox" id="c_com"><label for="c_com">Commercial</label>
+  <input type="checkbox" id="c_man"><label for="c_man">Manufacturing</label>
+  <input type="checkbox" id="c_res"><label for="c_res">Residential</label>
+  <input type="checkbox" id="c_par"><label for="c_par">Parks</label>
 </fieldset>
 </div>
 
 <h4 id="accessibile-fieldsets">Accessibile fieldsets</h4>
-<p>To increase accessibility, related controls (especially checkboxes and radio buttons) should always be wrapped in a fieldset. If this is not ideal for the layout, the <code>.show-for-sr</code> class can be added to the legend to it&#39;s hidden on screen but available for screen readers.</p>
+<p>To increase accessibility, related controls (especially checkboxes and radio buttons) should always be wrapped in a fieldset. If this is not ideal for the UI/layout, the <code>.show-for-sr</code> class can be added to the legend so it&#39;s hidden on screen but still available for screen readers.</p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">legend</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Zoning types:<span class="hljs-tag">&lt;/<span class="hljs-title">legend</span>&gt;</span>
   ...
@@ -779,27 +815,46 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </section>
 <section>
 <h3 id="file-upload">File upload <sup><a href="#file-upload" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-</section>
-<section>
-<h3 id="labels-and-placeholders">Labels & placeholders <sup><a href="#labels-and-placeholders" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-<p>All form inputs should be contained within a label.</p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Input Label
-  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span></code></pre></div><div class="callout">
-<label>Input Label
-  <input type="text">
-</label>
+<p>Use <code>&lt;input type=&quot;file&quot;&gt;</code> to create a file upload button. For security reasons, most browsers don&#39;t let you style file inputs. To work around that, we can style a form label as a button, and point it to the <code>&lt;input&gt;</code>. To properly mask the input, the <code>.show-for-sr</code> class is added.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"exampleFileUpload"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span>&gt;</span>Upload File<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"file"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"exampleFileUpload"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span></code></pre></div><div class="callout">
+<label for="exampleFileUpload" class="button">Upload File</label>
+<input type="file" id="exampleFileUpload" class="show-for-sr">
 </div>
 </section>
 <section>
+<h3 id="placeholder-text">Placeholder text <sup><a href="#placeholder-text" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>The <code>placeholder</code> attribute specifies text that appears within an input when it&#39;s empty.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"This is placeholder text"</span>&gt;</span></code></pre></div><div class="callout">
+  <input type="text" placeholder="This is placeholder text">
+</div>
+
+<h4 id="-i-class-fas-fa-exclamation-triangle-text-gold-i-placeholders-are-not-accessible-"><i class="fas fa-exclamation-triangle text-gold"></i> Placeholders are not accessible!</h4>
+<p><i class="fas fa-ban fuchsia"></i> Do not use placeholder text to replace the functionality of a <code>&lt;label&gt;</code> element. Placeholder text can’t be automatically translated, doesn&#39;t work with assistive technology, and causes UX confusion &mdash; users may assume that the field is already filled out and upon entering their first character, they no longer see the prompt. Explicit instructions and requirements for inputs should appear in <a href="#labels" data-smooth-scroll>labels</a> or <a href="#help-text" data-smooth-scroll>help text</a>.</p>
+<p><strong>Search is the exception.</strong> It&#39;s a standard UI convention for search inputs to have a magnifying glass icon, which clearly communicates the function of the input. In this case, it is acceptable to use placeholder text. However, you must also include a label for accessibility. View to the <a href="#search-form" data-smooth-scroll>Search Form</a> component for information on implementing this. </p>
+</section>
+<section>
 <h3 id="help-text">Help text <sup><a href="#help-text" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Place <code>.help-text</code> below a form element to clarify any instructions or requirements. Give the help text a unique <code>ID</code>, and add the attribute <code>aria-describedby</code> to the associated form element. Screen readers can read the help text when the user focusses an associated input.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Password
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"password"</span> <span class="hljs-attribute">aria-describedby</span>=<span class="hljs-value">"passwordHelpText"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"help-text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"passwordHelpText"</span>&gt;</span>Your password must have at least 10 characters, a number, and an Emoji.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><div class="callout">
+<label>Password
+  <input type="password" aria-describedby="passwordHelpText">
+</label>
+<p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+</div>
+
 </section>
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="layout" class="large-margin-bottom">Layout <sup><a href="#layout" class="silver"><i class="fas fa-link"></i></a></sup></h2>
-use relative units
-
+<ul>
+<li>use relative units</li>
+<li>boxes &amp; whitespace</li>
+</ul>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="components" class="large-margin-bottom">Components <sup><a href="#components" class="silver"><i class="fas fa-link"></i></a></sup></h2>
@@ -848,6 +903,22 @@ use relative units
       </nav>
     </div>
   </header>
+
+</section>
+<section>
+<h3 id="search-form">Search form <sup><a href="#search-form" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>It&#39;s a standard UI convention for search inputs to have a magnifying glass icon. This clearly communicates the function of the input. In this case, it is acceptable to use placeholder text. However, you must also include a label for accessibility &mdash; the <code>.show-for-sr</code> class can be added to the label so it&#39;s hidden on screen but still available for screen readers. </p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-form"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"my-search-field"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Search..."</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"my-search-field"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-input no-controls large-padding-right"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"submit"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fas fa-search text-dark-gray"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">fieldset</span>&gt;</span></code></pre></div><div class="callout">
+<fieldset class="search-form">
+  <label for="my-search-field" class="show-for-sr">Search</label>
+  <input type="search" placeholder="Search..." id="my-search-field" class="search-input no-controls large-padding-right">
+  <button type="submit" class="search-icon"><i class="fas fa-search text-dark-gray"></i></button>
+</fieldset>
+</div>
 
 </section>
 <section>
@@ -936,6 +1007,7 @@ how to use Sass
                   <li><a href="#grayscale-colors">Grayscale Colors</a></li>
                   <li><a href="#data-viz-colors">Data Viz Colors</a></li>
                   <li><a href="#color-classes">Color Classes</a></li>
+                  <li><a href="#color-accessibility">Color Accessibility</a></li>
                 </ul>
               </li>
               <li>
@@ -960,11 +1032,12 @@ how to use Sass
                 <ul class="medium-margin-bottom text-small">
                   <li><a href="#text-inputs">Text Inputs</a></li>
                   <li><a href="#text-areas">Text Areas</a></li>
+                  <li><a href="#labels-and-placeholders">Labels &amp; placeholders</a></li>
                   <li><a href="#select-menus">Select Menus</a></li>
                   <li><a href="#checkboxes-and-radio-buttons">Checkboxes &amp; Radio Buttons</a></li>
                   <li><a href="#fieldsets">Fieldsets</a></li>
                   <li><a href="#file-upload">File Upload</a></li>
-                  <li><a href="#labels-and-placeholders">Labels &amp; placeholders</a></li>
+                  <li><a href="#placeholder-text">Placeholder Text</a></li>
                   <li><a href="#help-text">Help Text</a></li>
                 </ul>
               </li>

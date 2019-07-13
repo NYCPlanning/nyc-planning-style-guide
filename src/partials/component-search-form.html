@@ -1,0 +1,23 @@
+<section>
+{{{headerify 'h3' 'Search form'}}}
+{{#markdown}}
+
+It's a standard UI convention for search inputs to have a magnifying glass icon. This clearly communicates the function of the input. In this case, it is acceptable to use placeholder text. However, you must also include a label for accessibility &mdash; the `.show-for-sr` class can be added to the label so it's hidden on screen but still available for screen readers. 
+
+```
+<fieldset class="search-form">
+  <label for="my-search-field" class="show-for-sr">Search</label>
+  <input type="search" placeholder="Search..." id="my-search-field" class="search-input no-controls large-padding-right">
+  <button type="submit" class="search-icon"><i class="fas fa-search text-dark-gray"></i></button>
+</fieldset>
+```
+<div class="callout">
+<fieldset class="search-form">
+  <label for="my-search-field" class="show-for-sr">Search</label>
+  <input type="search" placeholder="Search..." id="my-search-field" class="search-input no-controls large-padding-right">
+  <button type="submit" class="search-icon"><i class="fas fa-search text-dark-gray"></i></button>
+</fieldset>
+</div>
+
+{{/markdown}}
+</section>

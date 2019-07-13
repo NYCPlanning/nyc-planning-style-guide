@@ -94,11 +94,45 @@ fieldset {
   }
 }
 
+.search-form {
+  position: relative;
+  margin-bottom: $global-margin;
 
-//
-// Inputs
-// --------------------------------------------------
-::-ms-clear {
-  // nix IE's default clear buttons
-  display: none;
+  .search-input {
+    margin-bottom: 0;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    transform: translateY(-50%);
+  }
+}
+
+input.no-controls {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+
+  // nix Internet Explorer 'X'
+  &::-ms-clear {  display: none; width : 0; height: 0; }
+  &::-ms-reveal {  display: none; width : 0; height: 0; }
+
+  /* nix Webkit 'X' */
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration { display: none; }
+
+  // nix Webkit number spinners
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  // nix Webkit datepicker
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 }

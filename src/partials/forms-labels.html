@@ -1,8 +1,20 @@
 <section>
-{{{headerify 'h3' 'Labels & placeholders'}}}
+{{{headerify 'h3' 'Labels'}}}
 {{#markdown}}
 
-All form inputs should be contained within a label.
+All form inputs must have an associated label. To associate a `<label>` with an `<input>` element, give the label a `for` attribute with the same value as the input's `id` attribute.
+
+```
+<label for="my-label-id">Input Label</label>
+<input type="text" id="my-label-id">
+```
+<div class="callout">
+<label for="my-label-id">Input Label</label>
+<input type="text" id="my-label-id">
+</div>
+
+
+Alternatively, you can nest the input directly inside the label (without matching attributes) to associate them implicitly.
 
 ```
 <label>Input Label
@@ -11,8 +23,9 @@ All form inputs should be contained within a label.
 ```
 <div class="callout">
 <label>Input Label
-  <input type="text">
+  <input type="text" class="no-margin">
 </label>
 </div>
+
 {{/markdown}}
 </section>
