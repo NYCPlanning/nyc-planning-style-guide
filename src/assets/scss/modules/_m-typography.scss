@@ -27,15 +27,15 @@ button {
   cursor: pointer;
 }
 
-.button.gray {
-  background-color: $white-smoke;
-  color: darken($primary-color, 10%);
-
-  &:hover {
-    background-color: darken($white-smoke, 10%);
-    color: darken($primary-color, 20%);
-  }
-}
+// .button.gray {
+//   background-color: $white-smoke;
+//   color: darken($primary-color, 10%);
+//
+//   &:hover {
+//     background-color: darken($white-smoke, 10%);
+//     color: darken($primary-color, 20%);
+//   }
+// }
 
 
 //

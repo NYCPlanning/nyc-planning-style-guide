@@ -4,26 +4,26 @@ sections:
   - title: Logo
     slug: logo
     items:
-      - 'Logo variations'
-      - 'Logo usage'
+      - Logo variations
+      - Logo usage
 
   - title: Color
     slug: color
     items:
-      - 'Brand Colors'
-      - 'Grayscale Colors'
-      - 'Data Viz Colors'
-      - 'Color Classes'
-      - 'Color Accessibility'
+      - Brand colors
+      - Grayscale colors
+      - Data viz colors
+      - Color classes
+      - Color accessibility
 
   - title: Typography
     slug: typography
     items:
-      - Type Basics
+      - Type basics
       - Fonts
       - Headers
       - Paragraphs
-      - 'Text Alignment'
+      - Text alignment
       - Links
       - Lists
       - Blockquotes
@@ -35,25 +35,40 @@ sections:
   - title: Forms
     slug: forms
     items:
-      - 'Text Inputs'
-      - 'Text Areas'
-      - 'Labels & placeholders'
-      - 'Select Menus'
-      - 'Checkboxes & Radio Buttons'
+      - Text inputs
+      - Text areas
+      - Labels & placeholders
+      - Select menus
+      - Checkboxes & radio buttons
       - Fieldsets
-      - 'File Upload'
-      - 'Placeholder Text'
-      - 'Help Text'
+      - File upload
+      - Placeholder text
+      - Help text
+
+  - title: Navigation
+    slug: navigation
+    items:
+      - Buttons
+      - Close button
+      - Responsive menu
+      - Drilldown menu
+      - Dropdown menu
+      - Dropdown pane
+      - Menu
+      - Pagination
+
+  - title: Icons
+    slug: icons
+    items:
+      - Font Awesome
 
   - title: Accessibility
     slug: accessibility
     items:
-      - 'Text vs. Images'
+      - Text vs. images
       - Contrast
-      - 'Font Size'
-      - 'Screen Readers'
-      - 'Skip Links'
-      - 'Custom Form Controls'
+      - Screen readers
+      - Focus styles
 
   - title: Layout
     slug: layout
@@ -61,21 +76,9 @@ sections:
       - Tables
       - Grid
       - Visibility
-      - 'Print Styles'
-      - 'Float Classes'
+      - Print styles
+      - Float classes
       - Sticky
-
-  - title: Navigation
-    slug: navigation
-    items:
-      - Button
-      - 'Close Button'
-      - 'Responsive Menu'
-      - Drilldown Menu
-      - Dropdown Menu
-      - Dropdown Pane
-      - Menu
-      - Pagination
 
   - title: Components
     slug: components
@@ -86,7 +89,7 @@ sections:
       - Switches
       - Tooltips
       - Breadcrumbs
-      - Site Header
+      - Site header
 
   - title: Media
     slug: media
@@ -147,6 +150,26 @@ sections:
 {{> forms-file-upload}}
 {{> forms-placeholder-text}}
 {{> forms-help-text}}
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="navigation" class="large-margin-bottom">{{{anchorify 'Navigation'}}}</h2>
+{{> navigation-buttons}}
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="icons" class="large-margin-bottom">{{{anchorify 'Icons'}}}</h2>
+{{> icons-font-awesome}}
+
+<h3>Shadows</h3>
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="accessibility" class="large-margin-bottom">{{{anchorify 'Accessibility'}}}</h2>
+{{> accessibility}}
+{{> accessibility-contrast}}
+{{> accessibility-screen-readers}}
+{{> accessibility-focus-styles}}
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">

@@ -22,7 +22,8 @@
         max-height: 100vh;
         overflow: auto;
       }
-      .code-example + .callout {
+      .code-example + .callout,
+      .code-example + table {
         margin-top: calc(-1px - 1.5rem);
       }
       section + section {
@@ -378,12 +379,12 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", 
 font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div><h4 id="font-size">Font size</h4>
 <p>The default font size of the <code>&lt;body&gt;</code> element is set to <code>100%</code>, which is 16 pixels on most browsers. This ensures compatibility with browser-based text zoom and preferences set by the user. Explicit font sizes should be set with relative units, preferably <code>rem</code>. Setting the font size with <code>px</code> can break browser zoom functionality.</p>
 <table>
-  <tr><td><code>.xxlarge</code></td><td><code>rem</code> (typically 34 pixels).</td><td class="text-xxlarge">This is giant.</td></tr>
-  <tr><td><code>.xlarge</code></td><td><code>rem</code> (typically 25 pixels).</td><td class="text-xlarge">This is really big.</td></tr>
-  <tr><td><code>.large</code></td><td><code>rem</code> (typically 20 pixels).</td><td class="text-large">This is larger than average.</td></tr>
-  <tr><td><code>.medium</code></td><td><code>1rem</code> (typically 16 pixels).</td><td class="text-medium">This is medium (default size).</td></tr>
-  <tr><td><code>.small</code></td><td><code>rem</code> (typically 13 pixels).</td><td class="text-small">This is small. Make sure it&#39;s accessible.</td></tr>
-  <tr><td><code>.tiny</code></td><td><code>rem</code> (typically 10 pixels).</td><td class="text-tiny">Be careful with text this tiny. ALL CAPS HELPS.</td></tr>
+  <tr><td><code>.xxlarge</code></td><td><code>2.125rem</code> (≈ 34 pixels)</td><td class="text-xxlarge">This is giant.</td></tr>
+  <tr><td><code>.xlarge</code></td><td><code>1.5625rem</code> (≈ 25 pixels)</td><td class="text-xlarge">This is really big.</td></tr>
+  <tr><td><code>.large</code></td><td><code>1.25rem</code> (≈ 20 pixels)</td><td class="text-large">This is larger than average.</td></tr>
+  <tr><td><code>.medium</code></td><td><code>1rem</code> (≈ 16 pixels)</td><td class="text-medium">This is medium (default size).</td></tr>
+  <tr><td><code>.small</code></td><td><code>0.8125rem</code> (≈ 13 pixels)</td><td class="text-small">This is small. Make sure it&#39;s accessible.</td></tr>
+  <tr><td><code>.tiny</code></td><td><code>0.625rem</code> (≈ 10 pixels)</td><td class="text-tiny">Be careful with text this tiny. ALL CAPS HELPS.</td></tr>
 </table>
 
 </section>
@@ -461,14 +462,14 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </ol>
 <div class="grid-x grid-margin-x medium-up-2">
   <div class="cell">
+    <p class="tiny-margin-bottom"><b><i class="fas fa-ban fa-fw fuchsia"></i> Bad:</b></p>
     <div class="callout">
-      <b><i class="fas fa-ban fa-fw fuchsia"></i> Bad:</b>
       <p>To learn more about ZoLa, <a>click here</a>.</p>
     </div>
   </div>
   <div class="cell">
+    <p class="tiny-margin-bottom"><b><i class="fas fa-check fa-fw green-dark"></i> Good:</b></p>
     <div class="callout">
-      <b><i class="fas fa-check fa-fw green-dark"></i> Good:</b>
       <p>Learn more about <a>ZoLa</a>.</p>
     </div>
   </div>
@@ -490,7 +491,7 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </div>
 
 <h4 id="external-links">External links</h4>
-<p>When linking to external websites and documents, use an icon that indicates to the user that they will be leaving the current website. For example: “Follow <a href="https://github.com/NYCPlanning/">NYC Planning <i class="fas fa-external-link-alt"></i></a> on GitHub.” For more information on adding icons, go to the <a href="#font-awesome" data-smooth-scroll>Font Awesome</a> section. </p>
+<p>When linking to external websites and documents, use an icon that indicates to the user that they will be leaving the current website. For example: “Follow <a href="https://github.com/NYCPlanning/">NYC Planning <i class="fas fa-external-link-alt"></i></a> on GitHub.” For more information on adding icons, go to the <a href="#font-awesome" data-smooth-scroll>Font Awesome</a> section.</p>
 </section>
 <section>
 <h3 id="lists">Lists <sup><a href="#lists" class="silver"><i class="fas fa-link"></i></a></sup></h3>
@@ -850,6 +851,210 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="navigation" class="large-margin-bottom">Navigation <sup><a href="#navigation" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+<section>
+<h3 id="buttons">Buttons <sup><a href="#buttons" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Buttons can be created with minimal markup by adding the <code>.button</code> class. Primary buttons are <code>a11y-orange</code> with white text, and should be used sparingly for primary user actions that need to be very noticeable. For secondary tasks, add the <code>.secondary</code> class to make a light gray button with orange text.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Primary action<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button secondary"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Secondary action<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div><div class="callout">
+  <a class="button no-margin" href="#">Primary action</a>
+  <a class="button secondary no-margin" href="#">Secondary action</a>
+</div>
+
+<p>Size classes can be added to your button to change its size.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button tiny"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Tiny<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button small"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button large"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Large<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div><div class="callout">
+  <a class="button tiny" href="#">Tiny</a>
+  <a class="button small" href="#">Small</a>
+  <a class="button" href="#">Default</a>
+  <a class="button large" href="#">Large</a>
+</div>
+
+<p>The <code>.expanded</code> class makes the butto tak up the full width of its container.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button expanded"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Such Expand<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div><div class="callout">
+  <a class="button expanded" href="#">Such Expand</a>
+</div>
+
+<h4 id="-i-class-fas-fa-exclamation-triangle-text-gold-i-use-the-right-tag"><i class="fas fa-exclamation-triangle text-gold"></i> Use the right tag</h4>
+<p>Since buttons can be used for many purposes, it&#39;s important to use the right tag. Use the <code>&lt;a&gt;</code> tag if the button is a link to a document, another page, or an anchor within the page. Use the <code>&lt;button&gt;</code> tag if the button performs an action that changes something on the current page.</p>
+<h4 id="label-buttons-with-clear-actions">Label buttons with clear actions</h4>
+<p>Generic or misleading button text can be frustrating for users. A button’s text should clearly describe its action. Use verbs whenever possible instead of &quot;Yes&quot; or &quot;OK&quot; so buttons don&#39;t rely on the context of titles or prompts.</p>
+<div class="grid-x grid-margin-x medium-up-2">
+  <div class="cell">
+    <p class="tiny-margin-bottom"><b><i class="fas fa-ban fa-fw fuchsia"></i> Bad:</b></p>
+    <div class="callout">
+      <p>Would you like to delete this?</p>
+      <button class="button small no-margin">OK</button> <button class="button small secondary no-margin">No</button>
+    </div>
+  </div>
+  <div class="cell">
+    <p class="tiny-margin-bottom"><b><i class="fas fa-check fa-fw green-dark"></i> Good:</b></p>
+    <div class="callout">
+      <p>Would you like to delete this?</p>
+      <button class="button small no-margin">Delete</button> <button class="button small secondary no-margin">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<h4 id="disabled-buttons">Disabled buttons</h4>
+<p>The <code>.disabled</code> gives buttons a faded appearance and the <code>not-allowed</code> cursor property. This only adds visual style; it doesn&#39;t disable any actions. For <code>&lt;button&gt;</code> elements, you can add the <code>disabled</code> attribute to both style and actually disable it. Mark links as disabled for assistive technology by adding the <code>aria-disabled</code> attribute.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button disabled"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">aria-disabled</span>&gt;</span>Disabled link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button"</span> <span class="hljs-attribute">disabled</span>&gt;</span>Disabled button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></code></pre></div><div class="callout">
+  <a class="button disabled no-margin" href="#" aria-disabled>Disabled link</a>
+  <button type="button" class="button no-margin" disabled>Disabled button</button>
+</div>
+
+</section>
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="icons" class="large-margin-bottom">Icons <sup><a href="#icons" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+<section>
+<h3 id="font-awesome">Font Awesome <sup><a href="#font-awesome" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<div class="grid-x text-large small-up-3 medium-up-4 large-up-8 text-charcoal">
+  <div class="cell large-padding"><i class="fas fa-search fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-map-marker-alt fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-external-link-alt fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-exclamation-triangle fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-info-circle fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-check fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-file fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-copy fa-2x"></i></div>
+
+  <div class="cell large-padding"><i class="fas fa-users fa-2x"></i></div>
+  <div class="cell large-padding"><i class="far fa-hand-pointer fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-envelope fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-draw-polygon fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-pencil-alt fa-2x"></i></div>
+  <div class="cell large-padding"><i class="far fa-calendar fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-comment fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-share-square fa-2x"></i></div>
+
+  <div class="cell large-padding"><i class="fas fa-arrow-down fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-cogs fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-edit fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-building fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-undo fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-chart-pie fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-bus-alt fa-2x"></i></div>
+  <div class="cell large-padding"><i class="fas fa-bicycle fa-2x"></i></div>
+</div>
+
+<p class="no-margin-bottom">NYC Planning products use the <a href="https://fontawesome.com/">Font Awesome</a> free, open-source, vector icon set. You can easily tweak these icons. Easily add color, change the size, rotate, animate, and even combine/stack them.</p>
+
+<div class="grid-x text-large text-charcoal">
+  <div class="cell small-4 medium-shrink large-padding">
+    <i class="fas fa-search fa-2x text-blue"></i>
+    <small class="text-tiny">(blue)</small>
+  </div>
+  <div class="cell small-4 medium-shrink large-padding">
+    <i class="fas fa-search fa-xs"></i>
+    <small class="text-tiny">(small)</small>
+  </div>
+  <div class="cell small-4 medium-shrink large-padding">
+    <i class="fas fa-search fa-2x fa-rotate-270"></i>
+    <small class="text-tiny">(rotate)</small>
+  </div>
+  <div class="cell small-4 medium-shrink large-padding">
+    <i class="fas fa-cog fa-2x fa-spin text-charcoal"></i>
+    <small class="text-tiny">(spin)</small>
+  </div>
+  <div class="cell small-4 medium-shrink large-padding">
+    <span class="fa-stack fa-1x">
+      <i class="fas fa-comment fa-stack-2x text-charcoal"></i>
+      <i class="fas fa-bicycle fa-stack-1x text-blue-light"></i>
+    </span>
+    <small class="text-tiny">(stack)</small>
+  </div>
+</div>
+
+
+</section>
+
+<h3>Shadows</h3>
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="accessibility" class="large-margin-bottom">Accessibility <sup><a href="#accessibility" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+<section>
+<p class="large-margin-bottom">Be sure to follow best practices to make our products more accessible:</p>
+<div class="grid-x grid-margin-x">
+  <div class="cell large-7">
+    <ul>
+      <li><p><strong>Structure documents properly</strong> &mdash; Use the right HTML tags when marking up navigation, lists, links, controls, etc.</p></li>
+      <li><p><strong>Label everything</strong> &mdash; Every control or form element must have a text label. You can use the visibility classes to hide labels visually while maintaining accessibility. Use `alt` attributes on images to describe them.</p></li>
+      <li><p><strong>Don't rely on solely visual cues</strong> &mdash; Content should make sense even if it's being read by a screen reader. Content with color-based labeling should also have text-based ways of being identified.</p></li>
+      <li><p><strong>Make all content navigable regardless of device</strong> &mdash; All components should work with keyboards, mice, and touch screens. If content is primarily accessed via an interactive map, it should also be accessible via text search or some other non-map method.</p></li>
+    </ul>
+  </div>
+  <div class="cell large-5">
+    <h5 class="small-margin-bottom">Resources</h5>
+    <ul class="text-small">
+      <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/">WCAG 2.0 Guide</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN accessibility documentation</a></li>
+      <li><a href="https://www.w3.org/WAI/intro/accessibility.php">w3.org Introduction to Accessibility</a></li>
+      <li><a href="https://www.section508.gov/">Section 508 government requirements</a></li>
+      <li><a href="http://webaim.org/">WebAIM certification and training</a></li>
+      <li><a href="http://a11yproject.com/checklist.html">Web Accessibility Checklist</a></li>
+    </ul>
+    <h5 class="small-margin-bottom">Tools</h5>
+    <ul class="text-small">
+      <li><a href="https://tenon.io/index.php">Tenon accessibility checker</a></li>
+      <li><a href="http://wave.webaim.org">WAVE Chrome plugin - free accessibility checker</a></li>
+      <li><a href="http://webaim.org/resources/contrastchecker">Color Contrast Checker</a></li>
+      <li><a href="http://www.chromevox.com">ChromeVox screen reader plugin for Chrome</a></li>
+      <li><a href="http://www.freedomscientific.com/Products/Blindness/Jaws">JAWS screen reader for Windows</a></li>
+      <li><a href="http://www.nvaccess.org/download/">NVDA screen reader for Windows - Free</a></li>
+    </ul>
+  </div>
+</div>
+</section>
+<section>
+<h3 id="contrast">Contrast <sup><a href="#contrast" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>For users with low vision, proper typographic contrast is important. Both size and color matter. Text colors should stand out from background colors. Use the <a href="https://webaim.org/resources/contrastchecker/">Color Contrast Checker <i class="fas fa-external-link-alt"></i></a> to choose accessible colors. The contrast ratio should at least be 1:4.5 for normal text and 3:1 for large text.</p>
+</section>
+<section>
+<h3 id="screen-readers">Screen readers <sup><a href="#screen-readers" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Adding <code>display: none</code> to an element will prevent screen readers from reading it. There are better ways to hide content while still making it accessible to screen readers.</p>
+<h4 id="show-for-screen-readers-only">Show for Screen Readers Only</h4>
+<p>To visually hide content, while still allowing assistive technology to read it, add the <code>.show-for-sr</code> class.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>This paragraph can only be read by a screen reader.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>There's a paragraph above this one, but you can't see it.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><div class="callout">
+<p class="show-for-sr">This paragraph can only be read by a screen reader.</p>
+<p>There&#39;s a paragraph above this one, but you can&#39;t see it.</p>
+</div>
+
+
+<h4 id="hide-for-screen-readers-only">Hide for Screen Readers Only</h4>
+<p>To hide text from assistive technology, while still keeping it visible, add the attribute <code>aria-hidden=&quot;true&quot;</code>. This doesn&#39;t affect how the element looks, but screen readers will skip over it.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">"true"</span>&gt;</span>This text can be seen, but won't be read by a screen reader.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></div><div class="callout">
+  <p aria-hidden="true">This text can be seen, but won&#39;t be read by a screen reader.</p>
+</div>
+
+<p><em>Note: It&#39;s usually not a good idea to hide content from screen readers, but <code>aria-hidden</code> is best used to mask purely visual elements of a page. Try to avoid purely decorative text and images.</em></p>
+<h4 id="skip-links">Skip links</h4>
+<p>In a product with a lot of navigation, a screen reader has to read through the entire navigation to get to the content. This can be remedied by adding a skip link before the navigation, which takes the user to the main content.</p>
+<p>The <code>.show-on-focus</code> class hides an element, except when it has focus. Adding <code>tabindex</code> to the target element makes it focusable &mdash; a negative value (e.g. <code>tabindex=&quot;-1&quot;</code>) means the element is focusable, but not reachable via sequential keyboard navigation; <code>tabindex=&quot;0&quot;</code> means the element is focusable in sequential keyboard navigation.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-on-focus"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#main-content"</span>&gt;</span>Skip to content<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"header"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"banner"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- a lot of navigation --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">main</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"main-content"</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">"main"</span> <span class="hljs-attribute">tabindex</span>=<span class="hljs-value">"0"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span></code></pre></div></section>
+<section>
+<h3 id="focus-styles">Focus styles <sup><a href="#focus-styles" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h4 id="-i-class-fas-fa-exclamation-triangle-text-gold-i-never-remove-css-outlines-"><i class="fas fa-exclamation-triangle text-gold"></i> Never remove CSS outlines!</h4>
+<p>It is tempting to use <code>:focus { outline: none; }</code> to removing outlines in CSS. But this creates issues for people navigating via keyboard, removing any visible indication of focus. Methods like <code>onfocus=&quot;blur()&quot;</code> are even worse, preventing users from interacting with elements at all.</p>
+<p>Instead, use the <a href="https://github.com/ten1seven/what-input">what-input</a> library, which detects the user&#39;s current input device and adjusts the CSS accordingly. It let&#39;s us disable outlines for mouse users, but not for keyboard users.</p>
+<ul>
+<li>TODO: explain how to include what-input if not using Foundation JS...</li>
+</ul>
+<p><em>Note: Custom Sass components can use the <code>@include disable-mouse-outline;</code> at-rule to add what-input styles.</em></p>
+</section>
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="layout" class="large-margin-bottom">Layout <sup><a href="#layout" class="silver"><i class="fas fa-link"></i></a></sup></h2>
 <ul>
 <li>use relative units</li>
@@ -907,7 +1112,8 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </section>
 <section>
 <h3 id="search-form">Search form <sup><a href="#search-form" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-<p>It&#39;s a standard UI convention for search inputs to have a magnifying glass icon. This clearly communicates the function of the input. In this case, it is acceptable to use placeholder text. However, you must also include a label for accessibility &mdash; the <code>.show-for-sr</code> class can be added to the label so it&#39;s hidden on screen but still available for screen readers. </p>
+<p>It&#39;s a standard UI convention for search inputs to have a magnifying glass icon. This clearly communicates the function of the input. This is the one case where it&#39;s acceptable to use <a href="#placeholder-text" data-smooth-scroll>placeholder text</a>. However, you must also include a label for accessibility &mdash; the <code>.show-for-sr</code> class can be added to the label so it&#39;s hidden on screen but still available for screen readers.</p>
+<p>Use the <code>.search-form</code>, <code>.search-input</code>, and <code>.search-icon</code> classes to create a search component where the icon is positioned over the input. The <code>.large-padding-right</code> prevents the icon from overlapping the input&#39;s text. </p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">fieldset</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-form"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"my-search-field"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"show-for-sr"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">"Search..."</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"my-search-field"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"search-input no-controls large-padding-right"</span>&gt;</span>
@@ -1003,21 +1209,21 @@ how to use Sass
               <li>
                 <a href="#color" class="small-margin-bottom header-small display-inline-block text-black">Color</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#brand-colors">Brand Colors</a></li>
-                  <li><a href="#grayscale-colors">Grayscale Colors</a></li>
-                  <li><a href="#data-viz-colors">Data Viz Colors</a></li>
-                  <li><a href="#color-classes">Color Classes</a></li>
-                  <li><a href="#color-accessibility">Color Accessibility</a></li>
+                  <li><a href="#brand-colors">Brand colors</a></li>
+                  <li><a href="#grayscale-colors">Grayscale colors</a></li>
+                  <li><a href="#data-viz-colors">Data viz colors</a></li>
+                  <li><a href="#color-classes">Color classes</a></li>
+                  <li><a href="#color-accessibility">Color accessibility</a></li>
                 </ul>
               </li>
               <li>
                 <a href="#typography" class="small-margin-bottom header-small display-inline-block text-black">Typography</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#type-basics">Type Basics</a></li>
+                  <li><a href="#type-basics">Type basics</a></li>
                   <li><a href="#fonts">Fonts</a></li>
                   <li><a href="#headers">Headers</a></li>
                   <li><a href="#paragraphs">Paragraphs</a></li>
-                  <li><a href="#text-alignment">Text Alignment</a></li>
+                  <li><a href="#text-alignment">Text alignment</a></li>
                   <li><a href="#links">Links</a></li>
                   <li><a href="#lists">Lists</a></li>
                   <li><a href="#blockquotes">Blockquotes</a></li>
@@ -1030,26 +1236,43 @@ how to use Sass
               <li>
                 <a href="#forms" class="small-margin-bottom header-small display-inline-block text-black">Forms</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#text-inputs">Text Inputs</a></li>
-                  <li><a href="#text-areas">Text Areas</a></li>
+                  <li><a href="#text-inputs">Text inputs</a></li>
+                  <li><a href="#text-areas">Text areas</a></li>
                   <li><a href="#labels-and-placeholders">Labels &amp; placeholders</a></li>
-                  <li><a href="#select-menus">Select Menus</a></li>
-                  <li><a href="#checkboxes-and-radio-buttons">Checkboxes &amp; Radio Buttons</a></li>
+                  <li><a href="#select-menus">Select menus</a></li>
+                  <li><a href="#checkboxes-and-radio-buttons">Checkboxes &amp; radio buttons</a></li>
                   <li><a href="#fieldsets">Fieldsets</a></li>
-                  <li><a href="#file-upload">File Upload</a></li>
-                  <li><a href="#placeholder-text">Placeholder Text</a></li>
-                  <li><a href="#help-text">Help Text</a></li>
+                  <li><a href="#file-upload">File upload</a></li>
+                  <li><a href="#placeholder-text">Placeholder text</a></li>
+                  <li><a href="#help-text">Help text</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#navigation" class="small-margin-bottom header-small display-inline-block text-black">Navigation</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#buttons">Buttons</a></li>
+                  <li><a href="#close-button">Close button</a></li>
+                  <li><a href="#responsive-menu">Responsive menu</a></li>
+                  <li><a href="#drilldown-menu">Drilldown menu</a></li>
+                  <li><a href="#dropdown-menu">Dropdown menu</a></li>
+                  <li><a href="#dropdown-pane">Dropdown pane</a></li>
+                  <li><a href="#menu">Menu</a></li>
+                  <li><a href="#pagination">Pagination</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#icons" class="small-margin-bottom header-small display-inline-block text-black">Icons</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#font-awesome">Font Awesome</a></li>
                 </ul>
               </li>
               <li>
                 <a href="#accessibility" class="small-margin-bottom header-small display-inline-block text-black">Accessibility</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#text-vs.-images">Text vs. Images</a></li>
+                  <li><a href="#text-vs.-images">Text vs. images</a></li>
                   <li><a href="#contrast">Contrast</a></li>
-                  <li><a href="#font-size">Font Size</a></li>
-                  <li><a href="#screen-readers">Screen Readers</a></li>
-                  <li><a href="#skip-links">Skip Links</a></li>
-                  <li><a href="#custom-form-controls">Custom Form Controls</a></li>
+                  <li><a href="#screen-readers">Screen readers</a></li>
+                  <li><a href="#focus-styles">Focus styles</a></li>
                 </ul>
               </li>
               <li>
@@ -1058,22 +1281,9 @@ how to use Sass
                   <li><a href="#tables">Tables</a></li>
                   <li><a href="#grid">Grid</a></li>
                   <li><a href="#visibility">Visibility</a></li>
-                  <li><a href="#print-styles">Print Styles</a></li>
-                  <li><a href="#float-classes">Float Classes</a></li>
+                  <li><a href="#print-styles">Print styles</a></li>
+                  <li><a href="#float-classes">Float classes</a></li>
                   <li><a href="#sticky">Sticky</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#navigation" class="small-margin-bottom header-small display-inline-block text-black">Navigation</a>
-                <ul class="medium-margin-bottom text-small">
-                  <li><a href="#button">Button</a></li>
-                  <li><a href="#close-button">Close Button</a></li>
-                  <li><a href="#responsive-menu">Responsive Menu</a></li>
-                  <li><a href="#drilldown-menu">Drilldown Menu</a></li>
-                  <li><a href="#dropdown-menu">Dropdown Menu</a></li>
-                  <li><a href="#dropdown-pane">Dropdown Pane</a></li>
-                  <li><a href="#menu">Menu</a></li>
-                  <li><a href="#pagination">Pagination</a></li>
                 </ul>
               </li>
               <li>
@@ -1085,7 +1295,7 @@ how to use Sass
                   <li><a href="#switches">Switches</a></li>
                   <li><a href="#tooltips">Tooltips</a></li>
                   <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                  <li><a href="#site-header">Site Header</a></li>
+                  <li><a href="#site-header">Site header</a></li>
                 </ul>
               </li>
               <li>

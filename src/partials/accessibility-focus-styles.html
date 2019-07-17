@@ -1,0 +1,16 @@
+<section>
+{{{headerify 'h3' 'Focus styles'}}}
+{{#markdown}}
+
+#### <i class="fas fa-exclamation-triangle text-gold"></i> Never remove CSS outlines!
+
+It is tempting to use `:focus { outline: none; }` to removing outlines in CSS. But this creates issues for people navigating via keyboard, removing any visible indication of focus. Methods like `onfocus="blur()"` are even worse, preventing users from interacting with elements at all.
+
+Instead, use the [what-input](https://github.com/ten1seven/what-input) library, which detects the user's current input device and adjusts the CSS accordingly. It let's us disable outlines for mouse users, but not for keyboard users.
+
+- TODO: explain how to include what-input if not using Foundation JS...
+
+_Note: Custom Sass components can use the `@include disable-mouse-outline;` at-rule to add what-input styles._
+
+{{/markdown}}
+</section>

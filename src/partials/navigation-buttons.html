@@ -1,0 +1,79 @@
+<section>
+{{{headerify 'h3' 'Buttons'}}}
+{{#markdown}}
+
+Buttons can be created with minimal markup by adding the `.button` class. Primary buttons are `a11y-orange` with white text, and should be used sparingly for primary user actions that need to be very noticeable. For secondary tasks, add the `.secondary` class to make a light gray button with orange text.
+
+```
+<a class="button" href="#">Primary action</a>
+<a class="button secondary" href="#">Secondary action</a>
+```
+<div class="callout">
+  <a class="button no-margin" href="#">Primary action</a>
+  <a class="button secondary no-margin" href="#">Secondary action</a>
+</div>
+
+Size classes can be added to your button to change its size.
+
+```
+<a class="button tiny" href="#">Tiny</a>
+<a class="button small" href="#">Small</a>
+<a class="button" href="#">Default</a>
+<a class="button large" href="#">Large</a>
+```
+<div class="callout">
+  <a class="button tiny" href="#">Tiny</a>
+  <a class="button small" href="#">Small</a>
+  <a class="button" href="#">Default</a>
+  <a class="button large" href="#">Large</a>
+</div>
+
+The `.expanded` class makes the butto tak up the full width of its container.
+
+```
+<a class="button expanded" href="#">Such Expand</a>
+```
+<div class="callout">
+  <a class="button expanded" href="#">Such Expand</a>
+</div>
+
+#### <i class="fas fa-exclamation-triangle text-gold"></i> Use the right tag
+
+Since buttons can be used for many purposes, it's important to use the right tag. Use the `<a>` tag if the button is a link to a document, another page, or an anchor within the page. Use the `<button>` tag if the button performs an action that changes something on the current page.
+
+#### Label buttons with clear actions
+
+Generic or misleading button text can be frustrating for users. A button’s text should clearly describe its action. Use verbs whenever possible instead of "Yes" or "OK" so buttons don't rely on the context of titles or prompts.
+
+<div class="grid-x grid-margin-x medium-up-2">
+  <div class="cell">
+    <p class="tiny-margin-bottom"><b><i class="fas fa-ban fa-fw fuchsia"></i> Bad:</b></p>
+    <div class="callout">
+      <p>Would you like to delete this?</p>
+      <button class="button small no-margin">OK</button> <button class="button small secondary no-margin">No</button>
+    </div>
+  </div>
+  <div class="cell">
+    <p class="tiny-margin-bottom"><b><i class="fas fa-check fa-fw green-dark"></i> Good:</b></p>
+    <div class="callout">
+      <p>Would you like to delete this?</p>
+      <button class="button small no-margin">Delete</button> <button class="button small secondary no-margin">Cancel</button>
+    </div>
+  </div>
+</div>
+
+#### Disabled buttons
+
+The `.disabled` gives buttons a faded appearance and the `not-allowed` cursor property. This only adds visual style; it doesn't disable any actions. For `<button>` elements, you can add the `disabled` attribute to both style and actually disable it. Mark links as disabled for assistive technology by adding the `aria-disabled` attribute.
+
+```
+<a class="button disabled" href="#" aria-disabled>Disabled link</a>
+<button type="button" class="button" disabled>Disabled button</button>
+```
+<div class="callout">
+  <a class="button disabled no-margin" href="#" aria-disabled>Disabled link</a>
+  <button type="button" class="button no-margin" disabled>Disabled button</button>
+</div>
+
+{{/markdown}}
+</section>
