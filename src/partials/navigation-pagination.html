@@ -1,0 +1,41 @@
+<section>
+{{{headerify 'h3' 'Pagination'}}}
+{{#markdown}}
+
+Pagination lets users click through related content, like search results or news posts. Add the class `.pagination` to a `<ul>` containing `<li>` elements containing `<a>` elements. Add the `.current` class to highlight the current list item, or `.disabled` to subdue it. Pagination should be centered with the `.text-center` class.
+
+Pagination should be nested inside a `<nav>` with the attributes `aria-label="Pagination"` to explain the purpose of the component to assistive technologies. Content with the `.show-for-sr` class should also be added to provide more context to screen readers.
+
+```
+<nav aria-label="Pagination">
+  <ul class="pagination text-center">
+    <li class="pagination-previous disabled">Previous</li>
+    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+    <li><a href="#" aria-label="Page 2">2</a></li>
+    <li><a href="#" aria-label="Page 3">3</a></li>
+    <li class="ellipsis"></li>
+    <li><a href="#" aria-label="Page 42">42</a></li>
+    <li><a href="#" aria-label="Page 43">43</a></li>
+    <li><a href="#" aria-label="Page 44">44</a></li>
+    <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+  </ul>
+</nav>
+```
+<div class="callout">
+  <nav aria-label="Pagination">
+    <ul class="pagination text-center no-margin">
+      <li class="pagination-previous disabled">Previous</li>
+      <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+      <li><a href="#" aria-label="Page 2">2</a></li>
+      <li><a href="#" aria-label="Page 3">3</a></li>
+      <li class="ellipsis"></li>
+      <li><a href="#" aria-label="Page 42">42</a></li>
+      <li><a href="#" aria-label="Page 43">43</a></li>
+      <li><a href="#" aria-label="Page 44">44</a></li>
+      <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+    </ul>
+  </nav>
+</div>
+
+{{/markdown}}
+</section>

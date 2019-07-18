@@ -1,0 +1,64 @@
+<section>
+{{{headerify 'h3' 'Tabs'}}}
+{{#markdown}}
+
+Use tabs to alternate between views within the same context. Keep tab labels short. All tab content should be related and logically divided so users can easily predict what's in a given tab. If there aren't clearly distinct groupings, tabs are likely the wrong UI for navigating the content.
+
+```
+<ul class="tabs">
+  <li class="tabs-title"><a href="#">One</a></li>
+  <li class="tabs-title is-active"><a href="#" aria-selected="true">Two</a></li>
+  <li class="tabs-title"><a href="#">Three</a></li>
+  <li class="tabs-title"><a href="#">Four</a></li>
+</ul>
+```
+<div class="callout">
+  <ul class="tabs">
+    <li class="tabs-title"><a href="#">One</a></li>
+    <li class="tabs-title is-active"><a href="#" aria-selected="true">Two</a></li>
+    <li class="tabs-title"><a href="#">Three</a></li>
+    <li class="tabs-title"><a href="#">Four</a></li>
+  </ul>
+</div>
+
+<i class="fas fa-ban fuchsia"></i> Do not use tabs when users need to compare the info in multiple tabs. Having to switch back and forth puts an added burden on the user and lowers usability.
+
+<i class="fas fa-ban fuchsia"></i> Do not use tabs unless they all fit on one row at all screen sizes.
+
+#### Switching tabs
+
+Tabs can be implemented by reloading the page with different content on click or by showing/hiding content with JavaScript. Reloading the page is less desirable, as it can cause the scroll position to jump. JavaScript improves the user's experience by seamlessly swapping the tabs content.
+
+Foundation's JavaScript makes switching tabs easy. Put all tabs content in a container with the `.tabs-content` class. Each piece of content in the container needs the `.tabs-panel` class and a unique ID. The `href` of each tab link should match the ID of a tab panel. Alternatively, the ID can be specified with the attribute `data-tabs-target`.
+
+```
+<ul class="tabs" data-tabs id="example-tabs">
+  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+  <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+</ul>
+<div class="tabs-content" data-tabs-content="example-tabs">
+  <div class="tabs-panel is-active" id="panel1">
+    <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+  </div>
+  <div class="tabs-panel" id="panel2">
+    <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+  </div>
+</div>
+```
+<div class="callout">
+  <ul class="tabs" data-tabs id="example-tabs">
+    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+    <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="example-tabs">
+    <div class="tabs-panel is-active" id="panel1">
+      <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+    </div>
+    <div class="tabs-panel" id="panel2">
+      <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+    </div>
+  </div>
+</div>
+
+{{/markdown}}
+</section>

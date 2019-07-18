@@ -21783,20 +21783,10 @@ __webpack_require__.r(__webpack_exports__);
 
 window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
 
-__webpack_require__(/*! foundation-sites */ "./node_modules/foundation-sites/dist/js/foundation.esm.js"); // If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
+__webpack_require__(/*! foundation-sites */ "./node_modules/foundation-sites/dist/js/foundation.esm.js"); // To choose modules to include, comment out above and uncomment below
 //import './lib/foundation-explicit-pieces';
+// turn an RGB color into a Hex color
 
-
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.color-swatch').each(function (index) {
-    var bgColor = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('background-color');
-    var colorName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-colorname');
-    var bgHexColor = rgbToHex(bgColor);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).append("\n      <li class=\"text-small text-weight-bold\">".concat(colorName, "</li>\n      <li class=\"text-tiny\">").concat(bgHexColor, "</li>\n      <li class=\"text-tiny\">").concat(bgColor, "</li>\n    "));
-  });
-});
 
 function rgbToHex(rgb) {
   var sep = rgb.indexOf(",") > -1 ? "," : " ";
@@ -21808,7 +21798,27 @@ function rgbToHex(rgb) {
   if (g.length == 1) g = "0" + g;
   if (b.length == 1) b = "0" + b;
   return "#" + r + g + b;
-}
+} // init Foundation
+
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  // add meta info to color swatches
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.color-swatch').each(function (index) {
+    var bgColor = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('background-color');
+    var colorName = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-colorname');
+    var bgHexColor = rgbToHex(bgColor);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).append("\n      <li class=\"text-small text-weight-bold\">".concat(colorName, "</li>\n      <li class=\"text-tiny\">").concat(bgHexColor, "</li>\n      <li class=\"text-tiny\">").concat(bgColor, "</li>\n    "));
+  }); // toggle code samples
+  // $('.code-example').addClass('closed');
+  // $('#showCodesCheckbox').click(function() {
+  //   if ($(this).is(":checked")) {
+  //     $('.code-example').removeClass('closed');
+  //   } else {
+  //     $('.code-example').addClass('closed');
+  //   }
+  // });
+});
 
 /***/ }),
 

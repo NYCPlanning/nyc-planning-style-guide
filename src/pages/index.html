@@ -1,6 +1,14 @@
 ---
 title: Style Guide
 sections:
+
+  - title: Overview
+    slug: top
+    items:
+      - How to use this guide
+      - Sass
+      - Download
+
   - title: Logo
     slug: logo
     items:
@@ -15,6 +23,11 @@ sections:
       - Data viz colors
       - Color classes
       - Color accessibility
+
+  - title: Icons
+    slug: icons
+    items:
+      - Font Awesome
 
   - title: Typography
     slug: typography
@@ -49,18 +62,10 @@ sections:
     slug: navigation
     items:
       - Buttons
-      - Close button
-      - Responsive menu
-      - Drilldown menu
-      - Dropdown menu
-      - Dropdown pane
-      - Menu
+      - Button Groups
+      - Menus
+      - Tabs
       - Pagination
-
-  - title: Icons
-    slug: icons
-    items:
-      - Font Awesome
 
   - title: Accessibility
     slug: accessibility
@@ -96,19 +101,24 @@ sections:
     items:
       - 'Responsive Embed'
 
-  - title: Sass
-    slug: sass
-    items:
-
 ---
 
-<p class="lead">NYC Planning's Digital Style Guide defines standards for the creation, formatting, and design of our digital products. These best practices and UI patterns ensure consistency both within specific applications, and throughout our products and services. </p>
+<section>
+  <p class="lead">NYC Planning's Digital Style Guide defines standards for the creation, formatting, and design of our digital products. These best practices and UI patterns ensure consistency both within specific applications, and throughout our products and services. </p>
 
-<p>Since user experience is directly affected by how digital content is planned and structured, this guide is aimed at not only designers and developers, but also content creators.</p>
+  <p>Since user experience is directly affected by how digital content is planned and structured, this guide is aimed at not only designers and developers, but also content creators.</p>
+</section>
 
-- overview of how to use...
-- link to Sass/CSS instructions...
-- markup/elements
+{{#markdown}}
+#### How to use this guide
+
+choosing the right components… writing links, UI element content…
+
+- download the compiled CSS…
+- Sass…
+- Foundation (link to docs)…
+- Ember + Labs UI…
+{{/markdown}}
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -121,6 +131,11 @@ sections:
 {{> color-palettes}}
 {{> color-classes}}
 {{> color-accessibility}}
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="icons" class="large-margin-bottom">{{{anchorify 'Icons'}}}</h2>
+{{> icons-font-awesome}}
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -155,13 +170,15 @@ sections:
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="navigation" class="large-margin-bottom">{{{anchorify 'Navigation'}}}</h2>
 {{> navigation-buttons}}
-
-
-<hr class="xlarge-margin-top xlarge-margin-bottom">
-<h2 id="icons" class="large-margin-bottom">{{{anchorify 'Icons'}}}</h2>
-{{> icons-font-awesome}}
-
-<h3>Shadows</h3>
+{{> navigation-button-groups}}
+{{> navigation-menus}}
+{{> navigation-tabs}}
+{{> navigation-pagination}}
+<!-- navigation-close-button -->
+<!-- navigation-responsive-menu -->
+<!-- navigation-drilldown-menu -->
+<!-- navigation-dropdown-menu -->
+<!-- navigation-dropdown-pane -->
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -175,8 +192,22 @@ sections:
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="layout" class="large-margin-bottom">{{{anchorify 'Layout'}}}</h2>
 {{#markdown}}
-- use relative units
-- boxes & whitespace
+### responsive (mobile-first)
+
+…
+
+### relative units
+
+absolute units vs relative units… rem preferred… em nesting troubles… px breaks zoom…
+
+### boxes & whitespace
+
+…
+
+### Shadows
+
+…
+
 {{/markdown}}
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
@@ -206,9 +237,3 @@ Title Bar
 Toggler
 Top Bar
 -->
-
-
-<hr class="xlarge-margin-top xlarge-margin-bottom">
-<h2 id="sass" class="large-margin-bottom">{{{anchorify 'Sass'}}}</h2>
-download compiled CSS
-how to use Sass

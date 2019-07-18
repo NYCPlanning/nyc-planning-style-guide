@@ -9,29 +9,10 @@ import 'what-input';
 window.jQuery = $;
 require('foundation-sites');
 
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
+// To choose modules to include, comment out above and uncomment below
 //import './lib/foundation-explicit-pieces';
 
-
-$(document).foundation();
-
-$(document).ready(function() {
-
-  $('.color-swatch').each(function( index ) {
-    const bgColor = $(this).css('background-color');
-    const colorName = $(this).attr('data-colorname');
-    const bgHexColor = rgbToHex(bgColor);
-
-    $(this).append(`
-      <li class="text-small text-weight-bold">${colorName}</li>
-      <li class="text-tiny">${bgHexColor}</li>
-      <li class="text-tiny">${bgColor}</li>
-    ` );
-  });
-
-});
-
+// turn an RGB color into a Hex color
 function rgbToHex(rgb) {
   let sep = rgb.indexOf(",") > -1 ? "," : " ";
   rgb = rgb.substr(4).split(")")[0].split(sep);
@@ -46,3 +27,33 @@ function rgbToHex(rgb) {
 
   return "#" + r + g + b;
 }
+
+// init Foundation
+$(document).foundation();
+
+$(document).ready(function() {
+
+  // add meta info to color swatches
+  $('.color-swatch').each(function( index ) {
+    const bgColor = $(this).css('background-color');
+    const colorName = $(this).attr('data-colorname');
+    const bgHexColor = rgbToHex(bgColor);
+
+    $(this).append(`
+      <li class="text-small text-weight-bold">${colorName}</li>
+      <li class="text-tiny">${bgHexColor}</li>
+      <li class="text-tiny">${bgColor}</li>
+    ` );
+  });
+
+  // toggle code samples
+  // $('.code-example').addClass('closed');
+  // $('#showCodesCheckbox').click(function() {
+  //   if ($(this).is(":checked")) {
+  //     $('.code-example').removeClass('closed');
+  //   } else {
+  //     $('.code-example').addClass('closed');
+  //   }
+  // });
+
+});

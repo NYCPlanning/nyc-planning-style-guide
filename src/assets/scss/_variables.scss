@@ -538,10 +538,12 @@ $form-button-radius: $global-radius;
 // 21. Label
 // ---------
 
-$label-background: $primary-color;
-$label-color: $white;
-$label-color-alt: $black;
-$label-palette: $foundation-palette;
+$label-background: $white-smoke;
+$label-color: $black;
+$label-color-alt: $white;
+$label-palette: map-remove($foundation-palette, (
+    primary
+));
 $label-font-size: 0.8rem;
 $label-padding: 0.33333rem 0.5rem;
 $label-radius: $global-radius;
@@ -560,8 +562,8 @@ $menu-margin: 0;
 $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: get-color(primary);
+$menu-item-color-active: $charcoal;
+$menu-item-background-active: rgba(0,0,0,0.04);
 $menu-icon-spacing: 0.25rem;
 $menu-item-background-hover: $light-gray;
 $menu-state-back-compat: true;
@@ -621,15 +623,15 @@ $orbit-control-zindex: 10;
 
 $pagination-font-size: rem-calc(14);
 $pagination-margin-bottom: $global-margin;
-$pagination-item-color: $black;
+$pagination-item-color: $primary-color;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
 $pagination-radius: $global-radius;
-$pagination-item-background-hover: $light-gray;
-$pagination-item-background-current: $primary-color;
-$pagination-item-color-current: $white;
-$pagination-item-color-disabled: $medium-gray;
-$pagination-ellipsis-color: $black;
+$pagination-item-background-hover: $white-smoke;
+$pagination-item-background-current: $a11y-yellow;
+$pagination-item-color-current: $charcoal;
+$pagination-item-color-disabled: $light-gray;
+$pagination-ellipsis-color: $gray;
 $pagination-mobile-items: false;
 $pagination-mobile-current-item: false;
 $pagination-arrows: true;
@@ -881,18 +883,18 @@ $table-stack-breakpoint: medium;
 // --------
 
 $tab-margin: 0;
-$tab-background: $white;
+$tab-background: transparent;
 $tab-color: $primary-color;
-$tab-background-active: $light-gray;
+$tab-background-active: transparent;
 $tab-active-color: $primary-color;
 $tab-item-font-size: rem-calc(12);
 $tab-item-background-hover: $white;
-$tab-item-padding: 1.25rem 1.5rem;
+$tab-item-padding: 0.75rem 1.25rem;
 $tab-expand-max: 6;
-$tab-content-background: $white;
-$tab-content-border: $light-gray;
-$tab-content-color: $body-font-color;
-$tab-content-padding: 1rem;
+$tab-content-background: transparent;
+$tab-content-border: $silver;
+$tab-content-color: inherit;
+$tab-content-padding: 1rem 0 0;
 
 // 52. Thumbnail
 // -------------
