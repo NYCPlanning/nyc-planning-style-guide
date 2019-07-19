@@ -78,12 +78,10 @@ sections:
   - title: Layout
     slug: layout
     items:
-      - Tables
       - Grid
+      - Tables
       - Visibility
       - Print styles
-      - Float classes
-      - Sticky
 
   - title: Components
     slug: components
@@ -99,7 +97,7 @@ sections:
   - title: Media
     slug: media
     items:
-      - 'Responsive Embed'
+      - Responsive embed
 
 ---
 
@@ -192,21 +190,44 @@ choosing the right components… writing links, UI element content…
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="layout" class="large-margin-bottom">{{{anchorify 'Layout'}}}</h2>
 {{#markdown}}
-### responsive (mobile-first)
+<h3>
+  “There is no device.”&nbsp;
+  <small class="text-dark-gray">
+    <i class="fas fa-desktop fa-2x"></i>
+    <i class="fas fa-laptop fa-lg"></i>
+    <i class="fas fa-tablet-alt fa-lg"></i>
+    <i class="fas fa-tablet-alt"></i>
+    <i class="fas fa-tablet-alt fa-sm"></i>
+    <i class="fas fa-mobile-alt"></i>
+    <i class="fas fa-mobile-alt fa-xs"></i>
+  </small>
+</h3>
 
-…
+Our products should support any type of device, any size screen, and any resolution. They should fit various screens automatically, displaying content in a way that optimizes the user experience on any device.
 
-### relative units
-
+### Relative units
 absolute units vs relative units… rem preferred… em nesting troubles… px breaks zoom…
 
-### boxes & whitespace
+### Whitespace & boxes
+Avoid putting content into lots of boxes. Instead, use whitespace to separate pieces of content and create visual hierarchy. When creating boxes, avoid rounded corners. Boxes should have squared corners.
 
-…
+<div class="grid-x grid-margin-x">
+  <div class="cell medium-shrink callout" style="border-radius:1rem;">
+    <i class="fas fa-ban fuchsia"></i>  Avoid rounded corners.
+  </div>
+  <div class="cell medium-shrink callout">
+    <i class="fas fa-check fa-fw green-dark"></i> Use squared corners.
+  </div>
+</div>
 
-### Shadows
+### Drop shadows
+Drop shadows are used very sparingly and subtly. Do not apply drop shadows to content elements like buttons or text. Drop shadows should only be applied to the layout's primary containers. Shadows should not have any blur, they should retain sharp edges. The color of a shadow should be `rgba(0,0,0,0.1)`, or pure black at 10 percent opacity.
 
-…
+{{> layout-tables}}
+{{> layout-responsive-embeds}}
+<!-- float classes -->
+<!-- sticky -->
+
 
 {{/markdown}}
 
@@ -237,3 +258,9 @@ Title Bar
 Toggler
 Top Bar
 -->
+
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="media" class="large-margin-bottom">{{{anchorify 'Media'}}}</h2>
+
+{{> media-video}}

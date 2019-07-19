@@ -1273,14 +1273,53 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="layout" class="large-margin-bottom">Layout <sup><a href="#layout" class="silver"><i class="fas fa-link"></i></a></sup></h2>
-<h3 id="responsive-mobile-first-">responsive (mobile-first)</h3>
-<p>…</p>
-<h3 id="relative-units">relative units</h3>
+<h3>
+  “There is no device.”&nbsp;
+  <small class="text-dark-gray">
+    <i class="fas fa-desktop fa-2x"></i>
+    <i class="fas fa-laptop fa-lg"></i>
+    <i class="fas fa-tablet-alt fa-lg"></i>
+    <i class="fas fa-tablet-alt"></i>
+    <i class="fas fa-tablet-alt fa-sm"></i>
+    <i class="fas fa-mobile-alt"></i>
+    <i class="fas fa-mobile-alt fa-xs"></i>
+  </small>
+</h3>
+
+<p>Our products should support any type of device, any size screen, and any resolution. They should fit various screens automatically, displaying content in a way that optimizes the user experience on any device.</p>
+<h3 id="relative-units">Relative units</h3>
 <p>absolute units vs relative units… rem preferred… em nesting troubles… px breaks zoom…</p>
-<h3 id="boxes-whitespace">boxes &amp; whitespace</h3>
-<p>…</p>
-<h3 id="shadows">Shadows</h3>
-<p>…</p>
+<h3 id="whitespace-boxes">Whitespace &amp; boxes</h3>
+<p>Avoid putting content into lots of boxes. Instead, use whitespace to separate pieces of content and create visual hierarchy. When creating boxes, avoid rounded corners. Boxes should have squared corners.</p>
+<div class="grid-x grid-margin-x">
+  <div class="cell medium-shrink callout" style="border-radius:1rem;">
+    <i class="fas fa-ban fuchsia"></i>  Avoid rounded corners.
+  </div>
+  <div class="cell medium-shrink callout">
+    <i class="fas fa-check fa-fw green-dark"></i> Use squared corners.
+  </div>
+</div>
+
+<h3 id="drop-shadows">Drop shadows</h3>
+<p>Drop shadows are used very sparingly and subtly. Do not apply drop shadows to content elements like buttons or text. Drop shadows should only be applied to the layout&#39;s primary containers. Shadows should not have any blur, they should retain sharp edges. The color of a shadow should be <code>rgba(0,0,0,0.1)</code>, or pure black at 10 percent opacity.</p>
+<p><section></p>
+<p><h3 id="tables">Tables <sup><a href="#tables" class="silver"><i class="fas fa-link"></i></a></sup></h3></p>
+<p><p>…</p>
+</section></p>
+<p><section></p>
+<p><h3 id="responsive-embeds">Responsive embeds <sup><a href="#responsive-embeds" class="silver"><i class="fas fa-link"></i></a></sup></h3></p>
+<p><p>To make sure embedded content maintains its aspect ratio at various screen sizes, wrap the <code>iframe</code>, <code>object</code>, <code>embed</code>, or <code>video</code> in a container with the <code>.responsive-embed</code> class.</p></p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;responsive-embed widescreen&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">&quot;560&quot;</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">&quot;315&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;<a href="https://www.youtube.com/embed/6QJYgm0fRHk&quot;">https://www.youtube.com/embed/6QJYgm0fRHk&quot;</a></span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">&quot;0&quot;</span> <span class="hljs-attribute">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="callout">
+  <div class="responsive-embed widescreen">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6QJYgm0fRHk" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<p></section>
+<!-- float classes -->
+<!-- sticky --></p>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="components" class="large-margin-bottom">Components <sup><a href="#components" class="silver"><i class="fas fa-link"></i></a></sup></h2>
@@ -1409,6 +1448,17 @@ Toggler
 Top Bar
 -->
 
+
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="media" class="large-margin-bottom">Media <sup><a href="#media" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+
+<section>
+<h3 id="video">Video <sup><a href="#video" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p><strong>Make sure text is legible</strong> &mdash; When displaying text in videos, make sure that it&#39;s reasonably large, uses high-contrast colours, and remains on screen for long enough to be read.</p>
+<p><strong>Provide subtitles</strong> &mdash; A lot of video is watched without sound (as much as 85 percent on Facebook). This also makes the vides accessibility for users with auditory disabilities.</p>
+<p><strong>Disable autoplay</strong> &mdash; Specific sites like Facebook and YouTube play video automatically. When embedding video on the Council website, do not enable autoplay.</p>
+</section>
+
         </div>
         <div class="medium-4 large-3 cell medium-order-1" data-sticky-container>
           <div class="sticky large-padding-top large-padding-bottom" data-sticky data-margin-top="0" data-anchor="main-content">
@@ -1498,12 +1548,10 @@ Top Bar
               <li>
                 <a href="#layout" class="small-margin-bottom header-small display-inline-block text-black">Layout</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#tables">Tables</a></li>
                   <li><a href="#grid">Grid</a></li>
+                  <li><a href="#tables">Tables</a></li>
                   <li><a href="#visibility">Visibility</a></li>
                   <li><a href="#print-styles">Print styles</a></li>
-                  <li><a href="#float-classes">Float classes</a></li>
-                  <li><a href="#sticky">Sticky</a></li>
                 </ul>
               </li>
               <li>
@@ -1521,7 +1569,7 @@ Top Bar
               <li>
                 <a href="#media" class="small-margin-bottom header-small display-inline-block text-black">Media</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#responsive-embed">Responsive Embed</a></li>
+                  <li><a href="#responsive-embed">Responsive embed</a></li>
                 </ul>
               </li>
             </ul>
