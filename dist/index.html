@@ -1273,7 +1273,10 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="layout" class="large-margin-bottom">Layout <sup><a href="#layout" class="silver"><i class="fas fa-link"></i></a></sup></h2>
-<h3>
+<section>
+<h3 id="responsive-layouts">Responsive layouts <sup><a href="#responsive-layouts" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Our products should support any type of device, any size screen, and any resolution. They should fit various screens automatically, displaying content in a way that optimizes the user experience on any device.</p>
+<h4>
   “There is no device.”&nbsp;
   <small class="text-dark-gray">
     <i class="fas fa-desktop fa-2x"></i>
@@ -1284,12 +1287,13 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
     <i class="fas fa-mobile-alt"></i>
     <i class="fas fa-mobile-alt fa-xs"></i>
   </small>
-</h3>
+</h4>
 
-<p>Our products should support any type of device, any size screen, and any resolution. They should fit various screens automatically, displaying content in a way that optimizes the user experience on any device.</p>
-<h3 id="relative-units">Relative units</h3>
+<h4 id="relative-units">Relative units</h4>
 <p>absolute units vs relative units… rem preferred… em nesting troubles… px breaks zoom…</p>
-<h3 id="whitespace-boxes">Whitespace &amp; boxes</h3>
+</section>
+<section>
+<h3 id="whitespace-and-boxes">Whitespace & boxes <sup><a href="#whitespace-and-boxes" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>Avoid putting content into lots of boxes. Instead, use whitespace to separate pieces of content and create visual hierarchy. When creating boxes, avoid rounded corners. Boxes should have squared corners.</p>
 <div class="grid-x grid-margin-x">
   <div class="cell medium-shrink callout" style="border-radius:1rem;">
@@ -1300,26 +1304,42 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
   </div>
 </div>
 
-<h3 id="drop-shadows">Drop shadows</h3>
+</section>
+<section>
+<h3 id="visibility">Visibility <sup><a href="#visibility" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>Drop shadows are used very sparingly and subtly. Do not apply drop shadows to content elements like buttons or text. Drop shadows should only be applied to the layout&#39;s primary containers. Shadows should not have any blur, they should retain sharp edges. The color of a shadow should be <code>rgba(0,0,0,0.1)</code>, or pure black at 10 percent opacity.</p>
-<p><section></p>
-<p><h3 id="tables">Tables <sup><a href="#tables" class="silver"><i class="fas fa-link"></i></a></sup></h3></p>
-<p><p>…</p>
-</section></p>
-<p><section></p>
-<p><h3 id="responsive-embeds">Responsive embeds <sup><a href="#responsive-embeds" class="silver"><i class="fas fa-link"></i></a></sup></h3></p>
-<p><p>To make sure embedded content maintains its aspect ratio at various screen sizes, wrap the <code>iframe</code>, <code>object</code>, <code>embed</code>, or <code>video</code> in a container with the <code>.responsive-embed</code> class.</p></p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;responsive-embed widescreen&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">&quot;560&quot;</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">&quot;315&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;<a href="https://www.youtube.com/embed/6QJYgm0fRHk&quot;">https://www.youtube.com/embed/6QJYgm0fRHk&quot;</a></span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">&quot;0&quot;</span> <span class="hljs-attribute">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
+</section>
+<section>
+<h3 id="tables">Tables <sup><a href="#tables" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+<section>
+<h3 id="responsive-embeds">Responsive embeds <sup><a href="#responsive-embeds" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>To make sure embedded content maintains its aspect ratio at various screen sizes, wrap the <code>iframe</code>, <code>object</code>, <code>embed</code>, or <code>video</code> in a container with the <code>.responsive-embed</code> class.</p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"responsive-embed widescreen"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"560"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"315"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://www.youtube.com/embed/6QJYgm0fRHk"</span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></div><div class="callout">
   <div class="responsive-embed widescreen">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/6QJYgm0fRHk" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<p></section>
+<h4 id="embedded-videos">Embedded videos</h4>
+<p><strong>Disable autoplay</strong> &mdash; Specific sites like Facebook and YouTube play video automatically. When embedding video, do not enable autoplay.</p>
+<p><strong>Make sure text is legible</strong> &mdash; When displaying text in videos, make sure that it&#39;s reasonably large, uses high-contrast colours, and remains on screen for long enough to be read.</p>
+<p><strong>Provide subtitles</strong> &mdash; A lot of video is watched without sound (as much as 85 percent on Facebook). This also makes the vides accessibility for users with auditory disabilities.</p>
+</section>
+<section>
+<h3 id="visibility">Visibility <sup><a href="#visibility" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+<section>
+<h3 id="print-styles">Print styles <sup><a href="#print-styles" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
 <!-- float classes -->
-<!-- sticky --></p>
+<!-- sticky -->
+
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
 <h2 id="components" class="large-margin-bottom">Components <sup><a href="#components" class="silver"><i class="fas fa-link"></i></a></sup></h2>
@@ -1450,13 +1470,214 @@ Top Bar
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
-<h2 id="media" class="large-margin-bottom">Media <sup><a href="#media" class="silver"><i class="fas fa-link"></i></a></sup></h2>
+<h2 id="voice-and-language" class="large-margin-bottom">Voice & Language <sup><a href="#voice-and-language" class="silver"><i class="fas fa-link"></i></a></sup></h2>
 
 <section>
-<h3 id="video">Video <sup><a href="#video" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-<p><strong>Make sure text is legible</strong> &mdash; When displaying text in videos, make sure that it&#39;s reasonably large, uses high-contrast colours, and remains on screen for long enough to be read.</p>
-<p><strong>Provide subtitles</strong> &mdash; A lot of video is watched without sound (as much as 85 percent on Facebook). This also makes the vides accessibility for users with auditory disabilities.</p>
-<p><strong>Disable autoplay</strong> &mdash; Specific sites like Facebook and YouTube play video automatically. When embedding video on the Council website, do not enable autoplay.</p>
+<p>Content that is clear, relevant, and reader-friendly helps provide a great user experience. Language that is concise and literal allows for more accurate automated translations and makes information more accessibile. Focus on simple and succinct sentences. Avoid governmental jargon and legalese.</p>
+<p>We aim to be clear and conversational, yet professional. To be as clear as possible, strip sentences down to the <strong>actors</strong> and <strong>actions</strong>. The use of active voice is preferred to <strong>passive voice</strong>.</p>
+<ul>
+<li><p>Be conscious of the placement of the subjects of sentences. Write: <em>the applicant proposed changes</em> instead of <em>the changes were proposed by the applicant</em>.</p>
+</li>
+<li><p>Be conscious of the use of the verb &quot;to be.&quot; When the subject of your sentence comes after the verb, you are writing in <strong>passive voice</strong>.</p>
+</li>
+<li><p>Avoid citations. If needed, integrate into text (e.g. <em>according to the Department of Parks and Recreation</em>).</p>
+</li>
+<li><p>Alternate long and short sentences to help your writing flow better. Focus on one thought per sentence.</p>
+</li>
+<li><p><strong>Avoid repeating words</strong> in the same sentence, or beginning multiple sentences with the same word or phrase.</p>
+</li>
+</ul>
+</section>
+
+<section>
+<h3 id="acronyms-and-abbreviations">Acronyms and abbreviations <sup><a href="#acronyms-and-abbreviations" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li><p>Always spell out names of <strong>agencies</strong> and <strong>organizations</strong> on first reference, followed by the common abbreviation or acronym in parenthesis. On following references, the abbreviated agency name is preferred to the agency acronym. For instance, the <strong>Department of Parks &amp; Recreation</strong> should be referred to on second reference as <strong>Parks</strong>, not <strong>DPR</strong>.</p>
+</li>
+<li><p>It&#39;s acceptable to use <strong>ampersands</strong> (&amp;) and <strong>percent signs</strong> (%) in subheadings, charts, graphs, and web buttons. However, be consistent.</p>
+</li>
+</ul>
+</section>
+
+<section>
+<h3 id="addresses">Addresses <sup><a href="#addresses" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li><p>Always use numerals when writing out building numbers in addresses.</p>
+</li>
+<li><p>In reference to specific street names, always spell out and capitalize words like <em>Boulevard</em>, <em>Avenue</em>, and <em>Street</em>. For street names that are also numbers, spell out and capitalize <em>First</em> through <em>Ninth</em> and use figures for <em>10th</em> and higher (e.g <em>Fifth Ave</em> and <em>11th Ave</em>).</p>
+</li>
+<li><p>If a street name includes a cardinal direction, abbreviate North, South, East and West only when referring to a specific building (e.g. <em>326 W. 17th Street</em> or <em>East 34th Street</em>).</p>
+</li>
+</ul>
+</section>
+
+<section>
+<h3 id="phone-numbers">Phone numbers <sup><a href="#phone-numbers" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li>Phone numbers use hyphens between groups of numbers (e.g. <em>212-123-4567</em>). Do not use parentheses around area codes. Area codes and country codes get no special treatment and aren&#39;t preceded by a 1 or plus sign.</li>
+</ul>
+</section>
+
+<section>
+<h3 id="capitalization">Capitalization <sup><a href="#capitalization" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li><p><strong>Titles</strong> should always be capitalized when they appear before a person&#39;s name.</p>
+</li>
+<li><p>Follow sentence case for <strong>web buttons</strong> that include three or more words. Use title case for buttons with only one or two words. Punctuating buttons are up to the discretion of the writer.</p>
+</li>
+<li><p><strong>Charter</strong> should always be capitalized when used in reference to the New York City Charter.</p>
+</li>
+<li><p><strong>City</strong> should be capitalized when referring to New York City.</p>
+</li>
+<li><p><strong>District</strong> should be capitalized when referring to NYC Community Districts or Council Districts (e.g. <em>the 11th Council District</em>, or <em>within several Districts</em>).</p>
+</li>
+<li><p>Titles such as <strong>Chair</strong>, <strong>Mayor</strong>, and <strong>Speaker</strong> should always be capitalized when used in reference to their position &mdash; e.g. &quot;Chair of the City Planning Commission&quot; or &quot;Mayor of New York City&quot; or &quot;Speaker of the New York City Council.&quot;</p>
+</li>
+<li><p>Capitalize the first word of a <strong>subheading</strong>. Punctuating subheadings is acceptable for questions. Other forms of subhead punctuation are up to the discretion of the writer.</p>
+</li>
+<li><p>Lowercase adjectives that describe status of a title (e.g. <em>The former Speaker Christine Quinn</em>).</p>
+</li>
+</ul>
+</section>
+
+<section>
+<h3 id="compositions">Compositions <sup><a href="#compositions" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li>Use quotation marks around titles of works of art and compositions, like books, songs, television shows, video games, and poems. Do not use quotations or italics for names of publications (e.g. &quot;The Grapes of Wrath,&quot; or The New York Times).</li>
+</ul>
+</section>
+
+<section>
+<h3 id="contractions">Contractions <sup><a href="#contractions" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li>Use common contractions like <strong>isn&#39;t</strong>, <strong>won&#39;t</strong>, and <strong>you&#39;ll</strong> when possible. This sets a more conversational tone.</li>
+</ul>
+</section>
+
+<section>
+<h3 id="names">Names <sup><a href="#names" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li>Always use a person&#39;s title, first and last name upon first reference. Use title and last name for following references. Do not use courtesy titles, unless needed to differentiate between people who have the same last name.</li>
+</ul>
+</section>
+
+<section>
+<h3 id="numbers">Numbers <sup><a href="#numbers" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li><p>Spell out numbers <strong>one</strong> through <strong>nine</strong>. Use numerals for numbers <strong>10 and greater</strong>. Always spell out numbers that begin sentences, unless it&#39;s a year (e.g. <em>2006 was a great year</em>). For numbers in the millions, billions or trillions, use a number and word (e.g. <em>1 billion</em>, <em>4.8 million</em>).</p>
+</li>
+<li><p>When referring to <strong>money</strong>, always use numerals preceded with a dollar sign (e.g. <em>$400</em>). When referencing an amount of money less than $1, use numerals and spell out the word cents (e.g. <em>30 cents</em>).</p>
+</li>
+<li><p>For <strong>dates</strong>, avoid using ordinal numbers (1st, 2nd, or 3rd). Always use figures (e.g. <em>March 7, 1980</em>).</p>
+</li>
+<li><p>Always use numerals for <strong>dimensions</strong>. Spell out words like pounds, feet, and ounces.</p>
+</li>
+<li><p>The word <strong>percent</strong> should almost always be written out. A percent sign (%) may be used for charts, graphs and subheads.</p>
+</li>
+<li><p>Always use numerals for percentages (e.g. <em>30 percent</em>, <em>6 percent</em>).</p>
+</li>
+<li><p>Use numerals in reference to <strong>age</strong>. Hyphenate ages when used as an adjective before a noun or in substitution for a noun (e.g. <em>the 20-year-old student</em>, or <em>the 8-year-olds</em>). Don&#39;t use an apostrophe when describing a period of time (e.g. <em>in their 20s</em>, or <em>the 1950s</em>).</p>
+</li>
+</ul>
+</section>
+
+<section>
+<h3 id="hyperlinks">Hyperlinks <sup><a href="#hyperlinks" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li>Avoid hyperlinking <strong>&quot;read here&quot;</strong>, or <strong>&quot;click here&quot;</strong>. Hyperlinked text should always be descriptive to give readers a solid understanding of the linked content. Learn more about writing links in the <a href="#links" data-smooth-scroll>links</a> section.</li>
+</ul>
+</section>
+
+<section>
+<h3 id="hashtags">Hashtags <sup><a href="#hashtags" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Hashtags should be written in #CamelCase. Each word in the hashtag&#39;s phrase should begin with a capital letter. Acronyms within hashtags should be all capitals. Be careful when combining acronyms with other words&mdash;#NYCHealth reads as &quot;New York City Health,&quot; whereas #NYChealth reads as &quot;New York Chealth.&quot;</p>
+</section>
+
+<section>
+<h3 id="pronouns">Pronouns <sup><a href="#pronouns" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li>Pronouns like <strong>you</strong> and <strong>ours</strong> should be used at the writer&#39;s discretion to address readers or services we are providing. This helps humanize the City Planning&#39;s voice and makes us seem much more conversational and approachable.</li>
+</ul>
+</section>
+
+<section>
+<h3 id="punctuation">Punctuation <sup><a href="#punctuation" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<ul>
+<li><p><strong>Apostrophes</strong>: Add an apostrophe-s to all singular nouns, even if the noun ends in s. Use only an apostrophe with a singular noun if the following word begins with s (e.g. <em>the boss&#39;s hat</em>, or <em>the boss&#39; style</em>). Only use an apostrophe for a proper noun that ends in s (e.g. <em>Districts&#39; residents</em>).</p>
+</li>
+<li><p><strong>Bullets</strong>: Capitalize the first word of every bullet. Include a period only when the bulleted item is a complete sentence.</p>
+</li>
+<li><p><strong>Colons</strong>: Capitalize the first word after a colon if what follows makes a complete sentence.</p>
+</li>
+<li><p><strong>Commas</strong>: Always use the serial comma, also known as the Oxford comma.</p>
+</li>
+<li><p><strong>Dashes</strong>: Em dashes should be used&mdash;without spaces between them and adjacent words&mdash;to offset phrases. Avoid using en dashes when referring to ranges. Instead, spell out <em>to</em>, <em>and</em>, or <em>through</em>.</p>
+</li>
+<li><p><strong>Dates</strong>: Always use the full name of the month (e.g. <em>March 3, 2016</em>).</p>
+</li>
+<li><p><strong>Quotation marks</strong>: Periods and commas go inside quotation marks.</p>
+</li>
+</ul>
+</section>
+
+<section>
+<h3 id="words-to-avoid">Words to avoid <sup><a href="#words-to-avoid" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<p>Figurative, or superfluous, language can be confusing. It also makes translation into additional languages difficult. For example:</p>
+<ul>
+<li><strong>Stand</strong> (used often in social movements, not inclusive of people with physical disabilities)</li>
+<li><strong>Drive</strong> (use a word like lead )</li>
+<li><strong>Drive out</strong> (use eliminate or push away)</li>
+<li><strong>Going forward</strong> ( use in the future)</li>
+<li><strong>In order to</strong> (&quot;in order&quot; are extra, unneeded words)</li>
+<li><strong>One-stop shop</strong> (describe the item literally, such as clinic with comprehensive youth services)</li>
+</ul>
+<p>Strive to use as few words as possible, especially jargon and buzzwords, as their meanings are often lost on readers. Opt instead for words that are more specific and descriptive. Here&#39;s a list of words that are used idiomatically, along with more literal suggestions:</p>
+<div class="grid-x grid-margin-x">
+  <div class="cell large-6">
+    <h4>Idioms and misnomers</h4>
+    <p>Use literal and specific nouns rather than expressions or objects in a metaphorical context (e.g. <em>Our office is low bandwidth this week due to a plumbing issue</em> is abstract, <em>Our office hours will end early due to plumbing issues</em> is literal).</p>
+    <h6>Other examples:</h6>
+    <ul>
+      <li><strong>agenda</strong> <small>(use plan or intention)</small></li>
+      <li><strong>llegals/illegal aliens</strong> <small>(use undocumented immigrants or people without immigration status)</small></li>
+      <li><strong>thought leader</strong> <small>(describe person&#39;s specific accomplishments)</small></li>
+      <li><strong>touchpoint</strong> <small>(refer to actual components)</small></li>
+      <li><strong>user testing</strong> <small>(unless you&#39;re actually testing the users, use usability testing)</small></li>
+    </ul>
+  </div>
+  <div class="cell large-6">
+    <h4>Verbs</h4>
+    <p>Use the specific, literal action and sentence subject rather than a hard-to-understand abstraction of that action (e.g. <em>To empower the use of bathrooms</em> is abstract, <em>converted existing facilities into single-use, gender-neutral restrooms</em> is literal).</p>
+    <h6>Other examples:</h6>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-5" style="margin-bottom:0;">
+        <ul>
+          <li><strong>Collaborate</strong></li>
+          <li><strong>combating</strong></li>
+          <li><strong>countering</strong></li>
+          <li><strong>dialogue</strong></li>
+          <li><strong>facilitate</strong></li>
+          <li><strong>foster</strong></li>
+          <li><strong>impact</strong> <small>(as a verb)</small></li>
+          <li><strong>initiate</strong></li>
+        </ul>
+      </div>
+      <div class="cell large-7">
+        <ul>
+          <li><strong>land</strong> <small>(as verb)</small></li>
+          <li><strong>leverage</strong> <small>(implies financial)</small></li>
+          <li><strong>progress</strong> <small>(as a verb)</small></li>
+          <li><strong>promote</strong> <small>(implies advertising)</small></li>
+          <li><strong>streamline</strong></li>
+          <li><strong>tackle</strong> <small>(implies football)</small></li>
+          <li><strong>transform</strong></li>
+          <li><strong>utilize</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 </section>
 
         </div>
@@ -1548,8 +1769,11 @@ Top Bar
               <li>
                 <a href="#layout" class="small-margin-bottom header-small display-inline-block text-black">Layout</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#grid">Grid</a></li>
+                  <li><a href="#there-is-no-device">There is no device</a></li>
+                  <li><a href="#whitespace-and-boxes">Whitespace &amp; boxes</a></li>
+                  <li><a href="#drop-shadows">Drop shadows</a></li>
                   <li><a href="#tables">Tables</a></li>
+                  <li><a href="#responsive-embeds">Responsive embeds</a></li>
                   <li><a href="#visibility">Visibility</a></li>
                   <li><a href="#print-styles">Print styles</a></li>
                 </ul>
@@ -1569,7 +1793,24 @@ Top Bar
               <li>
                 <a href="#media" class="small-margin-bottom header-small display-inline-block text-black">Media</a>
                 <ul class="medium-margin-bottom text-small">
-                  <li><a href="#responsive-embed">Responsive embed</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#voice-and-language" class="small-margin-bottom header-small display-inline-block text-black">Voice &amp; Language</a>
+                <ul class="medium-margin-bottom text-small">
+                  <li><a href="#acronyms-and-abbreviations">Acronyms and abbreviations</a></li>
+                  <li><a href="#addresses">Addresses</a></li>
+                  <li><a href="#phone-numbers">Phone numbers</a></li>
+                  <li><a href="#capitalization">Capitalization</a></li>
+                  <li><a href="#compositions">Compositions</a></li>
+                  <li><a href="#contractions">Contractions</a></li>
+                  <li><a href="#names">Names</a></li>
+                  <li><a href="#numbers">Numbers</a></li>
+                  <li><a href="#hyperlinks">Hyperlinks</a></li>
+                  <li><a href="#hashtags">Hashtags</a></li>
+                  <li><a href="#pronouns">Pronouns</a></li>
+                  <li><a href="#punctuation">Punctuation</a></li>
+                  <li><a href="#words-to-avoid">Words to avoid</a></li>
                 </ul>
               </li>
             </ul>
