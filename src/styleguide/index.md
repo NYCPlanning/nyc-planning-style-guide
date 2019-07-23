@@ -279,7 +279,7 @@ Check out the [Foundation Docs](http://foundation.zurb.com/sites/docs) to learn 
 
 ## Form Layouts
 
-Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage — they are full width by default. That means that inputs will run as wide as the cell that contains them. However, you have two options which make these forms extremely versatile:
+Form elements in Foundation are styled based on their type attribute rather than a class. Inputs in Foundation have another major advantage—they are full width by default. That means that inputs will run as wide as the cell that contains them. However, you have two options which make these forms extremely versatile:
 
 - You can size inputs using cell sizes, like `.medium-6`, `.small-6`.
 - You can create row elements inside your form and use cell for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.
