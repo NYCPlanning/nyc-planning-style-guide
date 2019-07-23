@@ -1,28 +1,19 @@
 <section>
 {{{headerify 'h3' 'Labels'}}}
 {{#markdown}}
-Labels are useful inline styles that can be used to call out metadata such as tags or when something was updated.
+The `.label` class is a useful inline styles that can be used to call out metadata such as tags or when something was updated. Use color classes to change the color of labels. Be mindful not to make lables look clickable (remember, <a href="#color" data-smooth-scroll>orange implies clickable</a>
 
 ```
-<span class="label">Updated </span>
+<span class="label">Updated 7/23/19</span>
+<span class="label bg-chartreuse-light text-chartreuse-dark">cookies</span>
+<span class="label bg-chartreuse-dark">42</span>
+<span class="label bg-fuchsia">bicycle</span>
 ```
 <div class="callout">
-  <span class="label">Updated </span>
-</div>
-
-Use color classes to change the color of labels.
-
-```
-<span class="label bg-yellow-light a11y-orange">cookies</span>
-<span class="label bg-silver">bicycle</span>
-<span class="label bg-chartreuse-dark">happy</span>
-<span class="label bg-fuchsia">tea kettle</span>
-```
-<div class="callout">
-  <span class="label bg-yellow-light a11y-orange">cookies</span>
-  <span class="label bg-silver">bicycle</span>
-  <span class="label bg-chartreuse-dark">happy</span>
-  <span class="label bg-fuchsia">tea kettle</span>
+  <span class="label">Updated 7/23/19</span>
+  <span class="label bg-chartreuse-light text-chartreuse-dark">cookies</span>
+  <span class="label bg-chartreuse-dark">42</span>
+  <span class="label bg-fuchsia">bicycle</span>
 </div>
 {{/markdown}}
 </section>

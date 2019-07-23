@@ -743,7 +743,7 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </div>
 </section>
 <section>
-<h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
+<h3 id="labels-and-placeholders">Labels & placeholders <sup><a href="#labels-and-placeholders" class="silver"><i class="fas fa-link"></i></a></sup></h3>
 <p>All form inputs must have an associated label. To associate a <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element, give the label a <code>for</code> attribute with the same value as the input&#39;s <code>id</code> attribute.</p>
 <div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"my-label-id"</span>&gt;</span>Input Label<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"my-label-id"</span>&gt;</span></code></pre></div><div class="callout">
@@ -1438,20 +1438,15 @@ font-family: Consolas, 'Liberation Mono', Courier, monospace;</code></pre></div>
 </section>
 <section>
 <h3 id="labels">Labels <sup><a href="#labels" class="silver"><i class="fas fa-link"></i></a></sup></h3>
-<p>Labels are useful inline styles that can be used to call out metadata such as tags or when something was updated.</p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label"</span>&gt;</span>Updated <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
-  <span class="label">Updated </span>
-</div>
-
-<p>Use color classes to change the color of labels.</p>
-<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-yellow-light a11y-orange"</span>&gt;</span>cookies<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-silver"</span>&gt;</span>bicycle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-chartreuse-dark"</span>&gt;</span>happy<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-fuchsia"</span>&gt;</span>tea kettle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
-  <span class="label bg-yellow-light a11y-orange">cookies</span>
-  <span class="label bg-silver">bicycle</span>
-  <span class="label bg-chartreuse-dark">happy</span>
-  <span class="label bg-fuchsia">tea kettle</span>
+<p>The <code>.label</code> class is a useful inline styles that can be used to call out metadata such as tags or when something was updated. Use color classes to change the color of labels. Be mindful not to make lables look clickable (remember, <a href="#color" data-smooth-scroll>orange implies clickable</a></p>
+<div class="code-example"><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label"</span>&gt;</span>Updated 7/23/19<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-chartreuse-light text-chartreuse-dark"</span>&gt;</span>cookies<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-chartreuse-dark"</span>&gt;</span>42<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label bg-fuchsia"</span>&gt;</span>bicycle<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></pre></div><div class="callout">
+  <span class="label">Updated 7/23/19</span>
+  <span class="label bg-chartreuse-light text-chartreuse-dark">cookies</span>
+  <span class="label bg-chartreuse-dark">42</span>
+  <span class="label bg-fuchsia">bicycle</span>
 </div>
 </section>
 
