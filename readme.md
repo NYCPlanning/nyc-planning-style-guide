@@ -23,9 +23,13 @@ This style guide is built upon [Foundation for Sites](http://foundation.zurb.com
 
 ## Local Development
 
-- Clone this repository: `git clone git@github.com:NYCPlanning/labs-foundation.git`
-- Navigate to the directory: `cd labs-foundation`
+- Clone this repository: `git clone git@github.com:NYCPlanning/labs-style-guide.git`
+- Navigate to the directory: `cd labs-style-guide`
 - Install dependencies: `yarn`
 - `yarn start` to run Gulp
 - The site will be compiled in `dist` and viewable at `http://localhost:8000`
 - To create compressed, production-ready assets, run `yarn run build`
+
+## Deploying
+
+Deployment is handled through Netlify, which serves the `dist` directory. 
