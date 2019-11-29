@@ -1,8 +1,10 @@
-# NYC Planning Labs Foundation
+# NYC Planning Digital Style Guide
 
-Boilerplate [Foundation for Sites](http://foundation.zurb.com/sites) styles for Planning Labs websites and applications.
+NYC Planning's Digital Style Guide defines standards for the creation, formatting, and design of our digital products. These best practices and UI patterns ensure consistency both within specific applications, and throughout our products and services.
 
-Forked from the official ZURB Template, it has a Gulp-powered build system with these features:
+## Built on Foundation
+
+This style guide is built upon [Foundation for Sites](http://foundation.zurb.com/sites). This repo is forked from the ZURB Template and has a Gulp-powered build system with the following features:
 
 - Handlebars HTML templates with Panini
 - Sass compilation and prefixing
@@ -13,35 +15,17 @@ Forked from the official ZURB Template, it has a Gulp-powered build system with 
   - JavaScript module bundling with webpack
   - Image compression
 
-## Installation
-
-To use this template, your computer needs:
+## Requirements
 
 - [NodeJS](https://nodejs.org/en/) (Version 6 or greater recommended, tested with 6.11.4 and 8.12.0)
 - [Git](https://git-scm.com/)
 
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
 
+## Local Development
 
-### Local Development
-
-Clone this repository:
-
-```bash
-git clone git@github.com:NYCPlanning/labs-foundation.git
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd labs-foundation
-yarn
-```
-
-Finally, run `yarn start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
-
-```
-http://localhost:8000
-```
-
-To create compressed, production-ready assets, run `yarn run build`.
+- Clone this repository: `git clone git@github.com:NYCPlanning/labs-foundation.git`
+- Navigate to the directory: `cd labs-foundation`
+- Install dependencies: `yarn`
+- `yarn start` to run Gulp
+- The site will be compiled in `dist` and viewable at `http://localhost:8000`
+- To create compressed, production-ready assets, run `yarn run build`
