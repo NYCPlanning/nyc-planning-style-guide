@@ -1,0 +1,99 @@
+<section>
+{{#markdown}}
+
+There are a number of ways to incorporate the NYC Planning Digital Style Guide into your projects, depending on your technology stack and requirements.
+
+{{/markdown}}
+</section>
+
+
+<section>
+{{{headerify 'h3' 'Installation'}}}
+{{#markdown}}
+
+This package is available via [NPM](TODO: add link), and includes all of the source **Sass** and **JavaScript** files (as well as compiled CSS and JavaScript).
+
+Install this package:
+
+```
+npm install nyc-planning-style-guide
+```
+
+#### Sass
+
+Edit your `app.scss` to import/include NYC Planning Style Guide files:
+
+```
+// NYC Planning variables (colors, Foundation utilities and settings)
+@import 'nyc-planning-style-guide/variables';
+
+// Foundation
+@import 'foundation-sites/foundation';
+
+// Include all or a subset of Foundation modules
+@include foundation-everything;
+
+// Import all or a subset of NYC Planning modules
+@import 'nyc-planning-style-guide/all-modules';
+
+// Custom app modules and styles
+@import '_my-app-module';
+
+.peanut-butter {
+  color: $orange-muted;
+}
+```
+
+#### JavaScript
+
+JavaScript is optional, but many interactive components require it. You can either load this package's JS (which is a compiled combination of Foundation's JavaScript and its dependencies) or individually load jQuery, What Input, and specific Foundation JavaScript components and then initialize Foundation. For more information on setting up custom JavaScript, see the [Foundation JavaScript documentation](https://foundation.zurb.com/sites/docs/javascript.html). 
+
+{{/markdown}}
+</section>
+
+
+<section>
+{{{headerify 'h3' 'Ember and Labs UI'}}}
+{{#markdown}}
+
+Labs UI is an EmberJS addon that contains common components used in NYC Planning digital products. It consumes Sass files from this package to style its components. Since Ember handles behavior and state management, Labs UI does not include any JavaScript from this package.
+
+For more information, see the <strong><a href="https://ui.planninglabs.nyc/">Labs UI documentation</a></strong>.
+
+{{/markdown}}
+</section>
+
+
+<section>
+{{{headerify 'h3' 'Download'}}}
+{{#markdown}}
+
+The simplest way to incorporate the NYC PLanning Digital Style Guide into your project is to download the compiled assets and include them in your code.
+
+- **Style**: <a href="{{root}}assets/css/nyc-planning.css">nyc-planning.css&nbsp;<i class="fas fa-download"></i></a>
+- **JavaScript**: <a href="{{root}}assets/js/nyc-planning.js">nyc-planning.js&nbsp;<i class="fas fa-download"></i></a>
+
+Be sure to include the `.no-js` class on your `html` tag. Adding this class prevents flash of unstyled content for a number of components.
+Here's an HTML starter template:
+
+```
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYC Planning [application name]</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="nyc-planning.css">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <script src="nyc-planning.js"></script>
+  </body>
+</html>
+```
+
+{{/markdown}}
+</section>

@@ -4,10 +4,13 @@ sections:
 
   - title: Overview
     slug: top
+
+  - title: Getting Started
+    slug: getting-started
     items:
-      - How to use this guide
-      - Sass
+      - Installation
       - Download
+      - Ember and Labs UI
 
   - title: Logo
     slug: logo
@@ -118,19 +121,42 @@ sections:
 <section>
   <p class="lead">NYC Planning's Digital Style Guide defines standards for the creation, formatting, and design of our digital products. These best practices and UI patterns ensure consistency both within specific applications, and throughout our products and services. </p>
 
-  <p>Since user experience is directly affected by how digital content is planned and structured, this guide is aimed at not only designers and developers, but also content creators.</p>
+  <div class="grid-x text-center align-center align-middle large-margin-top">
+    <div class="cell medium-shrink">
+      <p>
+        <i class="fas fa-drafting-compass fa-3x small-margin text-teal-muted"></i>
+        <span class="display-block text-weight-bold">Design</span>
+      </p>
+    </div>
+    <div class="cell medium-shrink">
+      <i class="fas fa-plus fa-2x large-margin text-light-gray"></i>
+    </div>
+    <div class="cell medium-shrink">
+      <p>
+        <i class="fas fa-laptop-code fa-3x small-margin text-chartreuse-muted"></i>
+        <span class="display-block text-weight-bold">Development</span>
+      </p>
+    </div>
+    <div class="cell medium-shrink">
+      <i class="fas fa-plus fa-2x large-margin text-light-gray"></i>
+    </div>
+    <div class="cell medium-shrink">
+      <p>
+        <i class="fas fa-pen-alt fa-3x small-margin text-blue-muted"></i>
+        <span class="display-block text-weight-bold">Content</span>
+      </p>
+    </div>
+  </div>
+
+  <p>User experience is directly affected by how digital content is planned and structured. For this reason, this style guide is aimed at not only designers and developers, but also content creators. In addition to code samples and rules of aesthetics, this guide also defines best practices for creating content that's clear, concise, and user-friendly.</p>
+
+  <p class="large-margin-top"><em>Note: This style guide is built upon the Foundation front-end framework. For an exhaustive list of features, components, or modules not covered here, please see the <strong><a href="https://foundation.zurb.com/sites/docs/">Foundation for Sites documentation</a></strong>.</em></p>
 </section>
 
-{{#markdown}}
-#### How to use this guide
 
-choosing the right components… writing links, UI element content…
-
-- download the compiled CSS…
-- Sass…
-- Foundation (link to docs)…
-- Ember + Labs UI…
-{{/markdown}}
+<hr class="xlarge-margin-top xlarge-margin-bottom">
+<h2 id="getting-started" class="large-margin-bottom">{{{anchorify 'Getting Started'}}}</h2>
+{{> getting-started}}
 
 
 <hr class="xlarge-margin-top xlarge-margin-bottom">
