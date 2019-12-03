@@ -23,8 +23,8 @@ This style guide is built upon [Foundation for Sites](http://foundation.zurb.com
 
 ## Local Development
 
-- Clone this repository: `git clone git@github.com:NYCPlanning/labs-style-guide.git`
-- Navigate to the directory: `cd labs-style-guide`
+- Clone this repository: `git clone git@github.com:NYCPlanning/nyc-planning-style-guide.git`
+- Navigate to the directory: `cd nyc-planning-style-guide`
 - Install dependencies: `yarn`
 - `yarn start` to run Gulp
 - The site will be compiled in `dist` and viewable at `http://localhost:8000`
@@ -32,4 +32,4 @@ This style guide is built upon [Foundation for Sites](http://foundation.zurb.com
 
 ## Deploying
 
-Deployment is handled through Netlify, which serves the `dist` directory. 
+Deployment is handled through Netlify, which serves the `dist` directory.
