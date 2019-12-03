@@ -1,7 +1,22 @@
 <section>
 {{#markdown}}
 
-There are a number of ways to incorporate the NYC Planning Digital Style Guide into your projects, depending on your technology stack and requirements.
+There are a few ways to incorporate the NYC Planning Digital Style Guide into your project, depending on your tech stack and requirements:
+
+<ul class="menu expanded text-center">
+  <li><a href="#installation" data-smooth-scroll>
+    <span class="text-weight-normal"><i class="fab fa-npm fa-4x"></i></span>
+    <span class="display-block">**Install with package manager**</span>
+  </a></li>
+  <li><a href="#ember-and-labs-ui" data-smooth-scroll>
+    <span class="text-weight-normal"><i class="fab fa-ember fa-4x"></i></span>
+    <span class="display-block">**Use the Ember addon**</span>
+  </a></li>
+  <li><a href="#download" data-smooth-scroll>
+    <i class="fas fa-download fa-4x" style="transform:scale(0.6);"></i>
+    <span class="display-block">**Download assets**</span>
+  </a></li>
+</ul>
 
 {{/markdown}}
 </section>
@@ -11,42 +26,63 @@ There are a number of ways to incorporate the NYC Planning Digital Style Guide i
 {{{headerify 'h3' 'Installation'}}}
 {{#markdown}}
 
-This package is available via [NPM](TODO: add link), and includes all of the source **Sass** and **JavaScript** files (as well as compiled CSS and JavaScript).
-
-Install this package:
+This package is available at [npmjs.com](https://www.npmjs.com/package/nyc-planning-style-guide
+), and includes all of the source Sass and JavaScript files and the compiled CSS and JavaScript. It requires [Node.js](https://nodejs.org/) (with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)) and a [Sass](https://sass-lang.com/) compiler.
 
 ```
 npm install nyc-planning-style-guide
 ```
 
-#### Sass
+#### Sass Configuration
 
-Edit your `app.scss` to import/include NYC Planning Style Guide files:
+Edit your `app.scss` (or whatever your main Sass file is called) to import/include variables, mixins, and modules in the following order:
+
+1. NYC Planning variables (colors, Foundation utilities and settings)
+```
+@import 'nyc-planning-style-guide/variables';
+```
+
+2. Foundation
+```
+@import 'foundation-sites/foundation';
+```
+
+3. Include all or a subset of Foundation modules
+```
+@include foundation-everything;
+```
+
+4. Import all or a subset of NYC Planning modules
+```
+@import 'nyc-planning-style-guide/all-modules';
+```
+
+5. Custom app modules and styles
+
 
 ```
-// NYC Planning variables (colors, Foundation utilities and settings)
 @import 'nyc-planning-style-guide/variables';
-
-// Foundation
 @import 'foundation-sites/foundation';
-
-// Include all or a subset of Foundation modules
 @include foundation-everything;
-
-// Import all or a subset of NYC Planning modules
 @import 'nyc-planning-style-guide/all-modules';
-
-// Custom app modules and styles
 @import '_my-app-module';
 
 .peanut-butter {
-  color: $orange-muted;
+  color: Burlywood;
 }
 ```
 
-#### JavaScript
+#### JavaScript <small class="text-weight-normal">(optional)</small>
 
-JavaScript is optional, but many interactive components require it. You can either load this package's JS (which is a compiled combination of Foundation's JavaScript and its dependencies) or individually load jQuery, What Input, and specific Foundation JavaScript components and then initialize Foundation. For more information on setting up custom JavaScript, see the [Foundation JavaScript documentation](https://foundation.zurb.com/sites/docs/javascript.html). 
+This package can be used for its styles alone. However, some interactive components require JavaScript for behaviors such as toggling element class names. There are a few methods for including JavaScript in your project:
+
+- **Use the compiled JavaScript:**
+Simply load the JavaScript file (`/dist/assets/js/nyc-planning.js`), which is a compiled combination of Foundation's JavaScript and its dependencies. This is the easiest method but may include unnecessary code.
+
+- **Use specific JavaScript components:**
+Individually load jQuery, What Input, and the specific Foundation JavaScript components and then initialize Foundation. For more information on setting up custom JavaScript, see the [Foundation JavaScript documentation](https://foundation.zurb.com/sites/docs/javascript.html).
+
+- **Handle behavior/state yourself:** You can avoid the dependencies of jQuery and Foundation's JavaScript by instead using your own custom methods to change class names in intereactive components. This is how the <a href="https://ui.planninglabs.nyc/">Labs UI</a> addon works, as state is handled by EmberJS.
 
 {{/markdown}}
 </section>
