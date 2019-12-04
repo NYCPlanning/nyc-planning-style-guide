@@ -25,48 +25,193 @@ There are a few ways to incorporate the NYC Planning Digital Style Guide into yo
 <section>
 {{{headerify 'h3' 'Installation'}}}
 {{#markdown}}
+This package is available at [npmjs.com](https://www.npmjs.com/package/nyc-planning-style-guide), and includes all of the source Sass and JavaScript files and the compiled CSS and JavaScript. It requires [Node.js](https://nodejs.org/) (with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)) and a [Sass](https://sass-lang.com/) compiler (Ruby Sass 3.4+ or libsass 3.3.2+).
 
-This package is available at [npmjs.com](https://www.npmjs.com/package/nyc-planning-style-guide
-), and includes all of the source Sass and JavaScript files and the compiled CSS and JavaScript. It requires [Node.js](https://nodejs.org/) (with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)) and a [Sass](https://sass-lang.com/) compiler.
+#### Sass Configuration
+
+First, install the package using npm:
 
 ```
 npm install nyc-planning-style-guide
 ```
 
-#### Sass Configuration
+Next, add the Sass files as an import path. How you do this depends on your build process, but the path is the same regardless: `[packages_folder]/nyc-planning-style-guide/src/assets/scss`.
 
-Edit your `app.scss` (or whatever your main Sass file is called) to import/include variables, mixins, and modules in the following order:
+Then, edit your project's `[main].scss` file to import/include variables, mixins, and modules in the following order:
 
-1. NYC Planning variables (colors, Foundation utilities and settings)
+{{/markdown}}
+<ol class="no-margin-bottom">
+  <li>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-5">
+        <p>Import the variables file from this package, which includes NYC Planning color palettes and Foundation's utilities and settings.</p>
+      </div>
+      <div class="cell large-7">
+{{#markdown}}
 ```
 @import 'nyc-planning-style-guide/variables';
 ```
-
-2. Foundation
+{{/markdown}}
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-5">
+        <p>Import Foundation, which includes Sass functions and mixins but does not output any CSS rule-sets.</p>
+      </div>
+      <div class="cell large-7">
+{{#markdown}}
 ```
 @import 'foundation-sites/foundation';
 ```
-
-3. Include all or a subset of Foundation modules
+{{/markdown}}
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-5">
+        <p>Include Foundation components, which outputs CSS rule-sets for those components. If you don't need everything, you can output a subset of components by including them individually.</p>
+      </div>
+      <div class="cell large-7">
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active"><a data-tabs-target="foundation-include-all" href="#foundation-include-all" aria-selected="true">Everything</a></li>
+          <li class="tabs-title"><a data-tabs-target="foundation-include-some" href="#foundation-include-some">Individually</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel is-active" id="foundation-include-all">
+{{#markdown}}
 ```
 @include foundation-everything;
 ```
+{{/markdown}}
+          </div>
+          <div class="tabs-panel" id="foundation-include-some">
+{{#markdown}}
+```
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
 
-4. Import all or a subset of NYC Planning modules
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-switch;
+@include foundation-table;
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
+
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
+
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+@include foundation-visibility-classes;
+// @include foundation-prototype-classes;
+```
+{{/markdown}}
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-5">
+        <p>Include NYC Planning Sass modules, which outputs CSS rule-sets for our custom components. If you don't need everything, you can output a subset of modules by including them individually.</p>
+      </div>
+      <div class="cell large-7">
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active"><a data-tabs-target="nycplanning-include-all" href="#nycplanning-include-all" aria-selected="true">Everything</a></li>
+          <li class="tabs-title"><a data-tabs-target="nycplanning-include-some" href="#nycplanning-include-some">Individually</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel is-active" id="nycplanning-include-all">
+{{#markdown}}
 ```
 @import 'nyc-planning-style-guide/all-modules';
 ```
-
-5. Custom app modules and styles
-
-
+{{/markdown}}
+          </div>
+          <div class="tabs-panel" id="nycplanning-include-some">
+{{#markdown}}
 ```
-@import 'nyc-planning-style-guide/variables';
-@import 'foundation-sites/foundation';
-@include foundation-everything;
-@import 'nyc-planning-style-guide/all-modules';
+@import 'nyc-planning-style-guide/_m-box-model';
+@import 'nyc-planning-style-guide/_m-color';
+@import 'nyc-planning-style-guide/_m-layer-groups-menu';
+@import 'nyc-planning-style-guide/_m-site-header';
+@import 'nyc-planning-style-guide/_m-typography';
+```
+{{/markdown}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-5">
+        Any custom app modules and styles should come after the files above.
+      </div>
+      <div class="cell large-7">
+{{#markdown}}
+```
 @import '_my-app-module';
+.peanut-butter { color: Burlywood; }
+```
+{{/markdown}}
+      </div>
+    </div>
+  </li>
+</ol>
 
+{{#markdown}}
+Your `[main].scss` file should look something like this:
+
+```
+// NYC Planning Style Guide
+@import 'nyc-planning-style-guide/variables';
+@import 'foundation-sites/foundation';
+@include foundation-everything;
+@import 'nyc-planning-style-guide/all-modules';
+
+// My custom app styles
+@import '_my-app-module';
 .peanut-butter {
   color: Burlywood;
 }
@@ -104,7 +249,7 @@ For more information, see the <strong><a href="https://ui.planninglabs.nyc/">Lab
 {{{headerify 'h3' 'Download'}}}
 {{#markdown}}
 
-The simplest way to incorporate the NYC PLanning Digital Style Guide into your project is to download the compiled assets and include them in your code.
+The simplest way to incorporate the NYC Planning Digital Style Guide into your project is to download the compiled assets and include them in your code.
 
 - **Style**: <a href="{{root}}assets/css/nyc-planning.css">nyc-planning.css&nbsp;<i class="fas fa-download"></i></a>
 - **JavaScript**: <a href="{{root}}assets/js/nyc-planning.js">nyc-planning.js&nbsp;<i class="fas fa-download"></i></a>
