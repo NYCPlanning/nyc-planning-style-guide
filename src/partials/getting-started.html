@@ -35,7 +35,15 @@ First, install the package using npm:
 npm install nyc-planning-style-guide
 ```
 
-Next, add the Sass files as an import path. How you do this depends on your build process, but the path is the same regardless: `[packages_folder]/nyc-planning-style-guide/src/assets/scss`.
+<div class="large-padding-top"></div>
+
+Next, add Sass load paths for this package and Foundation. How you do this depends on your build process, but the paths are the same regardless:
+- `node_modules/nyc-planning-style-guide/src/assets/scss`
+- `node_modules/foundation-sites/scss`
+
+_Note: Load paths are optional. But without them, you'll need to provide explicit file paths in the following steps._
+
+<div class="large-padding-top"></div>
 
 Then, edit your project's `[main].scss` file to import/include variables, mixins, and modules in the following order:
 
@@ -49,7 +57,7 @@ Then, edit your project's `[main].scss` file to import/include variables, mixins
       <div class="cell large-7">
 {{#markdown}}
 ```
-@import 'nyc-planning-style-guide/variables';
+@import 'nyc-planning-variables';
 ```
 {{/markdown}}
       </div>
@@ -63,7 +71,7 @@ Then, edit your project's `[main].scss` file to import/include variables, mixins
       <div class="cell large-7">
 {{#markdown}}
 ```
-@import 'foundation-sites/foundation';
+@import 'foundation';
 ```
 {{/markdown}}
       </div>
@@ -153,7 +161,7 @@ Then, edit your project's `[main].scss` file to import/include variables, mixins
   <li>
     <div class="grid-x grid-margin-x">
       <div class="cell large-5">
-        <p>Include NYC Planning Sass modules, which outputs CSS rule-sets for our custom components. If you don't need everything, you can output a subset of modules by including them individually.</p>
+        <p>Import NYC Planning Sass modules, which outputs CSS rule-sets for our custom components. If you don't need everything, you can output a subset of modules by including them individually.</p>
       </div>
       <div class="cell large-7">
         <ul class="tabs" data-tabs id="example-tabs">
@@ -164,18 +172,18 @@ Then, edit your project's `[main].scss` file to import/include variables, mixins
           <div class="tabs-panel is-active" id="nycplanning-include-all">
 {{#markdown}}
 ```
-@import 'nyc-planning-style-guide/all-modules';
+@import 'nyc-planning-all-modules';
 ```
 {{/markdown}}
           </div>
           <div class="tabs-panel" id="nycplanning-include-some">
 {{#markdown}}
 ```
-@import 'nyc-planning-style-guide/_m-box-model';
-@import 'nyc-planning-style-guide/_m-color';
-@import 'nyc-planning-style-guide/_m-layer-groups-menu';
-@import 'nyc-planning-style-guide/_m-site-header';
-@import 'nyc-planning-style-guide/_m-typography';
+@import 'nyc-planning-m-box-model';
+@import 'nyc-planning-m-color';
+@import 'nyc-planning-m-layer-groups-menu';
+@import 'nyc-planning-m-site-header';
+@import 'nyc-planning-m-typography';
 ```
 {{/markdown}}
           </div>
@@ -183,35 +191,21 @@ Then, edit your project's `[main].scss` file to import/include variables, mixins
       </div>
     </div>
   </li>
-  <li>
-    <div class="grid-x grid-margin-x">
-      <div class="cell large-5">
-        Any custom app modules and styles should come after the files above.
-      </div>
-      <div class="cell large-7">
-{{#markdown}}
-```
-@import '_my-app-module';
-.peanut-butter { color: Burlywood; }
-```
-{{/markdown}}
-      </div>
-    </div>
-  </li>
 </ol>
 
+<div class="large-padding-top"></div>
+
 {{#markdown}}
-Your `[main].scss` file should look something like this:
+Finally, any custom app modules and styles should come after the files above. Your `[main].scss` file should look something like this:
 
 ```
-// NYC Planning Style Guide
-@import 'nyc-planning-style-guide/variables';
-@import 'foundation-sites/foundation';
+@import 'nyc-planning-variables';
+@import 'foundation';
 @include foundation-everything;
-@import 'nyc-planning-style-guide/all-modules';
+@import 'nyc-planning-all-modules';
 
 // My custom app styles
-@import '_my-app-module';
+@import 'my-app-module';
 .peanut-butter {
   color: Burlywood;
 }
