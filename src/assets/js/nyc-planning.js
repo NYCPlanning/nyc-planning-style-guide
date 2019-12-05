@@ -40,7 +40,7 @@ $(document).ready(function() {
     const bgHexColor = rgbToHex(bgColor);
 
     $(this).append(`
-      <li class="text-small text-weight-bold">${colorName}</li>
+      <li class="text-tiny text-weight-bold nowrap">${colorName}</li>
       <li class="text-tiny">${bgHexColor}</li>
       <li class="text-tiny">${bgColor}</li>
     ` );
