@@ -87,4 +87,8 @@
 // Custom app modules and styles
 // --------------------------------------------------
 
-// @import 'modules/_m-ember-tooltips';
+.sticky {
+  .active {
+    color: $black;
+  }
+}
