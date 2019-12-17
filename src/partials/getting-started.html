@@ -27,28 +27,47 @@ There are a few ways to incorporate the NYC Planning Digital Style Guide into yo
 {{#markdown}}
 This package is available at [npmjs.com](https://www.npmjs.com/package/nyc-planning-style-guide), and includes all of the source Sass and JavaScript files and the compiled CSS and JavaScript. It requires [Node.js](https://nodejs.org/) (with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)) and a [Sass](https://sass-lang.com/) compiler (Ruby Sass 3.4+ or libsass 3.3.2+).
 
-#### Sass Configuration
-
-First, install the package using npm:
+#### 1. Install the package
 
 ```
-npm install nyc-planning-style-guide
+$ npm install nyc-planning-style-guide
+$ # or
+$ yarn add nyc-planning-style-guide
 ```
 
-<div class="large-padding-top"></div>
+#### 2. Configure Sass load paths
 
-Next, add Sass load paths for this package and Foundation. How you do this depends on your build process, but the paths are the same regardless:
-- `node_modules/nyc-planning-style-guide/src/assets/scss`
+Add Sass load paths for this package and Foundation. How you do this depends on your build process—for example, `node-sass` can declare load paths by adding a `SASS_PATH` variable to your `.env` file:
+
+```
+SASS_PATH=node_modules:node_modules/foundation-sites/scss:node_modules/nyc-planning-style-guide/src/assets/scss
+```
+
+Regardless of your build process, the load paths are the same:
+- `node_modules/`
 - `node_modules/foundation-sites/scss`
+- `node_modules/nyc-planning-style-guide/src/assets/scss`
 
-_Note: Load paths are optional. But without them, you'll need to provide explicit file paths in the following steps._
+#### 3. Set up your `.scss`
 
-<div class="large-padding-top"></div>
-
-Then, edit your project's `[main].scss` file to import/include variables, mixins, and modules in the following order:
+Edit your project's Sass file to import/include variables, mixins, and modules in the following order:
 
 {{/markdown}}
-<ol class="no-margin-bottom">
+<ul class="no-margin-bottom">
+  <li>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-5">
+        <p>Import Foundation's utilities that help us work with colors, units, selectors, and more.</p>
+      </div>
+      <div class="cell large-7">
+{{#markdown}}
+```
+@import 'foundation-sites/scss/util/util';
+```
+{{/markdown}}
+      </div>
+    </div>
+  </li>
   <li>
     <div class="grid-x grid-margin-x">
       <div class="cell large-5">
@@ -172,7 +191,7 @@ Then, edit your project's `[main].scss` file to import/include variables, mixins
           <div class="tabs-panel is-active" id="nycplanning-include-all">
 {{#markdown}}
 ```
-@import 'nyc-planning-all-modules';
+@import 'modules/nyc-planning-all-modules';
 ```
 {{/markdown}}
           </div>
@@ -191,18 +210,16 @@ Then, edit your project's `[main].scss` file to import/include variables, mixins
       </div>
     </div>
   </li>
-</ol>
-
-<div class="large-padding-top"></div>
-
+  <li>
 {{#markdown}}
-Finally, any custom app modules and styles should come after the files above. Your `[main].scss` file should look something like this:
+Finally, any custom app modules and styles should come after the files above. Your `.scss` file should look something like this:
 
 ```
+@import 'foundation-sites/scss/util/util';
 @import 'nyc-planning-variables';
 @import 'foundation';
 @include foundation-everything;
-@import 'nyc-planning-all-modules';
+@import 'modules/nyc-planning-all-modules';
 
 // My custom app styles
 @import 'my-app-module';
@@ -210,8 +227,10 @@ Finally, any custom app modules and styles should come after the files above. Yo
   color: Burlywood;
 }
 ```
+  </li>
+</ul>
 
-#### JavaScript <small class="text-weight-normal">(optional)</small>
+#### 4. JavaScript <small class="text-weight-normal">(optional)</small>
 
 This package can be used for its styles alone. However, some interactive components require JavaScript for behaviors such as toggling element class names. There are a few methods for including JavaScript in your project:
 
@@ -221,7 +240,7 @@ Simply load the JavaScript file (`/dist/assets/js/nyc-planning.js`), which is a 
 - **Use specific JavaScript components:**
 Individually load jQuery, What Input, and the specific Foundation JavaScript components and then initialize Foundation. For more information on setting up custom JavaScript, see the [Foundation JavaScript documentation](https://foundation.zurb.com/sites/docs/javascript.html).
 
-- **Handle behavior/state yourself:** You can avoid the dependencies of jQuery and Foundation's JavaScript by instead using your own custom methods to change class names in intereactive components. This is how the <a href="https://ui.planninglabs.nyc/">Labs UI</a> addon works, as state is handled by EmberJS.
+- **Handle behavior/state yourself:** If you're using a framework that handles state for you (e.g. JavaScript MVCs), it's best  to avoid the dependencies of jQuery and Foundation's custom JavaScript. You should instead use your own custom methods to change class names in interactive components. This is how the <a href="https://ui.planninglabs.nyc/">Labs UI</a> addon works, as state is handled by EmberJS.
 
 {{/markdown}}
 </section>
