@@ -52,6 +52,5 @@
   "bugs": {
     "url": "https://github.com/NYCPlanning/nyc-planning-style-guide/issues",
     "email": "Labs_DL@planning.nyc.gov"
-  },
-  "private": true
+  }
 }
