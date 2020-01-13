@@ -5,7 +5,8 @@
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --production"
+    "build": "gulp build --production",
+    "prepublish": "npm run build"
   },
   "author": "Andrew Cochran <acochran@planning.nyc.gov>",
   "license": "MIT",
