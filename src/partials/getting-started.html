@@ -4,6 +4,10 @@
 There are a few ways to incorporate the NYC Planning Digital Style Guide into your project, depending on your tech stack and requirements:
 
 <ul class="menu expanded text-center">
+  <li><a href="#cdn" data-smooth-scroll>
+    <i class="fas fa-server fa-4x" style="transform:scale(0.6);"></i>
+    <span class="display-block">**Use a CDN-hosted version**</span>
+  </a></li>
   <li><a href="#installation" data-smooth-scroll>
     <span class="text-weight-normal"><i class="fab fa-npm fa-4x"></i></span>
     <span class="display-block">**Install with package manager**</span>
@@ -12,11 +16,66 @@ There are a few ways to incorporate the NYC Planning Digital Style Guide into yo
     <span class="text-weight-normal"><i class="fab fa-ember fa-4x"></i></span>
     <span class="display-block">**Use the Ember addon**</span>
   </a></li>
-  <li><a href="#download" data-smooth-scroll>
-    <i class="fas fa-download fa-4x" style="transform:scale(0.6);"></i>
-    <span class="display-block">**Download assets**</span>
-  </a></li>
 </ul>
+
+{{/markdown}}
+</section>
+
+
+<section>
+{{{headerify 'h3' 'CDN'}}}
+
+<div class="grid-x grid-margin-x">
+  <div class="cell large-4 large-order-2">
+{{#markdown}}
+- **Style**: <a href="{{root}}assets/css/nyc-planning.css">nyc-planning.css&nbsp;<i class="fas fa-download"></i></a>
+- **JavaScript**: <a href="{{root}}assets/js/nyc-planning.js">nyc-planning.js&nbsp;<i class="fas fa-download"></i></a>
+{{/markdown}}
+  </div>
+  <div class="cell large-8">
+{{#markdown}}
+The latest stable release is available to download and start using straight away. But, the simplest way to incorporate the Style Guide into your project is to use the files hosted on the [unpkg.com&nbsp;CDN&nbsp;<i class="fas fa-external-link-alt"></i>](https://unpkg.com/browse/nyc-planning-style-guide/).
+{{/markdown}}
+  </div>
+</div>
+
+{{#markdown}}
+##### 1. Place this link in the head of your HTML code:
+```
+<link rel="stylesheet" href="https://unpkg.com/nyc-planning-style-guide@{{release.version}}/dist/assets/css/nyc-planning.css" />
+```
+
+##### 2. And place this script at the end of your code, just before the closing `</body>` tag:
+```
+<script src="https://unpkg.com/nyc-planning-style-guide@{{release.version}}/dist/assets/js/nyc-planning.js"></script>
+```
+
+That's it! You're all set to start using our CSS classes and JavaScript components.
+
+**Upgrading:** When new versions of the Style Guide are released, simply update the version number in your codes pasted from above. Please note that npkg.com URLs that do not specify a package version number redirect to the latest version. So be sure to use (and test!) an explicit version number in your application to avoid breaking changes.
+
+**Still need help?** Here's a boilerplate HTML starter template which has everything you need — including the CSS, JavaScript, and the [FontAwesome icon set](/icons):
+
+```
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYC Planning [application name]</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/nyc-planning-style-guide@{{release.version}}/dist/assets/css/nyc-planning.css">
+  </head>
+  <body>
+    <h1>Hello, world! <i class="fas fa-rocket"></i></h1>
+
+    <script src="https://unpkg.com/nyc-planning-style-guide@{{release.version}}/dist/assets/js/nyc-planning.js"></script>
+  </body>
+</html>
+```
+
+_Note: Be sure to include the `.no-js` class on your `html` tag. Adding this class prevents flash of unstyled content for a number of components._
 
 {{/markdown}}
 </section>
@@ -253,41 +312,6 @@ Individually load jQuery, What Input, and the specific Foundation JavaScript com
 Labs UI is an EmberJS addon that contains common components used in NYC Planning digital products. It consumes Sass files from this package to style its components. Since Ember handles behavior and state management, Labs UI does not include any JavaScript from this package.
 
 For more information, see the <strong><a href="https://ui.planninglabs.nyc/">Labs UI documentation</a></strong>.
-
-{{/markdown}}
-</section>
-
-
-<section>
-{{{headerify 'h3' 'Download'}}}
-{{#markdown}}
-
-The simplest way to incorporate the NYC Planning Digital Style Guide into your project is to download the compiled assets and include them in your code.
-
-- **Style**: <a href="{{root}}assets/css/nyc-planning.css">nyc-planning.css&nbsp;<i class="fas fa-download"></i></a>
-- **JavaScript**: <a href="{{root}}assets/js/nyc-planning.js">nyc-planning.js&nbsp;<i class="fas fa-download"></i></a>
-
-Be sure to include the `.no-js` class on your `html` tag. Adding this class prevents flash of unstyled content for a number of components.
-Here's an HTML starter template:
-
-```
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NYC Planning [application name]</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="nyc-planning.css">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <script src="nyc-planning.js"></script>
-  </body>
-</html>
-```
 
 {{/markdown}}
 </section>
