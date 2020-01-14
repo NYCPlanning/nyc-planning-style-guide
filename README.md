@@ -30,6 +30,12 @@ This style guide is built upon [Foundation for Sites](http://foundation.zurb.com
 - The site will be compiled in `dist` and viewable at `http://localhost:8000`
 - To create compressed, production-ready assets, run `yarn run build`
 
-## Deploying
+## Publishing / Deploying
 
-Deployment is handled through Netlify, which serves the `dist` directory.
+Before deploying the docs, a new release should be created and published via npm (unless deploying changes that only affect the docs).
+
+- Bump the version number in `src/data/release.json`
+- Bump the version number in `package.json`
+- Run `npm publish` — a prepublish script is run on npmjs.com, which makes CDN files available at [unpkg.com/browse/nyc-planning-style-guide/](https://unpkg.com/browse/nyc-planning-style-guide/)
+
+Docs deployment is handled through Netlify, which serves the `dist` directory. To deploy to [nyc-planning-style-guide.netlify.com](https://nyc-planning-style-guide.netlify.com/), simply push changes to the `master` branch.

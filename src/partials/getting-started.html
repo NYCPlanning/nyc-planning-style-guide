@@ -23,23 +23,12 @@ There are a few ways to incorporate the NYC Planning Digital Style Guide into yo
 
 
 <section>
-{{{headerify 'h3' 'CDN'}}}
-
-<div class="grid-x grid-margin-x">
-  <div class="cell large-4 large-order-2">
-{{#markdown}}
-- **Style**: <a href="{{root}}assets/css/nyc-planning.css">nyc-planning.css&nbsp;<i class="fas fa-download"></i></a>
-- **JavaScript**: <a href="{{root}}assets/js/nyc-planning.js">nyc-planning.js&nbsp;<i class="fas fa-download"></i></a>
-{{/markdown}}
-  </div>
-  <div class="cell large-8">
-{{#markdown}}
-The latest stable release is available to download and start using straight away. But, the simplest way to incorporate the Style Guide into your project is to use the files hosted on the [unpkg.com&nbsp;CDN&nbsp;<i class="fas fa-external-link-alt"></i>](https://unpkg.com/browse/nyc-planning-style-guide/).
-{{/markdown}}
-  </div>
-</div>
+{{{headerify 'h2' 'CDN'}}}
 
 {{#markdown}}
+
+The simplest way to incorporate the Style Guide into your project is to use the files hosted on the [unpkg.com&nbsp;CDN&nbsp;<i class="fas fa-external-link-alt"></i>](https://unpkg.com/browse/nyc-planning-style-guide/).
+
 ##### 1. Place this link in the head of your HTML code:
 ```
 <link rel="stylesheet" href="https://unpkg.com/nyc-planning-style-guide@{{release.version}}/dist/assets/css/nyc-planning.css" />
@@ -52,9 +41,13 @@ The latest stable release is available to download and start using straight away
 
 That's it! You're all set to start using our CSS classes and JavaScript components.
 
-**Upgrading:** When new versions of the Style Guide are released, simply update the version number in your codes pasted from above. Please note that npkg.com URLs that do not specify a package version number redirect to the latest version. So be sure to use (and test!) an explicit version number in your application to avoid breaking changes.
+#### Upgrading
 
-**Still need help?** Here's a boilerplate HTML starter template which has everything you need — including the CSS, JavaScript, and the [FontAwesome icon set](/icons):
+If you want to upgrade to a newer release of the Style Guide, update the version number in your CSS and JavaScript URLs — see the [list of the available releases](https://unpkg.com/browse/nyc-planning-style-guide/).  If you don't specify a specific version, it will default to the latest version. So be sure to use (and test!) an explicit version in your application to avoid breaking changes.
+
+#### Still need help?
+
+Here's a boilerplate HTML starter template which has everything you need — including the CSS, JavaScript, and the [FontAwesome icon set](/icons):
 
 ```
 <!doctype html>
@@ -77,12 +70,20 @@ That's it! You're all set to start using our CSS classes and JavaScript componen
 
 _Note: Be sure to include the `.no-js` class on your `html` tag. Adding this class prevents flash of unstyled content for a number of components._
 
+#### Download static assets
+
+If you'd like the CSS and JavaScript as static assets for your project, you can download the latest files here:
+
+- **Style**: <a href="{{root}}assets/css/nyc-planning.css">nyc-planning.css&nbsp;<i class="fas fa-download"></i></a>
+- **JavaScript**: <a href="{{root}}assets/js/nyc-planning.js">nyc-planning.js&nbsp;<i class="fas fa-download"></i></a>
+
 {{/markdown}}
+
 </section>
 
 
 <section>
-{{{headerify 'h3' 'Installation'}}}
+{{{headerify 'h2' 'Installation'}}}
 {{#markdown}}
 This package is available at [npmjs.com](https://www.npmjs.com/package/nyc-planning-style-guide), and includes all of the source Sass and JavaScript files and the compiled CSS and JavaScript. It requires [Node.js](https://nodejs.org/) (with [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)) and a [Sass](https://sass-lang.com/) compiler (Ruby Sass 3.4+ or libsass 3.3.2+).
 
@@ -306,7 +307,7 @@ Individually load jQuery, What Input, and the specific Foundation JavaScript com
 
 
 <section>
-{{{headerify 'h3' 'Ember and Labs UI'}}}
+{{{headerify 'h2' 'Ember and Labs UI'}}}
 {{#markdown}}
 
 Labs UI is an EmberJS addon that contains common components used in NYC Planning digital products. It consumes Sass files from this package to style its components. Since Ember handles behavior and state management, Labs UI does not include any JavaScript from this package.
