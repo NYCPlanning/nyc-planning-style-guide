@@ -1,6 +1,6 @@
 {
   "name": "nyc-planning-style-guide",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Base styles for NYC Department of City Planning (using Foundation for Sites)",
   "main": "gulpfile.babel.js",
   "scripts": {
