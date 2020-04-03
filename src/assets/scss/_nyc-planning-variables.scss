@@ -376,9 +376,9 @@ $accordionmenu-arrow-size: 6px;
 // 9. Badge
 // --------
 
-$badge-background: $primary-color;
-$badge-color: $white;
-$badge-color-alt: $black;
+$badge-background: $a11y-yellow;
+$badge-color: $black;
+$badge-color-alt: $white;
 $badge-palette: $foundation-palette;
 $badge-padding: rem-calc(1);
 $badge-minwidth: rem-calc(17);
