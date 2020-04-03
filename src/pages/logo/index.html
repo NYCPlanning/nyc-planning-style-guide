@@ -11,7 +11,9 @@ sections:
     class: active
     items:
       - Logo variations
-      - Logo usage
+      - Clearspace
+      - Resolution
+      - What not to do
   - title: Color
     slug: color
   - title: Icons
@@ -38,20 +40,37 @@ sections:
 <h1 id="logo" class="large-margin-bottom">Logo</h1>
 
 <section>
+<p>The NYC Planning logo should be used consistently to foster brand awareness.</p>
+
+<div class="grid-x grid-margin-x">
+  <div class="cell large-8">
+
 {{#markdown}}
-
-The NYC Planning logo should be used consistently to foster brand awareness.
-
 ``` html
 <img alt="NYC Planning" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
 ```
 <div class="callout xlarge-padding">
   <img alt="NYC Planning" style="width:300px;" src="https://raw.githubusercontent.com/NYCPlanning/dcp-logo/master/dcp_logo_772.png" />
 </div>
-
-Download the logo in various formats: https://github.com/NYCPlanning/dcp-logo
-
 {{/markdown}}
+
+  </div>
+  <div class="cell large-4 text-small">
+
+    <p>
+      Various formats can be downloaded from
+      <a href="https://github.com/NYCPlanning/dcp-logo">github.com/NYCPlanning/dcp-logo</a>:
+    </p>
+
+    <ul>
+      <li><a href="https://github.com/NYCPlanning/dcp-logo/raw/master/dcp_logo.svg">SVG</a></li>
+      <li><a href="https://github.com/NYCPlanning/dcp-logo/raw/master/dcp_logo_772.png">PNG</a></li>
+      <li><a href="https://github.com/NYCPlanning/dcp-logo/raw/master/dcp_logo_black_772.png">PNG (Black)</a></li>
+      <li><a href="https://github.com/NYCPlanning/dcp-logo/raw/master/dcp_logo_white_772.png">PNG (White)</a></li>
+    </ul>
+
+  </div>
+</div>
 </section>
 
 <section>
@@ -91,10 +110,8 @@ The two-color, primary version of logo should be used for most instances. Altern
 </section>
 
 <section>
-{{{headerify 'h2' 'Logo usage'}}}
+{{{headerify 'h2' 'Clearspace'}}}
 {{#markdown}}
-
-### Clearspace
 
 <div class="grid-x grid-margin-x">
   <div class="cell large-4">
@@ -112,11 +129,21 @@ The two-color, primary version of logo should be used for most instances. Altern
   </div>
 </div>
 
-### Resolution
+{{/markdown}}
+</section>
 
-@2x for retina screens, display raster PNG version at max 1/2 size or use vector SVG versions
+<section>
+{{{headerify 'h2' 'Resolution'}}}
+{{#markdown}}
 
-### Logo don'ts
+The PNG version of the logo is 722 &times; 373 pixels. Remember to consider this for @2x/retina screens. It's best not to display the raster PNG logo at sizes wider than 360 pixels — the logo will look great on high-resolution screens when automatically scaled to less than 1/2 its original size. For larger display sizes (or print), use vector SVG version.
+
+{{/markdown}}
+</section>
+
+<section>
+{{{headerify 'h2' "What not to do"}}}
+{{#markdown}}
 
 <div class="grid-x grid-margin-x large-up-4">
   <div class="cell">
