@@ -1,0 +1,44 @@
+<section>
+{{{headerify 'h3' 'Custom font size'}}}
+{{#markdown}}
+
+The `.text-[size]` classes let you adjust the font size of elements.
+
+<table class="large-margin-bottom">
+  <tr><td>`.text-xxlarge`</td><td>`2.125rem` (≈ 34 pixels)</td><td class="text-xxlarge">This is giant.</td></tr>
+  <tr><td>`.text-xlarge`</td><td>`1.5625rem` (≈ 25 pixels)</td><td class="text-xlarge">This is really big.</td></tr>
+  <tr><td>`.text-large`</td><td>`1.25rem` (≈ 20 pixels)</td><td class="text-large">This is larger than average.</td></tr>
+  <tr><td>`.text-medium`</td><td>`1rem` (≈ 16 pixels)</td><td class="text-medium">This is medium (default size).</td></tr>
+  <tr><td>`.text-small`</td><td>`0.8125rem` (≈ 13 pixels)</td><td class="text-small">This is small. Make sure it's accessible.</td></tr>
+  <tr><td>`.tiny`</td><td>`0.625rem` (≈ 10 pixels)</td><td class="text-tiny">Be careful with text this tiny. ALL CAPS HELPS.</td></tr>
+</table>
+
+#### Use appropriate, semantic element tags
+
+<i class="fas fa-ban fuchsia"></i> Do not use `<h3>` instead of `<p>` just to make the larger.
+
+Although header tags make fonts bigger and bolder, text should not be inside a header tag if it is not a heading. Header classes are used to give elements a particular header style, regardless of their tag. This allows for both semantic page structure and versatile design.
+
+For example, an `<h2>` or `<p>` may be the proper element choice, but they default to specific sizes. You can style an element larger or smaller by adding a `.header-[size]` class.
+
+``` html
+<h5 class="header-xxlarge">XXL Heading</h5>
+<h5 class="header-xlarge">XL Heading</h5>
+<p class="header-large">Large Heading</p>
+<p class="header-medium">Medium Heading</p>
+<h1 class="header-small">Small Heading</h1>
+<h1 class="header-tiny">Tiny Heading</h1>
+<p class="lead">This is lead paragraph...</p>
+```
+<div class="callout">
+<h5 class="header-xxlarge">XXL Heading</h5>
+<h5 class="header-xlarge">XL Heading</h5>
+<p class="header-large">Large Heading</p>
+<p class="header-medium">Medium Heading</p>
+<h1 class="header-small">Small Heading</h1>
+<h1 class="header-tiny">Tiny Heading</h1>
+<p class="lead">This is lead paragraph. It's larger than a regular paragraph, which makes it noticeably stand out. If you add `class="lead"` to a paragraph you'll make it a lead paragraph.</p>
+</div>
+
+{{/markdown}}
+</section>
