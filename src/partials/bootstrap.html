@@ -1,11 +1,43 @@
 <section>
-  <p>This site references the Foundation framework throughout, but you can also use the <a href="https://getbootstrap.com/">Bootstrap</a> framework.</p>
-  <p>I have attempted to translate the settings used in the Foundation files into a Bootstrap template.  I have also attempted to port over as much of possible any parts of the guide where syntax is specific and differs from Bootstrap defaults so that either can be used.  For example:</p>
-  <div class="code-example"><pre>
-  <code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-primary btn-sm"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Default Bootstrap Syntax<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button large"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span>Style Guide<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre></div><div class="callout">
-    <a class="button large" href="#">Default Bootstrap Syntax</a>
-    <a class="button large" href="#">Style Guide</a>
+  {{{headerify 'h2' 'Bootstrap'}}}
+
+  <p>This Style Guide is built upon the Foundation front-end framework. However, if your project requires the <a href="https://getbootstrap.com/">Bootstrap</a> framework, the settings used for Foundation have been translated into a Bootstrap template.</p>
+
+  <p>Although the code samples in this Style Guide use Foundation's syntax (which differs from Bootstrap's defaults), this Bootstrap template attempts to port over as much of Foundation as possible so that either syntax can be used. For example, using either Bootstrap's or Foundation's button syntax will work:</p>
+
+  <div class="code-example">
+    <pre><code class="html">&lt;a class="btn" href="#"&gt;Bootstrap Button&lt;/a&gt;
+&lt;a class="button" href="#"&gt;Foundation Button&lt;/a&gt;</code></pre>
   </div>
-  <p>Using the Bootstrap default or the Style Guide syntax will work.</p>
+  <div class="callout">
+    <button class="button no-margin">Bootstrap Button</button>
+    <button class="button no-margin">Foundation Button</button>
+  </div>
+
+  <p>There are two ways to incorporate the Bootstrap template into your project, depending on your tech stack and requirements:</p>
+
+  <h4>1. Download static assets</h4>
+
+  <p>If you'd like the CSS and JavaScript as static assets for your project, you can download the latest files here:</p>
+
+  <ul>
+    <li><strong>Style</strong>: <a href="../assets/bootstrap/custom.css">custom.css&nbsp;<i class="fas fa-download"></i></a></li>
+    <li><strong>JavaScript</strong>: <a href="../assets/bootstrap/bootstrap.bundle.js">bootstrap.bundle.js&nbsp;<i class="fas fa-download"></i></a></li>
+  </ul>
+
+  <h4 id="custom-installation">2. Build Bootstrap yourself</h4>
+
+  <p>If you'd prefer to customize your Bootstrap installation:</p>
+
+  <ol>
+    <li class="medium-margin-bottom">Download the <a href="https://github.com/twbs/bootstrap" target="_blank">latest version of Bootstrap&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
+    <li class="medium-margin-bottom">Run <code>npm install</code> to install the Node.js dependencies</li>
+    <li class="medium-margin-bottom">Run <code>npm install what-input</code> to install what-input</li>
+    <li class="medium-margin-bottom">Add the statement <code>import 'what-input'</code> to <code>/js/src/index.js</code></li>
+    <li class="medium-margin-bottom">Replace <code>/scss/_variables.scss</code> with <a href="../assets/bootstrap/_variables.scss">_variables.scss&nbsp;<i class="fas fa-download"></i></a></li>
+    <li class="medium-margin-bottom">Replace <code>/scss/utilities/_background.scss</code> with <a href="../assets/bootstrap/_background.scss">_background.scss&nbsp;<i class="fas fa-download"></i></a></li>
+    <li class="medium-margin-bottom">Add <a href="../assets/bootstrap/custom.scss">custom.scss&nbsp;<i class="fas fa-download"></i></a> to the <code>/scss/</code> directory</li>
+    <li class="medium-margin-bottom">Make any desired changes</li>
+    <li class="medium-margin-bottom">Run <code>npm run dist</code> to rebuild your CSS and JavaScript files</li>
+  </ol>
 </section>
