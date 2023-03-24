@@ -17,7 +17,7 @@ This style guide is built upon [Foundation for Sites](http://foundation.zurb.com
 
 ## Requirements
 
-- [NodeJS](https://nodejs.org/en/) (Version 6 or greater recommended, tested with 6.11.4 and 8.12.0)
+- [NodeJS](https://nodejs.org/en/) **version listed in .nvmrc** 
 - [Git](https://git-scm.com/)
 
 
