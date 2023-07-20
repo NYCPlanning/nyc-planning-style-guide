@@ -10,13 +10,19 @@ import sherpa        from 'style-sherpa';
 import yaml          from 'js-yaml';
 import fs            from 'fs';
 import webpackStream from 'webpack-stream';
-import webpack2      from 'webpack';
+import webpack       from 'webpack';
 import named         from 'vinyl-named';
-import uncss         from 'uncss';
 import autoprefixer  from 'autoprefixer';
+import dartSass      from 'sass';
 
 // Load all Gulp plugins into one variable
-const $ = plugins();
+const $ = plugins({
+  postRequireTransforms: {
+    sass: function(sass) {
+      return sass(dartSass);
+    }
+  }
+});;
 
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
@@ -85,9 +91,6 @@ function sass() {
   const postCssPlugins = [
     // Autoprefixer
     autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
-
-    // UnCSS - Uncomment to remove unused styles in production
-    // PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
 
   return gulp.src('src/assets/scss/nyc-planning.scss')
@@ -97,7 +100,6 @@ function sass() {
     })
       .on('error', $.sass.logError))
     .pipe($.postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
@@ -128,7 +130,7 @@ function javascript() {
   return gulp.src(PATHS.entries)
     .pipe(named())
     .pipe($.sourcemaps.init())
-    .pipe(webpackStream(webpackConfig, webpack2))
+    .pipe(webpackStream(webpackConfig, webpack))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))

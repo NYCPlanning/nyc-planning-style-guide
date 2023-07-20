@@ -22,10 +22,10 @@
   margin: 0 !important;
 }
 .tiny-margin {
-  margin: $global-margin/4 !important;
+  margin: $global-margin*0.25 !important;
 }
 .small-margin {
-  margin: $global-margin/2 !important;
+  margin: $global-margin*0.5 !important;
 }
 .medium-margin {
   margin: $global-margin !important;
@@ -39,12 +39,12 @@
 
 // Margin for top and bottom
 .tiny-margin-y {
-  margin-top: $global-margin/4 !important;
-  margin-bottom: $global-margin/4 !important;
+  margin-top: $global-margin*0.25 !important;
+  margin-bottom: $global-margin*0.25 !important;
 }
 .small-margin-y {
-  margin-top: $global-margin/2 !important;
-  margin-bottom: $global-margin/2 !important;
+  margin-top: $global-margin*0.5 !important;
+  margin-bottom: $global-margin*0.5 !important;
 }
 .medium-margin-y {
   margin-top: $global-margin !important;
@@ -61,12 +61,12 @@
 
 // Margin for right and left
 .tiny-margin-x {
-  margin-right: $global-margin/4 !important;
-  margin-left: $global-margin/4 !important;
+  margin-right: $global-margin*0.25 !important;
+  margin-left: $global-margin*0.25 !important;
 }
 .small-margin-x {
-  margin-right: $global-margin/2 !important;
-  margin-left: $global-margin/2 !important;
+  margin-right: $global-margin*0.5 !important;
+  margin-left: $global-margin*0.5 !important;
 }
 .medium-margin-x {
   margin-right: $global-margin !important;
@@ -102,10 +102,10 @@ $sides: top right bottom left;
     margin-#{$side}: 0 !important;
   }
   .tiny-margin-#{$side} {
-    margin-#{$side}: $global-margin/4 !important;
+    margin-#{$side}: $global-margin*0.25 !important;
   }
   .small-margin-#{$side} {
-    margin-#{$side}: $global-margin/2 !important;
+    margin-#{$side}: $global-margin*0.5 !important;
   }
   .medium-margin-#{$side} {
     margin-#{$side}: $global-margin !important;
@@ -128,10 +128,10 @@ $sides: top right bottom left;
   padding: 0 !important;
 }
 .tiny-padding {
-  padding: $global-margin/4 !important;
+  padding: $global-margin*0.25 !important;
 }
 .small-padding {
-  padding: $global-margin/2 !important;
+  padding: $global-margin*0.5 !important;
 }
 .medium-padding {
   padding: $global-margin !important;
@@ -145,12 +145,12 @@ $sides: top right bottom left;
 
 // Padding for top and bottom
 .tiny-padding-y {
-  padding-top: $global-margin/4 !important;
-  padding-bottom: $global-margin/4 !important;
+  padding-top: $global-margin*0.25 !important;
+  padding-bottom: $global-margin*0.25 !important;
 }
 .small-padding-y {
-  padding-top: $global-margin/2 !important;
-  padding-bottom: $global-margin/2 !important;
+  padding-top: $global-margin*0.5 !important;
+  padding-bottom: $global-margin*0.5 !important;
 }
 .medium-padding-y {
   padding-top: $global-margin !important;
@@ -167,12 +167,12 @@ $sides: top right bottom left;
 
 // Padding for right and left
 .tiny-padding-x {
-  padding-right: $global-margin/4 !important;
-  padding-left: $global-margin/4 !important;
+  padding-right: $global-margin*0.25 !important;
+  padding-left: $global-margin*0.25 !important;
 }
 .small-padding-x {
-  padding-right: $global-margin/2 !important;
-  padding-left: $global-margin/2 !important;
+  padding-right: $global-margin*0.5 !important;
+  padding-left: $global-margin*0.5 !important;
 }
 .medium-padding-x {
   padding-right: $global-margin !important;
@@ -195,10 +195,10 @@ $sides: top right bottom left;
     padding-#{$side}: 0 !important;
   }
   .tiny-padding-#{$side} {
-    padding-#{$side}: $global-margin/4 !important;
+    padding-#{$side}: $global-margin*0.25 !important;
   }
   .small-padding-#{$side} {
-    padding-#{$side}: $global-margin/2 !important;
+    padding-#{$side}: $global-margin*0.5 !important;
   }
   .medium-padding-#{$side} {
     padding-#{$side}: $global-margin !important;
